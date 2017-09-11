@@ -13,7 +13,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-
 public class IconTextTabsActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
@@ -49,7 +48,7 @@ public class IconTextTabsActivity extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-       // adapter.addFrag(new OneFragment(), "NEWS FEED");
+        // adapter.addFrag(new OneFragment(), "NEWS FEED");
         adapter.addFrag(new TwoFragment(), "TYPES OF ABUSE");
         adapter.addFrag(new ThreeFragment(), "ABOUT");
         viewPager.setAdapter(adapter);

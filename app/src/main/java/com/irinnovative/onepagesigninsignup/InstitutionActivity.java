@@ -1,8 +1,8 @@
 package com.irinnovative.onepagesigninsignup;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -33,14 +33,14 @@ public class InstitutionActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 currentPlace = listPlaces.get(position);
 
-                Intent intent = new Intent(InstitutionActivity.this,PlacesActivity.class);
-                intent.putExtra("places",currentPlace);
+                Intent intent = new Intent(InstitutionActivity.this, PlacesActivity.class);
+                intent.putExtra("places", currentPlace);
                 startActivity(intent);
             }
         });
     }
 
-    public void populate(){
+    public void populate() {
 
         //SAPSAC
 
@@ -55,9 +55,9 @@ public class InstitutionActivity extends AppCompatActivity {
                         "Psychology\n" +
                         "Education\n" +
                         "Media ",
-                new int[]{R.drawable.sapsac},"P.O.Box 1267\n" +
+                new int[]{R.drawable.sapsac}, "P.O.Box 1267\n" +
                 "Menlyn Central",
-                "http://www. .co.za/","012 991 0718"));
+                "http://www. .co.za/", "012 991 0718"));
 
         //Powa
 
@@ -65,10 +65,10 @@ public class InstitutionActivity extends AppCompatActivity {
                 "POWA is a “feminist, women’s rights organisation that provides both services, and engages in advocacy in order to ensure the realisation of women’s rights and thereby improve women’s quality of life”.\n" +
                         "\n" +
                         "POWA’s uniqueness as an organisation is in providing both services to survivors and engaging in advocacy using a feminist and intersectional analysis. Our work is rooted in the belief that change can only be said to be effective when women’s lives are directly improved through our interventions. We also believe that there is no single route to change, and thus constantly seek new and creative approaches in our programming to achieve the change we seek. ",
-                new int[]{R.drawable.powa},"PO Box 93416, Yeoville 2143\n" +
+                new int[]{R.drawable.powa}, "PO Box 93416, Yeoville 2143\n" +
                 "Johannesburg\n"
                 ,
-                "http://www.powa.co.za","011 591 6803"));
+                "http://www.powa.co.za", "011 591 6803"));
 
         //Women and Men Against Child Abuse
 
@@ -80,12 +80,12 @@ public class InstitutionActivity extends AppCompatActivity {
                         "Women & Men Against Child Abuse are concerned about a recent incident where a victim of domestic violence was subjected to gross misconduct by the SAPS. \n" +
                         "\n" +
                         "The victim in this case was physically assaulted by her husband, a British national and father of her 5-year old child. When she failed to show up for work, her employer went to check on her and found her battered, upon which she took her to a doctor for examination. The doctor instructed them to obtain a J88 form from the police station. At Edenvale police station they were wrongly informed by Captain Nthite that a J88 form differs with each police station, and had to collect one at Boksburg Police Station. ",
-                new int[]{R.drawable.men_against}," 6 Benton House,\n" +
+                new int[]{R.drawable.men_against}, " 6 Benton House,\n" +
                 "Bond Street Business Park,\n" +
                 "cnr Bond Str and Kent Ave, Randburg\n" +
                 "Johannesburg\n"
                 ,
-                "http://www.wmaca.org"," 011 789 8815"));
+                "http://www.wmaca.org", " 011 789 8815"));
 
         //Life Line
 
@@ -97,10 +97,10 @@ public class InstitutionActivity extends AppCompatActivity {
                         "Hence the transformation of the organisation, as reflected in the newly defined vision and mission. Fulfilling this purpose requires an innovative, passionate, diverse group of people with integrity, commitment and a desire to bring about social change.",
                 new int[]{R.drawable.blue},
                 "28 Melle Street\n" +
-                "Braamfontein\n" +
-                "Johannesburg\n"
+                        "Braamfontein\n" +
+                        "Johannesburg\n"
                 ,
-                "http://www.lifeline.org.za","  082 231 0805"));
+                "http://www.lifeline.org.za", "  082 231 0805"));
 
         //Tears Foundation
 
@@ -108,7 +108,7 @@ public class InstitutionActivity extends AppCompatActivity {
                 "TEARS Foundation is responsible for the sourcing and collating of a data-base comprised of a fully comprehensive network of services; medical, medico-legal, legal and psychological, currently available throughout South Africa, for the assistance and support of survivors of rape and sexual abuse.. \n" +
                         "\n" +
                         "TEARS Foundation, founded in 2012 is a Registered NPO and PBO that uses technology innovatively in the scourge against domestic violence, sexual assault and child abuse.,",
-                new int[]{R.drawable.tear}," Tears Foundation\n" +
+                new int[]{R.drawable.tear}, " Tears Foundation\n" +
                 "TSEBO\n" +
                 "85 Protea Road\n" +
                 "Kingsley Office Park\n" +
@@ -116,7 +116,7 @@ public class InstitutionActivity extends AppCompatActivity {
                 "Chislehurston\n" +
                 "Sandton"
                 ,
-                "http://www.tears.co.za"," 010 590 5920"));
+                "http://www.tears.co.za", " 010 590 5920"));
 
         //Child Line
 
@@ -130,12 +130,12 @@ public class InstitutionActivity extends AppCompatActivity {
                         "They're a bunch of different people, some old and some young. They all work for us across South Africa. They have all sorts of hobbies and interests. But most importantly, they all care about young people and give up some their time to volunteer as counsellors. They have been trained on our Crisisline Counselling Course and are constantly updated with issues you may be facing.\n" +
                         "\n" +
                         "You can talk to them about anything, from self-harm and sexting to exam stress and eating problems.,",
-                new int[]{R.drawable.childline_south_africa_logo}," T 24 Stephen Dlamini Road" +
+                new int[]{R.drawable.childline_south_africa_logo}, " T 24 Stephen Dlamini Road" +
                 " Musgrave\n" +
                 " Durban\n" +
                 "4000\n"
                 ,
-                "http://www.childlinesa.org.za"," 0800 0555 55"));
+                "http://www.childlinesa.org.za", " 0800 0555 55"));
 
         //Child Welfare
 
@@ -148,12 +148,12 @@ public class InstitutionActivity extends AppCompatActivity {
                         "Establishing networks and partnerships to ensure the safeguarding of our children.\n" +
                         "Being a credible, professional body for child protection.\n" +
                         "Providing support and guidance to our Member Organisations.",
-                new int[]{R.drawable.child_welfare}," 247 Monument Road" +
+                new int[]{R.drawable.child_welfare}, " 247 Monument Road" +
                 " Glen Marais\n" +
                 " Kempton Park\n" +
                 "1619\n"
                 ,
-                "http://www.childwelfaresa.org.za"," 011 452 4110"));
+                "http://www.childwelfaresa.org.za", " 011 452 4110"));
 
         //Rape Crisis
 
@@ -165,11 +165,11 @@ public class InstitutionActivity extends AppCompatActivity {
                         "Our goal is to promote an end to violence against women – specifically rape. Rape survivors are key to successful convictions and their empowerment is based on safety, respect, support and the ability to make informed choices as they embark on this difficult and challenging journey.\n" +
                         "\n" +
                         "We aim to reduce the trauma experienced by survivors and encourage them to report rape. We support communities in challenging high rape rates and flaws in the criminal justice system.",
-                new int[]{R.drawable.rapecrisis}," 23 Trill Road, Observatory" +
+                new int[]{R.drawable.rapecrisis}, " 23 Trill Road, Observatory" +
                 " Cape Town \n" +
                 "  7925\n"
                 ,
-                "http://www.rapecrisis.org.za"," 021 447 9762"));
+                "http://www.rapecrisis.org.za", " 021 447 9762"));
 
         //Jo'burg Child Welfare
 
@@ -179,11 +179,11 @@ public class InstitutionActivity extends AppCompatActivity {
                         "Last year, our dedicated team of over 200 staff and volunteers reached over 47,000 children and individuals through protection, adoption, foster care, residential care, education and training work.\n" +
                         "\n" +
                         "Since 1909, Jo’burg Child Welfare has played a pivotal role in child care and protection strategies across the country. Nationally we advise on legislation to protect children, and through advocacy work we ensure children have a voice to influence services which affect them. We support those who have no where else to turn..",
-                new int[]{R.drawable.jhb}," 1st Floor, Edura House" +
+                new int[]{R.drawable.jhb}, " 1st Floor, Edura House" +
                 " 41 Fox Street \n" +
                 "  Johannesburg\n"
                 ,
-                "http://www.jhbchildwelfare.co.za"," 011 298 8500"));
+                "http://www.jhbchildwelfare.co.za", " 011 298 8500"));
 
         //The South African Depression and Anxiety Group
 
@@ -191,11 +191,11 @@ public class InstitutionActivity extends AppCompatActivity {
                 "Mental illness, and the stigma surrounding it, is a critical issue in South Africa. The South African Depression and Anxiety Group (SADAG) is at the forefront of patient advocacy, education and destigmatisation of mental illness in the country. Its expertise lies in assisting patients and callers throughout South Africa with mental health queries.\n" +
                         "\n" +
                         "SADAG is a Non-Profit Organisation, a Registered Section 21 Company, with an 18a tax exemption. It has on its board a powerful team of Patients, Psychiatrists, Psychologists, and General Practitioners. SADAG was established twenty years ago to serve as a support network for the thousands of South Africans who live with mental health problems. Currently, it is estimated that 1 in 5 people will, or do, suffer from a mental illness. SADAG manages a 16-line counselling-and-referral call centre, and is the voice of patient advocacy, working in urban, peri-urban, and the most rural communities across South Africa.",
-                new int[]{R.drawable.sadag}," Catherine St, Johannesburg" +
+                new int[]{R.drawable.sadag}, " Catherine St, Johannesburg" +
                 " 2000 \n" +
                 "  South Africa\n"
                 ,
-                "http://www.sadag.org"," 021 447 9762"));
+                "http://www.sadag.org", " 021 447 9762"));
 
         //Jelly Beans
 
@@ -206,11 +206,11 @@ public class InstitutionActivity extends AppCompatActivity {
                         "We provide individual and group therapy to children who’ve suffered trauma and abuse\n" +
                         "We create therapeutic tools and treatment programmes\n" +
                         "We provide training to professionals who work with child protection and mental health.",
-                new int[]{R.drawable.jelly},"\t641 Edgar , Street" +
+                new int[]{R.drawable.jelly}, "\t641 Edgar , Street" +
                 " Garsfontein \n" +
                 "  Pretoria\n"
                 ,
-                "http://www.jellybeanz.org.za"," +012 998 1364"));
+                "http://www.jellybeanz.org.za", " +012 998 1364"));
 
         //South African MALE SURVIVORS of Sexual Abuse
 
@@ -222,11 +222,11 @@ public class InstitutionActivity extends AppCompatActivity {
                         "The new acronym  SAMSOSA (South African Male Survivors of Sexual Abuse) will serve as a resource and referral centre, providing information, support and training for victims, affected individuals and organisations in a safe, non-judgmental structure. In addition, we will act as an advocacy group for non-offending male rape and abuse survivors to create awareness and understanding that will change social attitudes and structures.\n" +
                         "\n" +
                         "The rape and sexual abuse of both adult and young men around the world has been so greatly ignored, disrespected and discounted for, that it has created a major misconception in many that such an occurrence does not exist. Many services currently available are solely focused on meeting the needs of female victims who have been abused and sexually assaulted and in this exclusivity silently perpetuate the fallacy that male rape does not exist. The vast majority of male rape and abuse victims will never report their trauma due to a lack of awareness and misunderstandings of male sexual abuse as well as the current lack of support services available, instead they choose to suffer its effects alone and in silence.",
-                new int[]{R.drawable.samosa},"\n  1st Floor, SEWAFRICA House" +
+                new int[]{R.drawable.samosa}, "\n  1st Floor, SEWAFRICA House" +
                 " 136 Pritchard Street \n" +
                 "   Johannesburg, South Africa\n"
                 ,
-                "http://www.samsosa.org"," 071 280 9918"));
+                "http://www.samsosa.org", " 071 280 9918"));
 
         // Shukumisa
 
@@ -236,18 +236,11 @@ public class InstitutionActivity extends AppCompatActivity {
                         "The Shukumisa Campaign aims to stir and shake up public and political will to develop and implement policies and strengthen laws related to sexual offences in South Africa. It periodically carries out monitoring at police stations, health facilities and courts to determine the extent to which government departments and service providers are meeting their commitments to providing services to victims of sexual offences.\n" +
                         "\n" +
                         "The Shukumisa Campaign is made up of 47 organisations from all nine provinces and is governed by a steering committee comprising of 10 organisations. Its coordination is housed at the Rape Crisis Cape Town Trust (RCCTT) and is assisted administratively by RCCTT and the Tshwaranang Legal Advocacy Centre (TLAC) in Johannesburg.",
-                new int[]{R.drawable.shukumisa},"\n   Oliver Tambo Community Centre" +
+                new int[]{R.drawable.shukumisa}, "\n   Oliver Tambo Community Centre" +
                 "  128 2nd St, Alexandra \n" +
                 "   Wynberg\n"
                 ,
-                "http://shukumisa.org.za"," 011 885 3305"));
-
-
-
-
-
-
-
+                "http://shukumisa.org.za", " 011 885 3305"));
 
 
     }
