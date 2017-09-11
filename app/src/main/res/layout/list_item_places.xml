@@ -11,7 +11,7 @@
         android:id="@+id/imageView2"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:scaleType="centerInside"
+        android:scaleType="centerCrop"
         android:layout_alignParentBottom="true"
         android:layout_alignParentTop="true"
         android:layout_margin="5dp"
@@ -19,33 +19,29 @@
 
     <TextView
         android:id="@+id/textView_name"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="14dp"
         android:layout_marginStart="14dp"
-        android:layout_marginTop="5dp"
-        android:layout_toRightOf="@+id/imageView2"
+        android:layout_marginEnd="14dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@id/imageView2"
         android:textSize="16sp"
         android:textStyle="bold"
         tools:text="Name of plce" />
-
-
-
-
         />
 
     <TextView
         android:id="@+id/textView_description"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView_name"
-        android:layout_marginLeft="14dp"
         android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
         android:layout_marginTop="4dp"
-        android:layout_toRightOf="@+id/imageView2"
+        android:layout_toEndOf="@id/imageView2"
         android:freezesText="false"
         android:maxLines="3"
-        android:text="Description" />
+        tools:text="Description" />
 
 
 
