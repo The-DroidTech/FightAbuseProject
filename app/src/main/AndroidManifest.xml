@@ -28,7 +28,8 @@
         <activity android:name=".activity.AbuseActivity" />
         <activity android:name=".activity.SosActivity" />
         <activity android:name=".activity.SupportGroups" />
-        <activity android:name=".MentorProfileActivity"></activity>
+        <activity android:name=".MentorProfileActivity" />
+        <activity android:name=".activity.ChatActivity"></activity>
     </application>
 
 </manifest>
