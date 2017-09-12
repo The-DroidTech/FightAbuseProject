@@ -20,7 +20,7 @@
             android:layout_height="200dp"
             android:onClick="profile"
             android:scaleType="centerCrop"
-            android:src="@drawable/icon_1" />
+            android:src="@drawable/untitled" />
 
 
         <TableLayout
