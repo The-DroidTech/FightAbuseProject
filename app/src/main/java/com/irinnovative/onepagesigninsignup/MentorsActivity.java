@@ -1,10 +1,7 @@
 package com.irinnovative.onepagesigninsignup;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.irinnovative.onepagesigninsignup.adapter.MentorAdapter;
@@ -42,13 +39,5 @@ public class MentorsActivity extends AppCompatActivity {
         lvMentors = (ListView) findViewById(R.id.lvMentor);
         MentorAdapter adapter = new MentorAdapter(this,listMentors);
         lvMentors.setAdapter(adapter);
-
-        lvMentors.setOnItemClickListener(new AdapterView.OnItemClickListener(){
-            @Override
-            public void onItemClick(AdapterView<?>parent, View view, int position, long id){
-                Intent intent = new Intent(MentorsActivity.this,MentorProfileActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 }
