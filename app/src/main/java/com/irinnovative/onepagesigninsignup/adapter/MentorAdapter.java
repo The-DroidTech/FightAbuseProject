@@ -1,7 +1,6 @@
 package com.irinnovative.onepagesigninsignup.adapter;
 
 import android.app.Activity;
-import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,8 +41,6 @@ public class MentorAdapter extends ArrayAdapter<Mentor> {
         TextView institutionTextView = (TextView)listItemView.findViewById(R.id.txt_institution);
         institutionTextView.setText(currentMentor.getIntitution());
 
-        TextView locationTextView = (TextView) listItemView.findViewById(R.id.location);
-        locationTextView.setText(currentMentor.getLocation());
 
         ImageView imageView =(ImageView) listItemView.findViewById(R.id.image);
         imageView.setImageResource(currentMentor.getImage());
