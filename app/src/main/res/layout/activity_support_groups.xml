@@ -123,6 +123,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_weight="1"
                     android:onClick="learn"
+                    android:id="@+id/communities"
                     android:src="@drawable/ic_people" />
 
 
