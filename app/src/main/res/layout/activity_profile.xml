@@ -20,7 +20,6 @@
         android:layout_marginBottom="10dp">
 
 
-        
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -28,130 +27,139 @@
             <android.support.design.widget.FloatingActionButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_camera"
-                android:layout_alignParentBottom="true"
                 android:layout_alignEnd="@+id/circleImageView"
-                />
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/ic_camera" />
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/circleImageView"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_gravity="center_horizontal"
-            android:onClick="proPic"
-            android:scaleType="centerCrop"
-            android:src="@drawable/grace"
-            app:civ_border_color="@color/colorPrimaryDark"
-            app:civ_border_width="2dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
-
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circleImageView"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:onClick="proPic"
+                android:scaleType="centerCrop"
+                android:src="@drawable/grace"
+                app:civ_border_color="@color/colorPrimaryDark"
+                app:civ_border_width="2dp" />
 
 
         </RelativeLayout>
 
 
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
-            android:textColorHint="#FFF">
 
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/txtuser_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="User name"
-                android:layout_marginBottom="10dp"
-                android:inputType="textMultiLine"
-                android:textColor="#FFFFFF" />
-        </android.support.design.widget.TextInputLayout>
-
-
-
-
-
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
-            android:textColorHint="#FFF">
-
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/txtBio"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Bio"
-                android:inputType="phone"
-                android:textColor="#FFFFFF" />
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
-            android:textColorHint="#FFF">
-
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/emergency2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Mobile Number"
-                android:inputType="phone"
-                android:textColor="#FFFFFF" />
-        </android.support.design.widget.TextInputLayout>
-
-
-
-
-
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="20dp">
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btnUpdate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@null"
-            android:text="Update"
-            android:textColor="#FFF"
-            android:textSize="20sp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="15dp" />
-        <Button
-            android:id="@+id/btnSignout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@null"
-            android:text="Signout"
-            android:textColor="#FFF"
-            android:textSize="20sp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="15dp" />
 
-        </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"
+                android:text="BIO"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="5dp"
+                android:text="Edith Kriel is a social worker who has specialized in working with traumatised children for the last 24 years. She developed the Teddy Bear Clinic into a multi-level service, initiated the Child Witness Project in the Western Cape and developed the Healing Project for children that have been sexually abused and co-authored the book ‘Voices of Hope- Healing stories for Africa’s children’. Edith often presents multiple multi-disciplinary workshops on a range of child trauma related topics. She initiated and developed the anatomical doll project in South Africa."
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
+                android:textSize="16dp"
+                android:layout_marginBottom="10dp"/>
 
 
 
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:text="Contact Details"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse" />
+
+        </LinearLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="10dp"
+            >
 
 
 
+            <TableRow>
 
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/ic_call_white_24dp"/>
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:text="021 5569556"
+                    android:textColor="#fff" />
+
+
+
+            </TableRow>
+            <TableRow>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/ic_mail"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:text="edith@childtraumacentre.co.za"
+                    android:textColor="#fff"
+                    >
+
+                </TextView>
+
+
+            </TableRow>
+
+
+
+        </TableLayout>
 
     </LinearLayout>
+
+
+
+
+
 
 
 </ScrollView>

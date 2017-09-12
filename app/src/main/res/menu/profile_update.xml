@@ -3,9 +3,11 @@
 
 
     <item android:id="@+id/updatSos"
-        android:title ="Update SOS info">
+        android:title ="Update Profile">
 
     </item>
+
+
 
     <item android:id="@+id/log_out"
         android:title ="Log out">
