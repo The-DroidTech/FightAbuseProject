@@ -7,16 +7,14 @@ package com.irinnovative.onepagesigninsignup.pojo;
 public class Mentor {
 
     private String name;
-    private String location;
     private String intitution;
     private int image = -1;
 
     public Mentor() {
     }
 
-    public Mentor(String name, String location, String intitution, int image) {
+    public Mentor(String name, String intitution, int image) {
         this.name = name;
-        this.location = location;
         this.intitution = intitution;
         this.image = image;
     }
@@ -27,14 +25,6 @@ public class Mentor {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getLocation() {
-        return location;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
     }
 
     public String getIntitution() {

@@ -40,9 +40,6 @@ public class InfoAdapter extends ArrayAdapter<Mentor> {
         TextView institutionTextView = (TextView)listItemView.findViewById(R.id.txt_institution);
         institutionTextView.setText(currentMentor.getIntitution());
 
-        TextView locationTextView = (TextView) listItemView.findViewById(R.id.location);
-        locationTextView.setText(currentMentor.getLocation());
-
         ImageView imageView =(ImageView) listItemView.findViewById(R.id.image);
         imageView.setImageResource(currentMentor.getImage());
 
