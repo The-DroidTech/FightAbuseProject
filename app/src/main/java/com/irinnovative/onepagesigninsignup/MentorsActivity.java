@@ -1,7 +1,10 @@
 package com.irinnovative.onepagesigninsignup;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.irinnovative.onepagesigninsignup.adapter.MentorAdapter;
@@ -19,12 +22,23 @@ public class MentorsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_mentors);
 
         listMentors = new ArrayList<Mentor>();
-        listMentors.add(new Mentor("Marita Rademeyer"," clinical psychologist","Kinder Trauma Kliniek",R.drawable.marita));
-        listMentors.add(new Mentor("Edith Kriel","social worker and play therapist","Child Trauma Centre",R.drawable.edith_kriel));
-        listMentors.add(new Mentor("Mashilo Mnisi","chief executive of this men’s rights organisation","MOSHATE MEN'S RIGHTS ORGANISATION",R.drawable.moshate));
-        listMentors.add(new Mentor("Katlego More","Cape Town","Western Cape Foundation",R.drawable.katlego));
-        listMentors.add(new Mentor("Linda Smith","Pretoria","Africa's daughters",R.drawable.linda));
-        listMentors.add(new Mentor("Belinda Chai","PE","Africa's daughters",R.drawable.belinda));
+        listMentors.add(new Mentor("Marita Rademeyer","Kinder Trauma Kliniek",R.drawable.marita));
+        listMentors.add(new Mentor("Edith Kriel","Child Trauma Centre",R.drawable.edith_kriel));
+        listMentors.add(new Mentor("Andrea Dondolo","Lead SA Hero",R.drawable.andrea_dondolo));
+        listMentors.add(new Mentor("Maria Mabetoa","Department of Social Work Unisa",R.drawable.maria_mabetoa));
+        listMentors.add(new Mentor("Winnie Lindi Morake" ,"Department of Social Work Unisa ",R.drawable.winniindi));
+        listMentors.add(new Mentor("SURESHNIE RIDER","BLOW THE WHISTLE",R.drawable.sureshine_rider));
+        listMentors.add(new Mentor("TAINE NEWPORT","The Foundation Clinic",R.drawable.taine_newport));
+        listMentors.add(new Mentor("LEIGH-ANNE BRIERLEY","BLOW THE WHISTLE",R.drawable.leigh_anne));
+        listMentors.add(new Mentor("Ms Tryphosa Senoamadi","Focus building",R.drawable.tryposa));
+        listMentors.add(new Mentor("ENNIE PHUNGO","Cnr Lovedale & Plein Street",R.drawable.ennie));
+        listMentors.add(new Mentor("RUTH KATZ","RUTH KATZ CONSULTING",R.drawable.ruth));
+        listMentors.add(new Mentor(" Ayesha Malagas","Stars Wellness",R.drawable.ayesha));
+        listMentors.add(new Mentor("Peter Guess","Peter Guess Therapist",R.drawable.peter_guess));
+
+
+
+
 
 
 
@@ -32,5 +46,14 @@ public class MentorsActivity extends AppCompatActivity {
         lvMentors = (ListView) findViewById(R.id.lvMentor);
         MentorAdapter adapter = new MentorAdapter(this,listMentors);
         lvMentors.setAdapter(adapter);
-    }
+
+
+        lvMentors.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(MentorsActivity.this,MentorProfileActivity.class);
+                startActivity(intent);
+            }
+        });
+}
 }
