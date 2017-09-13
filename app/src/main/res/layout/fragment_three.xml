@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorAccent"
     tools:context="com.irinnovative.onepagesigninsignup.ThreeFragment">
 
     <LinearLayout
@@ -13,18 +14,17 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="256dp"
-            android:src="@drawable/icon" />
+            android:src="@drawable/untitled"
+            android:scaleType="centerCrop"/>
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
             android:layout_margin="10dp"
-            android:text="ALL ABOUT FIGHT BACK APP\n
-       ----------------------------------------------\n
-
-
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
+            android:text="ALL ABOUT FIGHT BACK APP\n  ----------------------------------------------------------\n
 Our app is designed for all genders
 The age group that will have access to the app must be at the age of 13 years because that’s the age where one gets to understand abuse and violence
 The app will be at R0 cost but we will need sponsorship to campaign against violence and abuse faced by all genders
@@ -34,6 +34,32 @@ The app will be at R0 cost but we will need sponsorship to campaign against viol
   HAVING AN SOS BUTTON THAT CAN LOCATE WHERE THE MESSAGE WAS SEND"
             android:textSize="18dp"
             android:textStyle="normal" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            android:layout_margin="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlackTrans"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
+            android:text="EMERGENCY SOS"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"
+                android:layout_margin="10dp"
+               android:text="@string/sos_info"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"/>
+
+
+
+
+
+
 
     </LinearLayout>
 </ScrollView>

@@ -60,6 +60,7 @@
             <TableRow>
 
                 <ImageView
+                    android:id="@+id/sosButton"
                     android:layout_width="0dp"
                     android:layout_height="100dp"
                     android:layout_marginTop="1dp"
