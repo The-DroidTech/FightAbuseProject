@@ -3,11 +3,11 @@ package com.irinnovative.onepagesigninsignup;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class TestomoniesActivity extends AppCompatActivity {
+public class EventsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_testomonies);
+        setContentView(R.layout.activity_events);
     }
 }

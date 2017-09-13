@@ -1,9 +1,429 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.irinnovative.onepagesigninsignup.TestomoniesActivity">
+    android:background="@color/colorAccent"
+    android:orientation="vertical"
+    tools:context="com.irinnovative.onepagesigninsignup.activity.TestomoniesActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="profile"
+            android:scaleType="centerCrop"
+            android:src="@drawable/untitled"
+            android:layout_marginBottom="5dp"/>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:text="VIEW THE SURVIVORS STORIES WITH JUST ONE CLICK"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
+            android:textSize="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"/>
+
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="14dp">
+
+            <TableRow>
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:onClick="jane"
+                    android:src="@drawable/ic_person_black_24dp" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:onClick="alex"
+                    android:src="@drawable/ic_person_black_24dp" />
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:onClick="ann"
+                    android:src="@drawable/ic_person_black_24dp" />
+
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="15dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:text="Jane"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#fff">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="15dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:text="Alex"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#fff">
+
+                </TextView>
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="15dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:text="Ann"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#fff" />
+            </TableRow>
+
+
+            <TableRow>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:onClick="katherine"
+                    android:src="@drawable/ic_person_black_24dp" />
+
+                <ImageView
+                    android:id="@+id/communities"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:onClick="jody"
+                    android:src="@drawable/ic_person_black_24dp" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:onClick="maria"
+                    android:src="@drawable/ic_person_black_24dp" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="15dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:text="Katherine"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="15dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:text="Jody"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#fff">
+
+                </TextView>
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="15dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:text="Maria"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#fff" />
+            </TableRow>
+
+            <TableRow>
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:onClick="kaz"
+                    android:src="@drawable/ic_person_black_24dp" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:onClick="jullie"
+                    android:src="@drawable/ic_person_black_24dp" />
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:onClick="institution"
+                    android:src="@drawable/ic_person_black_24dp" />
+
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="15dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:text="Kaz"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#fff">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="15dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:text="Julie"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#fff">
+
+                </TextView>
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="15dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:text="Sallie"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#fff" />
+            </TableRow>
+
+
+
+            <TableRow>
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:onClick="sos"
+                    android:src="@drawable/ic_person_black_24dp" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:onClick="sos"
+                    android:src="@drawable/ic_person_black_24dp" />
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:onClick="institution"
+                    android:src="@drawable/ic_person_black_24dp" /> />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="15dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:text="Lena"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#fff">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="15dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:text="Kazza"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#fff">
+
+                </TextView>
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="15dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:text="Angel"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#fff" />
+            </TableRow>
+
+            <TableRow>
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:onClick="tina"
+                    android:src="@drawable/ic_person_black_24dp" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:onClick="isobel"
+                    android:src="@drawable/ic_person_black_24dp" />
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:onClick="donna"
+                    android:src="@drawable/ic_person_black_24dp" />
+
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="15dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:text="Tina"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#fff">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="15dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:text="Isobel"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#fff">
+
+                </TextView>
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="15dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:text="Donna"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#fff" />
+            </TableRow>
+
+
+
+
+
+
+
+        </TableLayout>
+
+    </LinearLayout>
+
+</ScrollView>
