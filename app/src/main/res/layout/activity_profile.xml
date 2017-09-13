@@ -15,21 +15,23 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-
-
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="14dp"
-            android:text="GRACE MATHOLE, PRETORIA"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="5dp"
             android:textAlignment="center"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large.Inverse"
-            android:textColor="#ffff"
-            android:textSize="30dp" />
-        
+            android:text="GRACE MATHOLE"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
+            android:textSize="16dp"
+            android:layout_marginBottom="10dp"/>
+
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -37,151 +39,139 @@
             <android.support.design.widget.FloatingActionButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_camera"
-                android:layout_alignParentBottom="true"
                 android:layout_alignEnd="@+id/circleImageView"
-                />
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/ic_camera" />
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/circleImageView"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_gravity="center_horizontal"
-            android:onClick="proPic"
-            android:scaleType="centerCrop"
-            android:src="@drawable/grace"
-            app:civ_border_color="@color/colorPrimaryDark"
-            app:civ_border_width="2dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
-
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circleImageView"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:onClick="proPic"
+                android:scaleType="centerCrop"
+                android:src="@drawable/default_pic"
+                app:civ_border_color="@color/colorPrimaryDark"
+                app:civ_border_width="2dp" />
 
 
         </RelativeLayout>
 
 
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
-            android:textColorHint="#FFF">
 
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/sosMessage"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="SOS Message"
-                android:layout_marginBottom="10dp"
-                android:inputType="textMultiLine"
-                android:textColor="#FFFFFF" />
-        </android.support.design.widget.TextInputLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="5dp"
-            android:text="SOS Contacts"
-            android:textSize="18dp"
-            android:textStyle="bold"
-            android:textAlignment="center"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse" />
-
-
-
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
-            android:textColorHint="#FFF">
-
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/emergency1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Mobile Number"
-                android:inputType="phone"
-                android:textColor="#FFFFFF" />
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
-            android:textColorHint="#FFF">
-
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/emergency2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Mobile Number"
-                android:inputType="phone"
-                android:textColor="#FFFFFF" />
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
-            android:textColorHint="#FFF">
-
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/emergency3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Mobile Number"
-                android:inputType="phone"
-                android:textColor="#FFFFFF" />
-        </android.support.design.widget.TextInputLayout>
-
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="10dp">
-        <Button
-            android:id="@+id/btnUpdate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@null"
-            android:text="Update"
-            android:textColor="#FFF"
-            android:textSize="20sp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="15dp" />
-        <Button
-            android:id="@+id/btnSignout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@null"
-            android:text="Signout"
-            android:textColor="#FFF"
-            android:textSize="20sp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="15dp" />
+            android:orientation="vertical">
 
-        </RelativeLayout>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"
+                android:text="BIO"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="5dp"
+                android:text="My name is Grace Mathole and my journey to hell and back began twelve years ago. I met him when he moved in next door to me. We became friends and later he moved in with me and we became an item. He had me hook, line and sinker, a real charmer. He was a rebel, and life became fast and exciting. Parties, dancing, drinking and then more drinking until he physically abused me daily."
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
+                android:textSize="16dp"
+                android:layout_marginBottom="10dp"/>
 
 
 
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:text="Contact Details"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse" />
+
+        </LinearLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="10dp"
+            >
 
 
 
+            <TableRow>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/ic_call_white_24dp"/>
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:text="021 5569556"
+                    android:textColor="#fff" />
+
+
+
+            </TableRow>
+            <TableRow>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/ic_mail"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:text="edith@childtraumacentre.co.za"
+                    android:textColor="#fff"
+                    >
+
+                </TextView>
+
+
+            </TableRow>
+
+
+
+        </TableLayout>
 
     </LinearLayout>
+
+
+
+
+
 
 
 </ScrollView>

@@ -20,7 +20,7 @@
             android:layout_height="200dp"
             android:onClick="profile"
             android:scaleType="centerCrop"
-            android:src="@drawable/icon_1" />
+            android:src="@drawable/untitled" />
 
 
         <TableLayout
@@ -134,7 +134,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_weight="1"
                     android:onClick="support"
-                    android:src="@drawable/ic_chill" />
+                    android:src="@drawable/ic_local" />
             </TableRow>
 
             <TableRow>
@@ -170,7 +170,7 @@
                     android:layout_marginBottom="14dp"
                     android:layout_marginTop="4dp"
                     android:layout_weight="1"
-                    android:text="Hang out"
+                    android:text="TESTIMONIES"
                     android:textAlignment="center"
                     android:textAllCaps="true"
                     android:textColor="#fff" />

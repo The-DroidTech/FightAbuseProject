@@ -1,9 +1,14 @@
 package com.irinnovative.onepagesigninsignup.activity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.irinnovative.onepagesigninsignup.IconTextTabsActivity;
@@ -12,6 +17,7 @@ import com.irinnovative.onepagesigninsignup.MentorsActivity;
 import com.irinnovative.onepagesigninsignup.R;
 
 public class HomeActivity extends AppCompatActivity {
+    ImageView sos;
     int count = 0;
 
     @Override
@@ -46,18 +52,70 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void sos(View v){
-        count++;
-        if(count == 1)
-        {
-            Toast.makeText(this,"Double tap to activate sos",Toast.LENGTH_SHORT).show();
-        }
+        sos = (ImageView) findViewById(R.id.sosButton);
+        sos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder mBuilder = new AlertDialog.Builder(HomeActivity.this);
+                View mView = getLayoutInflater().inflate(R.layout.dialogue_spinner, null);
+                mBuilder.setTitle("Are you sure you want to activate?");
 
-        if(count > 2)
-        {
-            Toast.makeText(this,"SOS Activated",Toast.LENGTH_SHORT).show();
-            count = 0;
-        }
+                final Spinner mSpinner = (Spinner) mView.findViewById(R.id.spinner);
 
+                ArrayAdapter<String> adapter = new ArrayAdapter<String>(HomeActivity.this, android.R.layout.simple_spinner_item
+                        ,getResources().getStringArray(R.array.accountType));
+
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                mSpinner.setAdapter(adapter);
+
+
+                mBuilder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int which) {
+
+                        if (mSpinner.getSelectedItem().toString().equalsIgnoreCase("Choose account type")) {
+                            //Toast.makeText(MainActivity.this,
+                            // m = Spinner.getSelectedItem().toString(),
+                            //Toast.LENGTH_SHORT).show();
+
+                            dialogInterface.dismiss();
+                        }
+                        final String text= mSpinner.getSelectedItem().toString();
+
+                        switch(text) {
+                            case "Confirm":
+                                Intent intent = new Intent(HomeActivity.this, ConfirmSos.class);
+                                startActivity(intent);
+                                break;
+                            case "Cancel":
+                                Intent i = new Intent(HomeActivity.this, CancelSos.class);
+                                startActivity(i);
+                                break;
+                            default:
+                                Toast.makeText(HomeActivity.this, "To continue select an Item ",
+                                        Toast.LENGTH_SHORT).show();
+                                break;
+                        }
+
+                    }
+
+
+                });
+
+
+                mBuilder.setNegativeButton("Dismiss", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int which) {
+                        dialogInterface.dismiss();
+                    }
+                });
+                mBuilder.setView(mView);
+                AlertDialog dialog = mBuilder.create();
+                dialog.show();
+
+            }
+        });
         //Intent intent = new Intent(HomeActivity.this,.class);
        // startActivity(intent);
     }

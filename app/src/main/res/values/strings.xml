@@ -1,4 +1,20 @@
 <resources>
     <string name="app_name">Fight Abuse</string>
     <string name="one" />
+
+    <string-array name="accountType">
+        <item>Confirm</item>
+        <item>Cancel</item>
+    </string-array>
+
+
+    <string name="sos_info">
+SOS offers our clients access to appropriate emergency assistance when:
+(a) you don’t know who to call
+(b) you don’t know where you are
+(c) you want to notify your emergency contacts about your emergency and the exact location.
+</string>
+
+    <string name="bio_info">
+I am a 27 year old female from Pretoria. I have been in an abusive relationship forthe past 5 years. My partner used to physically and emotionally abuse me for the last 3 years .</string>
 </resources>
