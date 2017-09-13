@@ -31,7 +31,8 @@
         <activity android:name=".activity.SosActivity" />
         <activity android:name=".activity.SupportGroups" />
         <activity android:name=".MentorProfileActivity" />
-        <activity android:name=".activity.SosDetailsActivity"></activity>
+        <activity android:name=".activity.SosDetailsActivity" />
+        <activity android:name=".TestomoniesActivity"></activity>
     </application>
 
 </manifest>

@@ -19,6 +19,18 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="5dp"
+            android:textAlignment="center"
+            android:text="GRACE MATHOLE"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
+            android:textSize="16dp"
+            android:layout_marginBottom="10dp"/>
+
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -33,14 +45,14 @@
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/circleImageView"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center_horizontal"
                 android:onClick="proPic"
                 android:scaleType="centerCrop"
-                android:src="@drawable/grace_mathole"
+                android:src="@drawable/default_pic"
                 app:civ_border_color="@color/colorPrimaryDark"
                 app:civ_border_width="2dp" />
 
@@ -72,7 +84,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_alignParentTop="true"
                 android:layout_margin="5dp"
-                android:text="Edith Kriel is a social worker who has specialized in working with traumatised children for the last 24 years. She developed the Teddy Bear Clinic into a multi-level service, initiated the Child Witness Project in the Western Cape and developed the Healing Project for children that have been sexually abused and co-authored the book ‘Voices of Hope- Healing stories for Africa’s children’. Edith often presents multiple multi-disciplinary workshops on a range of child trauma related topics. She initiated and developed the anatomical doll project in South Africa."
+                android:text="My name is Grace Mathole and my journey to hell and back began twelve years ago. I met him when he moved in next door to me. We became friends and later he moved in with me and we became an item. He had me hook, line and sinker, a real charmer. He was a rebel, and life became fast and exciting. Parties, dancing, drinking and then more drinking until he physically abused me daily."
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
                 android:textSize="16dp"
                 android:layout_marginBottom="10dp"/>
