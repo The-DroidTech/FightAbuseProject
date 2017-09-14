@@ -1,13 +1,18 @@
 package com.irinnovative.onepagesigninsignup.pojo;
 
+import java.io.Serializable;
+
 /**
  * Created by Code Tribe on 2017/09/01.
  */
 
-public class Mentor {
+public class Mentor implements Serializable{
 
     private String name;
     private String intitution;
+    private String description;
+    private String contacts;
+    private String website;
     private int image = -1;
 
     public Mentor() {
@@ -16,6 +21,15 @@ public class Mentor {
     public Mentor(String name, String intitution, int image) {
         this.name = name;
         this.intitution = intitution;
+        this.image = image;
+    }
+
+    public Mentor(String name, String intitution, String description, String contacts, String website, int image) {
+        this.name = name;
+        this.intitution = intitution;
+        this.description = description;
+        this.contacts = contacts;
+        this.website = website;
         this.image = image;
     }
 
@@ -41,5 +55,29 @@ public class Mentor {
 
     public void setImage(int image) {
         this.image = image;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getContacts() {
+        return contacts;
+    }
+
+    public void setContacts(String contacts) {
+        this.contacts = contacts;
+    }
+
+    public String getWebsite() {
+        return website;
+    }
+
+    public void setWebsite(String website) {
+        this.website = website;
     }
 }
