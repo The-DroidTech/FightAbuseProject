@@ -41,14 +41,6 @@
                     android:onClick="media"
                     android:src="@drawable/ic_camera" />
 
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="100dp"
-                    android:layout_marginBottom="14dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_weight="1"
-                    android:onClick="sos"
-                    android:src="@drawable/ic_kick" />
 
 
                 <ImageView
@@ -78,19 +70,6 @@
 
                 </TextView>
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="15dp"
-                    android:layout_marginBottom="14dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_weight="1"
-                    android:text="Volunteer Here"
-                    android:onClick="media"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"
-                    android:textColor="#fff">
-
-                </TextView>
 
                 <TextView
 
