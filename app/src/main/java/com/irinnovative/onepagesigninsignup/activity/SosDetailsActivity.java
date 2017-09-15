@@ -15,7 +15,7 @@ import com.irinnovative.onepagesigninsignup.pojo.Sos;
 
 public class SosDetailsActivity extends AppCompatActivity {
 
-    private TextInputEditText sosContact1,sosContact2,sosContact3,sosMessage;
+    private TextInputEditText sosContact1, sosContact2, sosContact3, sosMessage;
     private Button btnUpdate;
     private Button btnSignOut;
 
@@ -30,19 +30,17 @@ public class SosDetailsActivity extends AppCompatActivity {
         sosContact3 = (TextInputEditText) findViewById(R.id.sos3);
         sosMessage = (TextInputEditText) findViewById(R.id.message_update);
         btnUpdate = (Button) findViewById(R.id.btnUpdate);
-        btnSignOut =(Button)findViewById(R.id.btnSignout);
+        btnSignOut = (Button) findViewById(R.id.btnSignout);
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         final DatabaseReference myRef = database.getReference("sosmessage");
 
 
-
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Sos sos = new Sos(sosContact1.getText().toString(),sosContact2.getText().toString(),sosContact3.getText().toString()
+                Sos sos = new Sos(sosContact1.getText().toString(), sosContact2.getText().toString(), sosContact3.getText().toString()
                         , sosMessage.getText().toString());
-
 
 
                 myRef.child("sos_id").push().setValue(sos);
@@ -58,7 +56,7 @@ public class SosDetailsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(getBaseContext(),MainActivity.class));
+                startActivity(new Intent(getBaseContext(), MainActivity.class));
 
             }
         });
