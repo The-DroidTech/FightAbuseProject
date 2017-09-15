@@ -8,60 +8,58 @@ import android.view.View;
 
 import com.irinnovative.onepagesigninsignup.R;
 
-public class TestomoniesActivity extends AppCompatActivity {
-
+public class MoviesActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_testomonies);
-        getSupportActionBar().setTitle("TESTIMONIES");
-
+        setContentView(R.layout.activity_movies);
     }
 
-    public void ann(View v) {
-        Intent annintent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.dvrcv.org.au/stories/anns-story"));
-        startActivity(annintent);
+
+    public void cry(View v) {
+        Intent cryintent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=_YqXwVM_frg&list=PLF24D723238B368F6"));
+        startActivity(cryintent);
     }
 
-    public void jane(View v) {
-        Intent janeintent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.dvrcv.org.au/stories/janes-story"));
-        startActivity(janeintent);
+    public void damage(View v) {
+        Intent damageintent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=lHGf-UUqnSg&index=3&list=PLF24D723238B368F6"));
+        startActivity(damageintent);
     }
 
-    public void katherine(View v) {
-        Intent katherineintent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.dvrcv.org.au/stories/katherines-story"));
+    public void be(View v) {
+        Intent katherineintent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=lHGf-UUqnSg&index=3&list=PLF24D723238B368F6"));
         startActivity(katherineintent);
     }
 
-    public void jody(View v) {
-        Intent jodyintent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.dvrcv.org.au/stories/true-stories/stories-women/jodys-story"));
-        startActivity(jodyintent);
+    public void broken(View v) {
+        Intent brokenintent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=guaG981MLoQ"));
+        startActivity(brokenintent);
     }
 
-    public void anna(View v) {
-        Intent annaintent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.dvrcv.org.au/stories/true-stories/stories-women/annas-story"));
-        startActivity(annaintent);
+    public void beautiful(View v) {
+        Intent beautifulintent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=bmUfJtsaqps"));
+        startActivity(beautifulintent);
     }
 
-    public void maria(View v) {
-        Intent mariaintent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.dvrcv.org.au/stories/true-stories/stories-women/marias-story"));
-        startActivity(mariaintent);
+    public void fight(View v) {
+        Intent fightintent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=xo1VInw-SKc"));
+        startActivity(fightintent);
     }
 
-    public void alex(View v) {
-        Intent twitterintent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.dvrcv.org.au/stories/true-stories/stories-women/alexs-story"));
-        startActivity(twitterintent);
+    public void climb(View v) {
+        Intent climbintent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=NG2zyeVRcbs&list=PLCjDivseazNzzH6pla2VYAFCT1bwWh86j"));
+        startActivity(climbintent);
     }
 
-    public void kaz(View v) {
-        Intent kazintent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.dvrcv.org.au/stories/true-stories/stories-women/kazs-story"));
-        startActivity(kazintent);
+    public void here(View v) {
+        Intent hereintent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=i41qWJ6QjPI"));
+        startActivity(hereintent);
     }
 
-    public void jullie(View v) {
-        Intent webintent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.dvrcv.org.au/stories/true-stories/stories-women/kazs-story"));
-        startActivity(webintent);
+    public void wide(View v) {
+        Intent wideintent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=dom7VlltBUc&list=PL5cPgAcnxc-crhIlMXhyXWCKa-k8F1JOl&index=5"));
+        startActivity(wideintent);
     }
 
     public void andreas(View v) {
@@ -102,13 +100,4 @@ public class TestomoniesActivity extends AppCompatActivity {
 
 
 
-
-
-
 }
-
-
-
-
-
-

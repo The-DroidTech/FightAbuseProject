@@ -41,4 +41,10 @@ public class SupportGroups extends AppCompatActivity {
         startActivity(new Intent(SupportGroups.this, EventsActivity.class));
 
     }
+
+    public void media (View v){
+
+        startActivity(new Intent(SupportGroups.this,MediaActivity.class));
+
+    }
 }
