@@ -1,12 +1,10 @@
 package com.irinnovative.onepagesigninsignup.activity;
 
 import android.content.Intent;
-import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -25,8 +23,6 @@ import com.irinnovative.onepagesigninsignup.R;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
-
-import static android.R.attr.data;
 
 public class ProfileActivity extends AppCompatActivity {
     private FirebaseUser user;
