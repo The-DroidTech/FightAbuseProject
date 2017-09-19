@@ -25,6 +25,7 @@ public class MentorsActivity extends AppCompatActivity {
         listMentors.add(new Mentor("Marita Rademeyer", "Kinder Trauma Kliniek", R.drawable.marita));
         listMentors.add(new Mentor("Edith Kriel", "Child Trauma Centre", R.drawable.edith_kriel));
         listMentors.add(new Mentor("Andrea Dondolo", "Lead SA Hero", R.drawable.andrea_dondolo));
+
         listMentors.add(new Mentor("Maria Mabetoa", "Department of Social Work Unisa", R.drawable.maria_mabetoa));
         listMentors.add(new Mentor("Winnie Lindi Morake", "Department of Social Work Unisa ", R.drawable.winniindi));
         listMentors.add(new Mentor("SURESHNIE RIDER", "BLOW THE WHISTLE", R.drawable.sureshine_rider));
