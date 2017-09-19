@@ -34,7 +34,16 @@
         <activity android:name=".activity.SosActivity" />
         <activity android:name=".activity.SupportGroups" />
         <activity android:name=".MentorProfileActivity" />
-        <activity android:name=".activity.SosDetailsActivity"></activity>
+        <activity android:name=".activity.SosDetailsActivity" />
+        <activity
+            android:name=".activity.TestomoniesActivity"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".activity.ChatActivity" />
+        <activity android:name=".EventsActivity" />
+        <activity android:name=".activity.MediaActivity" />
+        <activity android:name=".activity.MoviesActivity" />
+        <activity android:name=".activity.VideoActivity" />
+        <activity android:name=".activity.BooksActivity" />
     </application>
 
 </manifest>

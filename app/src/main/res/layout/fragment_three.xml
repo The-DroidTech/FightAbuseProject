@@ -13,17 +13,16 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="256dp"
-            android:src="@drawable/untitled"
-            android:scaleType="centerCrop"/>
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/untitled" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="5dp"
             android:layout_margin="10dp"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="15dp"
             android:text="ALL ABOUT FIGHT BACK APP\n  ----------------------------------------------------------\n
 Our app is designed for all genders
 The age group that will have access to the app must be at the age of 13 years because that’s the age where one gets to understand abuse and violence
@@ -32,33 +31,29 @@ The app will be at R0 cost but we will need sponsorship to campaign against viol
 - BREAKING THE SILENCE THROUGH SUPPORT GROUPS AND MENTORS
 - PROVIDES ACCESS TO THE NUMEROUS INSTITUTIONS FOR REHABILITATION PURPOSES
   HAVING AN SOS BUTTON THAT CAN LOCATE WHERE THE MESSAGE WAS SEND"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
             android:textSize="18dp"
             android:textStyle="normal" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="5dp"
             android:layout_margin="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="15dp"
+            android:text="EMERGENCY SOS"
             android:textAlignment="center"
-            android:textColor="@color/colorBlackTrans"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
-            android:text="EMERGENCY SOS"/>
+            android:textColor="@color/colorBlackTrans" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="5dp"
-                android:layout_margin="10dp"
-               android:text="@string/sos_info"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"/>
-
-
-
-
-
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/sos_info"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse" />
 
 
     </LinearLayout>
