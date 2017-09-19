@@ -29,9 +29,9 @@ public class MentorProfileActivity extends AppCompatActivity {
 
         txtViewName.setText(mentor.getName());
         imProfilePic.setImageResource(mentor.getImage());
-        txtViewDescripion.setText("");
-        txtViewContacts.setText("");
-        txtViewEmail.setText("");
-        txtViewWebsite.setText("");
+        txtViewDescripion.setText(mentor.getDescription());
+        txtViewContacts.setText(mentor.getContacts());
+        txtViewEmail.setText(mentor.getEmail());
+        txtViewWebsite.setText(mentor.getWebsite());
     }
 }

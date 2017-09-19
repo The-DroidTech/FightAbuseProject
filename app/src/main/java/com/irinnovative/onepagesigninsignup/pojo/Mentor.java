@@ -13,6 +13,7 @@ public class Mentor implements Serializable{
     private String description;
     private String contacts;
     private String website;
+    private String email;
     private int image = -1;
 
     public Mentor() {
@@ -24,13 +25,14 @@ public class Mentor implements Serializable{
         this.image = image;
     }
 
-    public Mentor(String name, String intitution, String description, String contacts, String website, int image) {
+    public Mentor(String name, String intitution, String description, String contacts, String website,String email, int image) {
         this.name = name;
         this.intitution = intitution;
         this.description = description;
         this.contacts = contacts;
         this.website = website;
         this.image = image;
+        this.email = email;
     }
 
     public String getName() {
@@ -79,5 +81,13 @@ public class Mentor implements Serializable{
 
     public void setWebsite(String website) {
         this.website = website;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

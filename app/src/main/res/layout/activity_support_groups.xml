@@ -93,7 +93,7 @@
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_weight="1"
-                    android:onClick="learn"
+                    android:onClick="socialMedia"
                     android:src="@drawable/ic_pages" />
 
                 <ImageView

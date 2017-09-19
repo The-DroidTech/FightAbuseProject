@@ -76,6 +76,12 @@ public class BooksActivity extends AppCompatActivity {
         startActivity(richintent);
     }
 
+    public void breaking(View v) {
+        Intent richintent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.destinedtowin.org/pdf/BREAKING%2520THE%2520CURSE%2520OF%2520POVERTY.pdf"));
+        startActivity(richintent);
+    }
+
+
 
 
 

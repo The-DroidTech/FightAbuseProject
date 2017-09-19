@@ -111,7 +111,7 @@
             android:layout_marginBottom="8dp"
             android:layout_marginTop="4dp"
             android:layout_weight="1"
-            android:text="Other videos"
+            android:text="Inspirational videos"
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textColor="#000" />
