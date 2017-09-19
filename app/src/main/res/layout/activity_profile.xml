@@ -39,14 +39,20 @@
             <android.support.design.widget.FloatingActionButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignEnd="@+id/circleImageView"
+                android:layout_alignEnd="@+id/ImageView_user_pic"
                 android:layout_alignParentBottom="true"
                 android:src="@drawable/ic_camera" />
 
             <de.hdodenhof.circleimageview.CircleImageView
+
+                android:id="@+id/ImageView_user_pic"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+
                 android:id="@+id/circleImageView"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
+
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center_horizontal"
