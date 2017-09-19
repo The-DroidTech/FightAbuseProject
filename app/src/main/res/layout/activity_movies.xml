@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:textAlignment="center"
-            android:text="VIEW THE SURVIVORS STORIES WITH JUST ONE CLICK"
+            android:text="WINE ABIT WITH JUST ONE CLICK"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
             android:textSize="10dp"
             android:layout_marginTop="10dp"
@@ -53,8 +53,8 @@
                     android:layout_marginBottom="14dp"
                     android:layout_marginTop="10dp"
                     android:layout_weight="1"
-                    android:onClick="jane"
-                    android:src="@drawable/ic_person_black_24dp" />
+                    android:onClick="cry"
+                    android:src="@drawable/ic_local_movies" />
 
                 <ImageView
                     android:layout_width="0dp"
@@ -62,8 +62,8 @@
                     android:layout_marginBottom="14dp"
                     android:layout_marginTop="10dp"
                     android:layout_weight="1"
-                    android:onClick="alex"
-                    android:src="@drawable/ic_person_black_24dp" />
+                    android:onClick="damage"
+                    android:src="@drawable/ic_local_movies" />
 
 
                 <ImageView
@@ -72,8 +72,8 @@
                     android:layout_marginBottom="14dp"
                     android:layout_marginTop="10dp"
                     android:layout_weight="1"
-                    android:onClick="ann"
-                    android:src="@drawable/ic_person_black_24dp" />
+                    android:onClick="be"
+                    android:src="@drawable/ic_local_movies" />
 
 
             </TableRow>
@@ -86,7 +86,7 @@
                     android:layout_marginBottom="14dp"
                     android:layout_marginTop="4dp"
                     android:layout_weight="1"
-                    android:text="Jane"
+                    android:text="I won't cry"
                     android:textAlignment="center"
                     android:textAllCaps="true"
                     android:textColor="#fff">
@@ -99,7 +99,7 @@
                     android:layout_marginBottom="14dp"
                     android:layout_marginTop="4dp"
                     android:layout_weight="1"
-                    android:text="Alex"
+                    android:text="damaged"
                     android:textAlignment="center"
                     android:textAllCaps="true"
                     android:textColor="#fff">
@@ -113,7 +113,7 @@
                     android:layout_marginBottom="8dp"
                     android:layout_marginTop="4dp"
                     android:layout_weight="1"
-                    android:text="Ann"
+                    android:text="Be a voice"
                     android:textAlignment="center"
                     android:textAllCaps="true"
                     android:textColor="#fff" />
@@ -128,8 +128,8 @@
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_weight="1"
-                    android:onClick="katherine"
-                    android:src="@drawable/ic_person_black_24dp" />
+                    android:onClick="broken"
+                    android:src="@drawable/ic_local_movies" />
 
                 <ImageView
                     android:id="@+id/communities"
@@ -138,8 +138,8 @@
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_weight="1"
-                    android:onClick="jody"
-                    android:src="@drawable/ic_person_black_24dp" />
+                    android:onClick="beautiful"
+                    android:src="@drawable/ic_local_movies" />
 
                 <ImageView
                     android:layout_width="0dp"
@@ -147,8 +147,8 @@
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_weight="1"
-                    android:onClick="maria"
-                    android:src="@drawable/ic_person_black_24dp" />
+                    android:onClick="fight"
+                    android:src="@drawable/ic_local_movies" />
             </TableRow>
 
             <TableRow>
@@ -159,7 +159,7 @@
                     android:layout_marginBottom="14dp"
                     android:layout_marginTop="4dp"
                     android:layout_weight="1"
-                    android:text="Katherine"
+                    android:text="Broken Girl"
                     android:textAlignment="center"
                     android:textAllCaps="true"
                     android:textColor="#fff" />
@@ -170,7 +170,7 @@
                     android:layout_marginBottom="14dp"
                     android:layout_marginTop="4dp"
                     android:layout_weight="1"
-                    android:text="Jody"
+                    android:text="Beautiful"
                     android:textAlignment="center"
                     android:textAllCaps="true"
                     android:textColor="#fff">
@@ -184,7 +184,7 @@
                     android:layout_marginBottom="14dp"
                     android:layout_marginTop="4dp"
                     android:layout_weight="1"
-                    android:text="Maria"
+                    android:text="Fight Back"
                     android:textAlignment="center"
                     android:textAllCaps="true"
                     android:textColor="#fff" />
@@ -199,8 +199,8 @@
                     android:layout_marginBottom="14dp"
                     android:layout_marginTop="10dp"
                     android:layout_weight="1"
-                    android:onClick="kaz"
-                    android:src="@drawable/ic_person_black_24dp" />
+                    android:onClick="climb"
+                    android:src="@drawable/ic_local_movies" />
 
                 <ImageView
                     android:layout_width="0dp"
@@ -208,8 +208,8 @@
                     android:layout_marginBottom="14dp"
                     android:layout_marginTop="10dp"
                     android:layout_weight="1"
-                    android:onClick="jullie"
-                    android:src="@drawable/ic_person_black_24dp" />
+                    android:onClick="here"
+                    android:src="@drawable/ic_local_movies" />
 
 
                 <ImageView
@@ -218,8 +218,8 @@
                     android:layout_marginBottom="14dp"
                     android:layout_marginTop="10dp"
                     android:layout_weight="1"
-                    android:onClick="andreas"
-                    android:src="@drawable/ic_person_black_24dp" />
+                    android:onClick="wide"
+                    android:src="@drawable/ic_local_movies" />
 
 
             </TableRow>
@@ -232,7 +232,7 @@
                     android:layout_marginBottom="14dp"
                     android:layout_marginTop="4dp"
                     android:layout_weight="1"
-                    android:text="Kaz"
+                    android:text="The Climb"
                     android:textAlignment="center"
                     android:textAllCaps="true"
                     android:textColor="#fff">
@@ -245,7 +245,7 @@
                     android:layout_marginBottom="14dp"
                     android:layout_marginTop="4dp"
                     android:layout_weight="1"
-                    android:text="Julie"
+                    android:text="Here"
                     android:textAlignment="center"
                     android:textAllCaps="true"
                     android:textColor="#fff">
@@ -259,7 +259,7 @@
                     android:layout_marginBottom="8dp"
                     android:layout_marginTop="4dp"
                     android:layout_weight="1"
-                    android:text="Andreas"
+                    android:text="Wide open"
                     android:textAlignment="center"
                     android:textAllCaps="true"
                     android:textColor="#fff" />
@@ -267,154 +267,6 @@
 
 
 
-            <TableRow>
-
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="80dp"
-                    android:layout_marginBottom="14dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_weight="1"
-                    android:onClick="samantha"
-                    android:src="@drawable/ic_person_black_24dp" />
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="80dp"
-                    android:layout_marginBottom="14dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_weight="1"
-                    android:onClick="jacq"
-                    android:src="@drawable/ic_person_black_24dp" />
-
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="80dp"
-                    android:layout_marginBottom="14dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_weight="1"
-                    android:onClick="dannielle"
-                    android:src="@drawable/ic_person_black_24dp" /> />
-
-            </TableRow>
-
-            <TableRow>
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="15dp"
-                    android:layout_marginBottom="14dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_weight="1"
-                    android:text="Samantha"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"
-                    android:textColor="#fff">
-
-                </TextView>
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="15dp"
-                    android:layout_marginBottom="14dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_weight="1"
-                    android:text="jacq"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"
-                    android:textColor="#fff">
-
-                </TextView>
-
-                <TextView
-
-                    android:layout_width="0dp"
-                    android:layout_height="15dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_weight="1"
-                    android:text="Dannielle"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"
-                    android:textColor="#fff" />
-            </TableRow>
-
-            <TableRow>
-
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="80dp"
-                    android:layout_marginBottom="14dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_weight="1"
-                    android:onClick="david"
-                    android:src="@drawable/ic_person_black_24dp" />
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="80dp"
-                    android:layout_marginBottom="14dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_weight="1"
-                    android:onClick="cyrus"
-                    android:src="@drawable/ic_person_black_24dp" />
-
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="80dp"
-                    android:layout_marginBottom="14dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_weight="1"
-                    android:onClick="jade"
-                    android:src="@drawable/ic_person_black_24dp" />
-
-
-            </TableRow>
-
-            <TableRow>
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="15dp"
-                    android:layout_marginBottom="14dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_weight="1"
-                    android:text="David"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"
-                    android:textColor="#fff">
-
-                </TextView>
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="15dp"
-                    android:layout_marginBottom="14dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_weight="1"
-                    android:text="Cyrus"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"
-                    android:textColor="#fff">
-
-                </TextView>
-
-                <TextView
-
-                    android:layout_width="0dp"
-                    android:layout_height="15dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_weight="1"
-                    android:text="Jade"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"
-                    android:textColor="#fff" />
-            </TableRow>
 
 
 
