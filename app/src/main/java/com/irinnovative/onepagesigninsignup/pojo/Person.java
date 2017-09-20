@@ -5,16 +5,17 @@ package com.irinnovative.onepagesigninsignup.pojo;
  */
 
 public class Person {
-    private String username, bio, cellphone;
+    private String id, username, bio, cellphone, imageUrl;
 
     public Person() {
     }
 
-    public Person(String username, String bio, String cellphone) {
+    public Person(String id, String username, String bio, String cellphone, String imageUrl) {
+        this.id = id;
         this.username = username;
         this.bio = bio;
         this.cellphone = cellphone;
-
+        this.imageUrl = imageUrl;
     }
 
     public String getUsername() {
@@ -39,5 +40,21 @@ public class Person {
 
     public void setCellphone(String cellphone) {
         this.cellphone = cellphone;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 }
