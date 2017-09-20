@@ -35,7 +35,6 @@ public class SosDetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sos_details);
 
         username = (TextInputEditText) findViewById(R.id.user_Username);
-        bio = (TextInputEditText) findViewById(R.id.user_bio);
         cellphone = (TextInputEditText) findViewById(R.id.user_cellphone);
 
         sosContact1 = (TextInputEditText) findViewById(R.id.sos1);
