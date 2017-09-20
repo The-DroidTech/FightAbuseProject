@@ -46,19 +46,26 @@ public class SosDetailsActivity extends AppCompatActivity {
         btnSignOut = (Button) findViewById(R.id.btnSignout);
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        final DatabaseReference myRef = database.getReference("Profile");
+        final DatabaseReference refProfile = database.getReference("Profile");
+        final DatabaseReference refSos = database.getReference("Sos");
 
         // Read from the database
-        myRef.addValueEventListener(new ValueEventListener() {
+        refProfile.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
                 Person value = dataSnapshot.getValue(Person.class);
+                Sos sos = dataSnapshot.getValue(Sos.class);
 
                 username.setText(value.getUsername());
                 bio.setText(value.getBio());
                 cellphone.setText(value.getCellphone());
+
+                sosMessage.setText(sos.getMessage());
+                sosContact1.setText(sos.getContact1());
+                sosContact2.setText(sos.getContact2());
+                sosContact3.setText(sos.getContact3());
                 //Log.d("TAG", "Value is: " + value);
             }
 
@@ -71,22 +78,20 @@ public class SosDetailsActivity extends AppCompatActivity {
         });
 
 
+
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                temp_key = myRef.push().getKey();
+                temp_key = refProfile.push().getKey();
                 Person person = new Person(temp_key,username.getText().toString(),bio.getText().toString(),cellphone.getText().toString(),"");
-                myRef.setValue(person);
-                /*Sos sos = new Sos(sosContact1.getText().toString(), sosContact2.getText().toString(), sosContact3.getText().toString()
+                refProfile.setValue(person);
+
+                Sos sos = new Sos(sosContact1.getText().toString(), sosContact2.getText().toString(), sosContact3.getText().toString()
                         , sosMessage.getText().toString());
 
+                refSos.setValue(sos);
 
-                myRef.child("sos_id").push().setValue(sos);
-                sosContact1.setText("");
-                sosContact2.setText("");
-                sosContact3.setText("");
-                sosMessage.setText("");
-                */
+                startActivity(new Intent(SosDetailsActivity.this,ProfileActivity.class));
             }
         });
 

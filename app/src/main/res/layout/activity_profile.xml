@@ -20,13 +20,14 @@
         android:layout_marginBottom="10dp">
 
         <TextView
+            android:id="@+id/textView_profile_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_alignParentTop="true"
             android:layout_margin="5dp"
             android:textAlignment="center"
-            android:text="GRACE MATHOLE"
+            tools:text="GRACE MATHOLE"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
             android:textSize="16dp"
             android:layout_marginBottom="10dp"/>
@@ -82,12 +83,13 @@
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse" />
 
             <TextView
+                android:id="@+id/textView_profile_bio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_alignParentTop="true"
                 android:layout_margin="5dp"
-                android:text="My name is Grace Mathole and my journey to hell and back began twelve years ago. I met him when he moved in next door to me. We became friends and later he moved in with me and we became an item. He had me hook, line and sinker, a real charmer. He was a rebel, and life became fast and exciting. Parties, dancing, drinking and then more drinking until he physically abused me daily."
+                tools:text="My name is Grace Mathole and my journey to hell and back began twelve years ago. I met him when he moved in next door to me. We became friends and later he moved in with me and we became an item. He had me hook, line and sinker, a real charmer. He was a rebel, and life became fast and exciting. Parties, dancing, drinking and then more drinking until he physically abused me daily."
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
                 android:textSize="16dp"
                 android:layout_marginBottom="10dp"/>
@@ -128,13 +130,13 @@
                     android:src="@drawable/ic_call_white_24dp"/>
 
                 <TextView
-
+                    android:id="@+id/textView_profile_cellphone"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
                     android:layout_weight="1"
-                    android:text="021 5569556"
+                    tools:text="021 5569556"
                     android:textColor="#fff" />
 
 
@@ -151,12 +153,13 @@
                     android:src="@drawable/ic_mail"/>
 
                 <TextView
+                    android:id="@+id/textView_profile_email"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
                     android:layout_weight="1"
-                    android:text="edith@childtraumacentre.co.za"
+                    tools:text="edith@childtraumacentre.co.za"
                     android:textColor="#fff"
                     >
 

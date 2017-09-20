@@ -132,7 +132,7 @@
                 android:hint="Message Update"
                 android:drawablePadding="10dp"
                 android:drawableLeft="@drawable/ic_mail"
-                android:inputType="phone"
+                android:inputType="textMultiLine"
                 android:textColor="#FFFFFF" />
         </android.support.design.widget.TextInputLayout>
 
