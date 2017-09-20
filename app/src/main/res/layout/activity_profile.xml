@@ -9,28 +9,25 @@
     tools:context="com.irinnovative.onepagesigninsignup.activity.ProfileActivity">
 
 
-
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:layout_marginBottom="10dp"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp">
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/textView_profile_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
             android:layout_margin="5dp"
+            android:layout_marginBottom="10dp"
             android:textAlignment="center"
-            tools:text="GRACE MATHOLE"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
             android:textSize="16dp"
-            android:layout_marginBottom="10dp"/>
+            tools:text="GRACE MATHOLE" />
 
 
         <RelativeLayout
@@ -64,7 +61,6 @@
         </RelativeLayout>
 
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -74,39 +70,37 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
                 android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
                 android:text="BIO"
-                android:textSize="18dp"
-                android:textStyle="bold"
                 android:textAlignment="center"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse" />
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
+                android:textSize="18dp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView_profile_bio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
                 android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
                 android:layout_margin="5dp"
-                tools:text="My name is Grace Mathole and my journey to hell and back began twelve years ago. I met him when he moved in next door to me. We became friends and later he moved in with me and we became an item. He had me hook, line and sinker, a real charmer. He was a rebel, and life became fast and exciting. Parties, dancing, drinking and then more drinking until he physically abused me daily."
+                android:layout_marginBottom="10dp"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
                 android:textSize="16dp"
-                android:layout_marginBottom="10dp"/>
-
-
+                tools:text="My name is Grace Mathole and my journey to hell and back began twelve years ago. I met him when he moved in next door to me. We became friends and later he moved in with me and we became an item. He had me hook, line and sinker, a real charmer. He was a rebel, and life became fast and exciting. Parties, dancing, drinking and then more drinking until he physically abused me daily." />
 
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
                 android:text="Contact Details"
-                android:textSize="18dp"
-                android:textStyle="bold"
                 android:textAlignment="center"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse" />
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
+                android:textSize="18dp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -114,9 +108,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="10dp"
-            android:paddingBottom="10dp"
-            >
-
+            android:paddingBottom="10dp">
 
 
             <TableRow>
@@ -124,44 +116,43 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
                     android:layout_weight="0.1"
-                    android:src="@drawable/ic_call_white_24dp"/>
+                    android:src="@drawable/ic_call_white_24dp" />
 
                 <TextView
                     android:id="@+id/textView_profile_cellphone"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
                     android:layout_weight="1"
-                    tools:text="021 5569556"
-                    android:textColor="#fff" />
-
+                    android:textColor="#fff"
+                    tools:text="021 5569556" />
 
 
             </TableRow>
+
             <TableRow>
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
                     android:layout_weight="0.1"
-                    android:src="@drawable/ic_mail"/>
+                    android:src="@drawable/ic_mail" />
 
                 <TextView
                     android:id="@+id/textView_profile_email"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
                     android:layout_weight="1"
-                    tools:text="edith@childtraumacentre.co.za"
                     android:textColor="#fff"
-                    >
+                    tools:text="edith@childtraumacentre.co.za">
 
                 </TextView>
 
@@ -169,15 +160,9 @@
             </TableRow>
 
 
-
         </TableLayout>
 
     </LinearLayout>
-
-
-
-
-
 
 
 </ScrollView>
