@@ -55,8 +55,7 @@ public class InstitutionActivity extends AppCompatActivity {
                         "Psychology\n" +
                         "Education\n" +
                         "Media ",
-                new int[]{R.drawable.sapsac}, "P.O.Box 1267\n" +
-                "Menlyn Central",
+                new int[]{R.drawable.sapsac}, "577 Koedoeberg Avenue, Faerie Glen, Pretoria, 0081",
                 "http://www. .co.za/", "012 991 0718"));
 
         //Powa
@@ -65,8 +64,7 @@ public class InstitutionActivity extends AppCompatActivity {
                 "POWA is a “feminist, women’s rights organisation that provides both services, and engages in advocacy in order to ensure the realisation of women’s rights and thereby improve women’s quality of life”.\n" +
                         "\n" +
                         "POWA’s uniqueness as an organisation is in providing both services to survivors and engaging in advocacy using a feminist and intersectional analysis. Our work is rooted in the belief that change can only be said to be effective when women’s lives are directly improved through our interventions. We also believe that there is no single route to change, and thus constantly seek new and creative approaches in our programming to achieve the change we seek. ",
-                new int[]{R.drawable.powa}, "PO Box 93416, Yeoville 2143\n" +
-                "Johannesburg\n"
+                new int[]{R.drawable.powa}, " 64 Mitchell Street, Berea"
                 ,
                 "http://www.powa.co.za", "011 591 6803"));
 
@@ -80,10 +78,7 @@ public class InstitutionActivity extends AppCompatActivity {
                         "Women & Men Against Child Abuse are concerned about a recent incident where a victim of domestic violence was subjected to gross misconduct by the SAPS. \n" +
                         "\n" +
                         "The victim in this case was physically assaulted by her husband, a British national and father of her 5-year old child. When she failed to show up for work, her employer went to check on her and found her battered, upon which she took her to a doctor for examination. The doctor instructed them to obtain a J88 form from the police station. At Edenvale police station they were wrongly informed by Captain Nthite that a J88 form differs with each police station, and had to collect one at Boksburg Police Station. ",
-                new int[]{R.drawable.men_against}, " 6 Benton House,\n" +
-                "Bond Street Business Park,\n" +
-                "cnr Bond Str and Kent Ave, Randburg\n" +
-                "Johannesburg\n"
+                new int[]{R.drawable.men_against}, "374 Kent Ave, Ferndale, Randburg, 2194"
                 ,
                 "http://www.wmaca.org", " 011 789 8815"));
 
@@ -191,15 +186,13 @@ public class InstitutionActivity extends AppCompatActivity {
                 "Mental illness, and the stigma surrounding it, is a critical issue in South Africa. The South African Depression and Anxiety Group (SADAG) is at the forefront of patient advocacy, education and destigmatisation of mental illness in the country. Its expertise lies in assisting patients and callers throughout South Africa with mental health queries.\n" +
                         "\n" +
                         "SADAG is a Non-Profit Organisation, a Registered Section 21 Company, with an 18a tax exemption. It has on its board a powerful team of Patients, Psychiatrists, Psychologists, and General Practitioners. SADAG was established twenty years ago to serve as a support network for the thousands of South Africans who live with mental health problems. Currently, it is estimated that 1 in 5 people will, or do, suffer from a mental illness. SADAG manages a 16-line counselling-and-referral call centre, and is the voice of patient advocacy, working in urban, peri-urban, and the most rural communities across South Africa.",
-                new int[]{R.drawable.sadag}, " Catherine St, Johannesburg" +
-                " 2000 \n" +
-                "  South Africa\n"
+                new int[]{R.drawable.sadag}, " -26.20000000; 28.08329900"
                 ,
                 "http://www.sadag.org", " 021 447 9762"));
 
         //Jelly Beans
 
-        listPlaces.add(new Place(" The South African Depression and Anxiety Group ",
+        listPlaces.add(new Place("Jelly Beanz ",
                 "At Jelly Beanz, we believe children should be free. Free to live. To love. To learn. To play and to grow, knowing that they matter. We know that most children and families who’ve experienced trauma and abuse don’t have access to mental health services and the support they need. So we reach out to the most vulnerable and disadvantaged.\n" +
                         "PROJECTS\n" +
                         "AND PROGRAMMES\n" +
