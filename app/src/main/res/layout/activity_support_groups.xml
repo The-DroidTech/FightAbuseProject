@@ -20,7 +20,7 @@
             android:layout_height="200dp"
             android:onClick="profile"
             android:scaleType="centerCrop"
-            android:src="@drawable/icon_1" />
+            android:src="@drawable/untitled" />
 
 
         <TableLayout
@@ -38,17 +38,9 @@
                     android:layout_marginBottom="14dp"
                     android:layout_marginTop="10dp"
                     android:layout_weight="1"
-                    android:onClick="sos"
+                    android:onClick="media"
                     android:src="@drawable/ic_camera" />
 
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="100dp"
-                    android:layout_marginBottom="14dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_weight="1"
-                    android:onClick="sos"
-                    android:src="@drawable/ic_kick" />
 
 
                 <ImageView
@@ -57,7 +49,7 @@
                     android:layout_marginBottom="14dp"
                     android:layout_marginTop="10dp"
                     android:layout_weight="1"
-                    android:onClick="institution"
+                    android:onClick="events"
                     android:src="@drawable/ic_today" />
 
 
@@ -71,25 +63,13 @@
                     android:layout_marginBottom="14dp"
                     android:layout_marginTop="4dp"
                     android:layout_weight="1"
-                    android:text="memories"
+                    android:text="media House"
                     android:textAlignment="center"
                     android:textAllCaps="true"
                     android:textColor="#fff">
 
                 </TextView>
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="15dp"
-                    android:layout_marginBottom="14dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_weight="1"
-                    android:text="Volunteer Here"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"
-                    android:textColor="#fff">
-
-                </TextView>
 
                 <TextView
 
@@ -113,7 +93,7 @@
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_weight="1"
-                    android:onClick="learn"
+                    android:onClick="socialMedia"
                     android:src="@drawable/ic_pages" />
 
                 <ImageView
@@ -134,7 +114,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_weight="1"
                     android:onClick="support"
-                    android:src="@drawable/ic_chill" />
+                    android:src="@drawable/ic_local" />
             </TableRow>
 
             <TableRow>
@@ -170,7 +150,7 @@
                     android:layout_marginBottom="14dp"
                     android:layout_marginTop="4dp"
                     android:layout_weight="1"
-                    android:text="Hang out"
+                    android:text="TESTIMONIES"
                     android:textAlignment="center"
                     android:textAllCaps="true"
                     android:textColor="#fff" />

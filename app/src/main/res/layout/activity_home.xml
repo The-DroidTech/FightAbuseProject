@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:onClick="profile"
             android:scaleType="centerCrop"
-            android:src="@drawable/icon_1" />
+            android:src="@drawable/untitled" />
 
 
         <TableLayout
@@ -60,6 +60,7 @@
             <TableRow>
 
                 <ImageView
+                    android:id="@+id/sosButton"
                     android:layout_width="0dp"
                     android:layout_height="100dp"
                     android:layout_marginTop="1dp"
@@ -153,7 +154,7 @@
                     android:layout_marginBottom="8dp"
                     android:layout_marginTop="4dp"
                     android:layout_weight="1"
-                    android:text="Support Groups"
+                    android:text="Support Structures"
                     android:textAlignment="center"
                     android:textAllCaps="true"
                     android:textColor="#000" />
@@ -188,7 +189,7 @@
                     android:layout_marginBottom="8dp"
                     android:layout_marginTop="4dp"
                     android:layout_weight="1"
-                    android:text="Service Centres"
+                    android:text="Support Centres"
                     android:textAlignment="center"
                     android:textAllCaps="true"
                     android:textColor="#000">
