@@ -58,14 +58,14 @@ public class SosDetailsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 temp_key = refProfile.push().getKey();
-                Person person = new Person(uid,username.getText().toString(),bio.getText().toString(),cellphone.getText().toString(),"");
+                Person person = new Person(uid, username.getText().toString(), bio.getText().toString(), cellphone.getText().toString(), "");
                 refProfile.setValue(person);
 
                 Sos sos = new Sos(sosContact1.getText().toString(), sosContact2.getText().toString(), sosContact3.getText().toString()
                         , sosMessage.getText().toString());
                 refSos.setValue(sos);
 
-                startActivity(new Intent(SosDetailsActivity.this,ProfileActivity.class));
+                startActivity(new Intent(SosDetailsActivity.this, ProfileActivity.class));
             }
         });
 
@@ -93,8 +93,7 @@ public class SosDetailsActivity extends AppCompatActivity {
                 Person value = dataSnapshot.getValue(Person.class);
                 Sos sosValue = dataSnapshot.getValue(Sos.class);
 
-                if(value != null)
-                {
+                if (value != null) {
                     username.setText(value.getUsername());
                     bio.setText(value.getBio());
                     cellphone.setText(value.getCellphone());
@@ -120,8 +119,7 @@ public class SosDetailsActivity extends AppCompatActivity {
                 // whenever data at this location is updated.
 
                 Sos sosValue = dataSnapshot.getValue(Sos.class);
-                if(sosValue!=null)
-                {
+                if (sosValue != null) {
                     sosMessage.setText(sosValue.getMessage());
                     sosContact1.setText(sosValue.getContact1());
                     sosContact2.setText(sosValue.getContact2());
