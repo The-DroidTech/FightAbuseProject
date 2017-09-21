@@ -36,6 +36,10 @@ public class MentorsActivity extends AppCompatActivity {
 
 
 
+
+
+
+
         lvMentors = (ListView) findViewById(R.id.lvMentor);
         MentorAdapter adapter = new MentorAdapter(this,listMentors);
         lvMentors.setAdapter(adapter);
