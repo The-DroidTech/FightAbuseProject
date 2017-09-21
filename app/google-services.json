@@ -1,35 +1,35 @@
 {
   "project_info": {
-    "project_number": "151322820563",
-    "firebase_url": "https://onepagesigninsignup-mast-25121.firebaseio.com",
-    "project_id": "onepagesigninsignup-mast-25121",
-    "storage_bucket": "onepagesigninsignup-mast-25121.appspot.com"
+    "project_number": "458146780594",
+    "firebase_url": "https://fightabusechat.firebaseio.com",
+    "project_id": "fightabusechat",
+    "storage_bucket": "fightabusechat.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:151322820563:android:cc8c4367289659d2",
+        "mobilesdk_app_id": "1:458146780594:android:cc8c4367289659d2",
         "android_client_info": {
           "package_name": "com.irinnovative.onepagesigninsignup"
         }
       },
       "oauth_client": [
         {
-          "client_id": "151322820563-7f0n0uki26nq2la2sn851133pnatl054.apps.googleusercontent.com",
+          "client_id": "458146780594-4hdh9v07n5f52biqujns7rr721a4uofh.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.irinnovative.onepagesigninsignup",
-            "certificate_hash": "c15a96d13833a0ed0dcb1827036f83e845b3bfbf"
+            "certificate_hash": "334914bd2b0a73166076350eab86a9051ec93911"
           }
         },
         {
-          "client_id": "151322820563-7kd4lqmo72smte0on1it8er5i0gad4ir.apps.googleusercontent.com",
+          "client_id": "458146780594-hodec5os4fgkmte03053nvmri92h358h.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDHPef6fLLNrdG2W5tzdTlfORwrGvmiK0o"
+          "current_key": "AIzaSyCf1GEDDKe-7UtwRJYxgFYiawo_RCB4res"
         }
       ],
       "services": {
@@ -40,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "151322820563-7kd4lqmo72smte0on1it8er5i0gad4ir.apps.googleusercontent.com",
+              "client_id": "458146780594-hodec5os4fgkmte03053nvmri92h358h.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

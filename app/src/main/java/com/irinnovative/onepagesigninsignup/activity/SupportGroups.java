@@ -23,7 +23,7 @@ public class SupportGroups extends AppCompatActivity {
         communities.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SupportGroups.this, ChatActivity.class);
+                Intent intent = new Intent(SupportGroups.this, ChatRoomActivity.class);
                 startActivity(intent);
             }
         });
