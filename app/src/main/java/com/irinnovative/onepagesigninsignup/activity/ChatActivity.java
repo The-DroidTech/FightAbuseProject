@@ -19,24 +19,31 @@ import java.util.Map;
 
 public class ChatActivity extends AppCompatActivity
 {
-    private Button sendMessageBtn;
-    private EditText typeMessageTxt;
-    private TextView chat_conversation;
 
-    private String userName, roomName, temp_key, chatUserName, chatMessage;
+    private Button sendBtn;
+    private TextView recieveMsg;
+    private EditText sendMsg;
 
-    private DatabaseReference rootRoomName;
+
+
+    DatabaseReference rootRoomName;
+
+
+    String userName, roomName, chatUserName, chatMessage;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_chat);
 
 
-        sendMessageBtn = (Button)findViewById(R.id.btnSendMessage);
-        typeMessageTxt = (EditText)findViewById(R.id.etTypeMessage);
-        chat_conversation = (TextView)findViewById(R.id.txtViewMessage);
+        sendBtn = (Button)findViewById(R.id.btnSendMessage);
+        recieveMsg =(TextView)findViewById(R.id.txtViewMessage);
+        sendMsg =(EditText)findViewById(R.id.etTypeMessage);
+
+
 
         roomName = getIntent().getExtras().get("Room_name").toString();
         userName = getIntent().getExtras().get("User_name").toString();
@@ -44,21 +51,24 @@ public class ChatActivity extends AppCompatActivity
         setTitle(roomName);
 
 
-        rootRoomName = FirebaseDatabase.getInstance().getReference().getRoot().child(roomName);
+        rootRoomName = FirebaseDatabase.getInstance().getReferenceFromUrl("https://fightabusechat.firebaseio.com/").getRoot().child(roomName);
 
-        sendMessageBtn.setOnClickListener(new View.OnClickListener() {
+
+        sendBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 DatabaseReference childRoot = rootRoomName.push();
 
-                Map<String,Object> map = new HashMap<>();
+                Map<String, Object> map = new HashMap<>();
 
                 map.put("name", userName);
-                map.put("message", typeMessageTxt.getText().toString());
-
+                map.put("message", sendMsg.getText().toString());
 
                 childRoot.updateChildren(map);
+
+
+
 
             }
         });
@@ -67,11 +77,14 @@ public class ChatActivity extends AppCompatActivity
         rootRoomName.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+
                 update_message(dataSnapshot);
+
             }
 
             @Override
             public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
                 update_message(dataSnapshot);
 
             }
@@ -92,19 +105,17 @@ public class ChatActivity extends AppCompatActivity
             }
         });
 
-
     }
 
-    private void update_message(DataSnapshot dataSnapshot) {
+    private void update_message(DataSnapshot dataSnapshot)
+    {
 
         chatUserName = (String) dataSnapshot.child("name").getValue();
-        chatMessage = (String) dataSnapshot.child("message").getValue();
+        chatMessage =  (String) dataSnapshot.child("message").getValue();
 
+        recieveMsg.append(chatUserName + ": " +  chatMessage + "\n\n" );
 
-        chat_conversation.append(chatUserName + ": " + chatMessage + "\n\n");
     }
 
 
 }
-
-
