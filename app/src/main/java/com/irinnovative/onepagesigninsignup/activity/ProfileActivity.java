@@ -1,12 +1,10 @@
 package com.irinnovative.onepagesigninsignup.activity;
 
 import android.content.Intent;
-import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -33,14 +31,13 @@ import com.irinnovative.onepagesigninsignup.pojo.Person;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 
-import static android.R.attr.data;
-import static android.R.attr.value;
-
 public class ProfileActivity extends AppCompatActivity {
     private FirebaseUser user;
     private ImageView imProfilePic;
     private TextView textViewUsername,textViewBio,textViewCellphone,textViewEmail;
     int RESULT_LOAD_IMG = 1;
+
+    private String uid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,8 +50,9 @@ public class ProfileActivity extends AppCompatActivity {
         textViewCellphone = (TextView) findViewById(R.id.textView_profile_cellphone);
         textViewEmail = (TextView) findViewById(R.id.textView_profile_email);
 
+        uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        final DatabaseReference myRef = database.getReference("Profile");
+        final DatabaseReference myRef = database.getReference().child("Profile").child(uid);
 
         user = FirebaseAuth.getInstance().getCurrentUser();
 
@@ -94,11 +92,15 @@ public class ProfileActivity extends AppCompatActivity {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
                 Person value = dataSnapshot.getValue(Person.class);
-                textViewUsername.setText(value.getUsername());
-                textViewBio.setText(value.getBio());
-                textViewCellphone.setText(value.getCellphone());
+                if(value!= null)
+                {
+                    textViewUsername.setText(value.getUsername());
+                    textViewBio.setText(value.getBio());
+                    textViewCellphone.setText(value.getCellphone());
+                }
 
-                Log.d("TAG", "Value is: " + value);
+
+                //Log.d("TAG", "Value is: " + value);
             }
 
             @Override
@@ -107,6 +109,12 @@ public class ProfileActivity extends AppCompatActivity {
                 Log.w("TAG", "Failed to read value.", error.toException());
             }
         });
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
 
     }
 

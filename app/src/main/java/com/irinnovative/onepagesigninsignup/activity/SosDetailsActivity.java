@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -27,6 +26,10 @@ public class SosDetailsActivity extends AppCompatActivity {
     private Button btnUpdate;
     private Button btnSignOut;
     private String temp_key;
+    private String uid;
+
+    private DatabaseReference refProfile;
+    private DatabaseReference refSos;
 
 
     @Override
@@ -46,49 +49,20 @@ public class SosDetailsActivity extends AppCompatActivity {
         btnSignOut = (Button) findViewById(R.id.btnSignout);
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        final DatabaseReference refProfile = database.getReference("Profile");
-        final DatabaseReference refSos = database.getReference("Sos");
+        uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
-        // Read from the database
-        refProfile.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                // This method is called once with the initial value and again
-                // whenever data at this location is updated.
-                Person value = dataSnapshot.getValue(Person.class);
-                Sos sos = dataSnapshot.getValue(Sos.class);
-
-                username.setText(value.getUsername());
-                bio.setText(value.getBio());
-                cellphone.setText(value.getCellphone());
-
-                sosMessage.setText(sos.getMessage());
-                sosContact1.setText(sos.getContact1());
-                sosContact2.setText(sos.getContact2());
-                sosContact3.setText(sos.getContact3());
-                //Log.d("TAG", "Value is: " + value);
-            }
-
-            @Override
-            public void onCancelled(DatabaseError error) {
-                // Failed to read value
-                Toast.makeText(getParent(),"Failed to read",Toast.LENGTH_SHORT).show();
-                Log.w("TAG", "Failed to read value.", error.toException());
-            }
-        });
-
-
+        refProfile = database.getReference().child("Profile").child(uid);
+        refSos = database.getReference().child("Sos").child(uid);
 
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 temp_key = refProfile.push().getKey();
-                Person person = new Person(temp_key,username.getText().toString(),bio.getText().toString(),cellphone.getText().toString(),"");
+                Person person = new Person(uid,username.getText().toString(),bio.getText().toString(),cellphone.getText().toString(),"");
                 refProfile.setValue(person);
 
                 Sos sos = new Sos(sosContact1.getText().toString(), sosContact2.getText().toString(), sosContact3.getText().toString()
                         , sosMessage.getText().toString());
-
                 refSos.setValue(sos);
 
                 startActivity(new Intent(SosDetailsActivity.this,ProfileActivity.class));
@@ -107,5 +81,60 @@ public class SosDetailsActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
 
+        refProfile.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                Person value = dataSnapshot.getValue(Person.class);
+                Sos sosValue = dataSnapshot.getValue(Sos.class);
+
+                if(value != null)
+                {
+                    username.setText(value.getUsername());
+                    bio.setText(value.getBio());
+                    cellphone.setText(value.getCellphone());
+                }
+
+
+                //Log.d("TAG", "Value is: " + value);
+            }
+
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                //Toast.makeText(getParent(),"Failed to read",Toast.LENGTH_SHORT).show();
+                Log.w("TAG", "Failed to read value.", error.toException());
+            }
+        });
+
+        refSos.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+
+                Sos sosValue = dataSnapshot.getValue(Sos.class);
+                if(sosValue!=null)
+                {
+                    sosMessage.setText(sosValue.getMessage());
+                    sosContact1.setText(sosValue.getContact1());
+                    sosContact2.setText(sosValue.getContact2());
+                    sosContact3.setText(sosValue.getContact3());
+                }
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.w("TAG", "Failed to read value.", error.toException());
+            }
+        });
+    }
 }
