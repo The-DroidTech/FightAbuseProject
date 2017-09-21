@@ -31,7 +31,7 @@ public class AbuseActivity extends AppCompatActivity {
         imageView = (ImageView) findViewById(R.id.image_abuse);
 
         Intent intent = getIntent();
-        Abuse abuse= (Abuse) intent.getSerializableExtra("content");
+        Abuse abuse = (Abuse) intent.getSerializableExtra("content");
         toolbar.setTitle(abuse.getTopic());
 
         txtTopic.setText(abuse.getTopic());

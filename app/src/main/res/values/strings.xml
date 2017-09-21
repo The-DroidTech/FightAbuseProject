@@ -1,4 +1,18 @@
 <resources>
     <string name="app_name">Fight Abuse</string>
     <string name="one" />
+
+    <string-array name="accountType">
+        <item>Confirm</item>
+        <item>Cancel</item>
+    </string-array>
+
+
+    <string name="sos_info">
+SOS offers our clients access to appropriate emergency assistance when:
+(a) you don’t know who to call
+(b) you don’t know where you are
+(c) you want to notify your emergency contacts about your emergency and the exact location.
+</string>
+
 </resources>

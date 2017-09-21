@@ -1,74 +1,107 @@
 package com.irinnovative.onepagesigninsignup.activity;
 
 import android.content.Intent;
-import android.support.design.widget.TextInputEditText;
-import android.support.v7.app.AppCompatActivity;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.auth.UserProfileChangeRequest;
 import com.irinnovative.onepagesigninsignup.R;
-import com.irinnovative.onepagesigninsignup.pojo.Sos;
+
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 
 public class ProfileActivity extends AppCompatActivity {
-    private TextInputEditText sosContact1,sosContact2,sosContact3,sosMessage;
-    private Button btnUpdate;
-    private Button btnSignOut;
+    private FirebaseUser user;
+    private ImageView imProfilePic;
+    int RESULT_LOAD_IMG = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+        getSupportActionBar().setTitle("PROFILE");
 
-        sosContact1 = (TextInputEditText) findViewById(R.id.emergency1);
-        sosContact2 = (TextInputEditText) findViewById(R.id.emergency2);
-        sosContact3 = (TextInputEditText) findViewById(R.id.emergency3);
-        sosMessage = (TextInputEditText) findViewById(R.id.sosMessage);
-        btnUpdate = (Button) findViewById(R.id.btnUpdate);
-        btnSignOut =(Button)findViewById(R.id.btnSignout);
+        user = FirebaseAuth.getInstance().getCurrentUser();
 
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        final DatabaseReference myRef = database.getReference("sosmessage");
+        imProfilePic = (ImageView) findViewById(R.id.ImageView_user_pic);
+
+        try {
+            Uri imageUri = user.getPhotoUrl();
+            if(imageUri != null)
+            {
+                InputStream imageStream = getContentResolver().openInputStream(imageUri);
+                Bitmap selectedImage = BitmapFactory.decodeStream(imageStream);
+                imProfilePic.setImageBitmap(selectedImage);
+            }
+            else
+            {
+                imProfilePic.setImageResource(R.drawable.blank);
+            }
+
+        } catch (FileNotFoundException e) {
+
+        }
 
 
-
-        btnUpdate.setOnClickListener(new View.OnClickListener() {
+        imProfilePic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Sos sos = new Sos(sosContact1.getText().toString(),sosContact2.getText().toString(),sosContact3.getText().toString()
-                       , sosMessage.getText().toString());
-
-
-
-                myRef.child("sos_id").push().setValue(sos);
-                sosContact1.setText("");
-                sosContact2.setText("");
-                sosContact3.setText("");
-                sosMessage.setText("");
-
+                Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
+                photoPickerIntent.setType("image/*");
+                startActivityForResult(photoPickerIntent, RESULT_LOAD_IMG);
             }
         });
-
-        btnSignOut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-          FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(getBaseContext(),MainActivity.class));
-
-            }
-        });
-
-
-
 
 
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == RESULT_OK) {
+            try {
+                final Uri imageUri = data.getData();
+                final InputStream imageStream = getContentResolver().openInputStream(imageUri);
+                final Bitmap selectedImage = BitmapFactory.decodeStream(imageStream);
+                imProfilePic.setImageBitmap(selectedImage);
+
+                UserProfileChangeRequest profileChangeRequest = new UserProfileChangeRequest.Builder()
+                        .setPhotoUri(imageUri).build();
+
+                user.updateProfile(profileChangeRequest)
+                        .addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                if (task.isSuccessful()) {
+                                    Log.d("TAG", "User profile updated.");
+                                    Toast.makeText(getBaseContext(), "Successful", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+                Toast.makeText(ProfileActivity.this, "Something went wrong", Toast.LENGTH_LONG).show();
+            }
+
+        } else {
+            Toast.makeText(ProfileActivity.this, "You haven't picked Image", Toast.LENGTH_LONG).show();
+        }
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -85,8 +118,13 @@ public class ProfileActivity extends AppCompatActivity {
         int id = item.getItemId();
         if (id == R.id.log_out) {
             FirebaseAuth.getInstance().signOut();
+            startActivity(new Intent(this, MainActivity.class));
             return true;
+        } else if (id == R.id.updatSos) {
+            startActivity(new Intent(this, SosDetailsActivity.class));
         }
+
+
         return super.onOptionsItemSelected(item);
     }
 

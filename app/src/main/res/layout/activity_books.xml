@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorAccent"
     android:orientation="vertical"
-    tools:context="com.irinnovative.onepagesigninsignup.activity.SupportGroups">
-
+    tools:context="com.irinnovative.onepagesigninsignup.activity.TestomoniesActivity">
 
     <LinearLayout
 
@@ -17,10 +17,25 @@
         <ImageView
             android:id="@+id/icon"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="wrap_content"
             android:onClick="profile"
             android:scaleType="centerCrop"
-            android:src="@drawable/untitled" />
+            android:src="@drawable/untitled"
+            android:layout_marginBottom="5dp"/>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:text="BE EMPOWERED WITH JUST ONE CLICK"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
+            android:textSize="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"/>
+
 
 
         <TableLayout
@@ -34,23 +49,31 @@
 
                 <ImageView
                     android:layout_width="0dp"
-                    android:layout_height="100dp"
+                    android:layout_height="80dp"
                     android:layout_marginBottom="14dp"
                     android:layout_marginTop="10dp"
                     android:layout_weight="1"
-                    android:onClick="media"
-                    android:src="@drawable/ic_camera" />
+                    android:onClick="power"
+                    android:src="@drawable/ic_import_contacts_black_24dp" />
 
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:onClick="comfort"
+                    android:src="@drawable/ic_import_contacts_black_24dp" />
 
 
                 <ImageView
                     android:layout_width="0dp"
-                    android:layout_height="100dp"
+                    android:layout_height="80dp"
                     android:layout_marginBottom="14dp"
                     android:layout_marginTop="10dp"
                     android:layout_weight="1"
-                    android:onClick="events"
-                    android:src="@drawable/ic_today" />
+                    android:onClick="breaking"
+                    android:src="@drawable/ic_import_contacts_black_24dp" />
 
 
             </TableRow>
@@ -63,13 +86,25 @@
                     android:layout_marginBottom="14dp"
                     android:layout_marginTop="4dp"
                     android:layout_weight="1"
-                    android:text="media House"
+                    android:text="Power of "
                     android:textAlignment="center"
                     android:textAllCaps="true"
                     android:textColor="#fff">
 
                 </TextView>
 
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="15dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:text="Comfort Zone"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#fff">
+
+                </TextView>
 
                 <TextView
 
@@ -78,7 +113,7 @@
                     android:layout_marginBottom="8dp"
                     android:layout_marginTop="4dp"
                     android:layout_weight="1"
-                    android:text="Events"
+                    android:text="Breaking the"
                     android:textAlignment="center"
                     android:textAllCaps="true"
                     android:textColor="#fff" />
@@ -89,32 +124,31 @@
 
                 <ImageView
                     android:layout_width="0dp"
-                    android:layout_height="100dp"
+                    android:layout_height="80dp"
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_weight="1"
-                    android:onClick="socialMedia"
-                    android:src="@drawable/ic_pages" />
+                    android:onClick="happy"
+                    android:src="@drawable/ic_import_contacts_black_24dp" />
 
                 <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="100dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_weight="1"
-                    android:onClick="learn"
                     android:id="@+id/communities"
-                    android:src="@drawable/ic_people" />
-
-
-                <ImageView
                     android:layout_width="0dp"
-                    android:layout_height="100dp"
+                    android:layout_height="80dp"
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_weight="1"
-                    android:onClick="support"
-                    android:src="@drawable/ic_local" />
+                    android:onClick="secret"
+                    android:src="@drawable/ic_import_contacts_black_24dp" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:onClick="rich"
+                    android:src="@drawable/ic_import_contacts_black_24dp" />
             </TableRow>
 
             <TableRow>
@@ -125,7 +159,7 @@
                     android:layout_marginBottom="14dp"
                     android:layout_marginTop="4dp"
                     android:layout_weight="1"
-                    android:text="social media"
+                    android:text="be happy"
                     android:textAlignment="center"
                     android:textAllCaps="true"
                     android:textColor="#fff" />
@@ -136,7 +170,7 @@
                     android:layout_marginBottom="14dp"
                     android:layout_marginTop="4dp"
                     android:layout_weight="1"
-                    android:text="Communities"
+                    android:text="The secret"
                     android:textAlignment="center"
                     android:textAllCaps="true"
                     android:textColor="#fff">
@@ -150,15 +184,19 @@
                     android:layout_marginBottom="14dp"
                     android:layout_marginTop="4dp"
                     android:layout_weight="1"
-                    android:text="TESTIMONIES"
+                    android:text="Think and Grow"
                     android:textAlignment="center"
                     android:textAllCaps="true"
                     android:textColor="#fff" />
             </TableRow>
 
 
+
+
+
+
         </TableLayout>
 
     </LinearLayout>
 
-</LinearLayout>
+</ScrollView>
