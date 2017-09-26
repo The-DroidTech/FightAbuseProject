@@ -39,9 +39,9 @@ public class ProfileActivity extends AppCompatActivity {
     private StorageReference mStorageRef;
 
     private ImageView imProfilePic;
-    private TextView textViewUsername,textViewBio,textViewCellphone,textViewEmail;
+    private TextView textViewUsername, textViewBio, textViewCellphone, textViewEmail;
     int RESULT_LOAD_IMG = 1;
-    private Uri imageUri,downloadUri;
+    private Uri imageUri, downloadUri;
     ProgressDialog pd;
 
     private String uid;
@@ -104,8 +104,7 @@ public class ProfileActivity extends AppCompatActivity {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
                 Person value = dataSnapshot.getValue(Person.class);
-                if(value!= null)
-                {
+                if (value != null) {
                     textViewUsername.setText(value.getUsername());
                     textViewBio.setText(value.getBio());
                     textViewCellphone.setText(value.getCellphone());
@@ -168,8 +167,6 @@ public class ProfileActivity extends AppCompatActivity {
             Toast.makeText(ProfileActivity.this, "You haven't picked Image", Toast.LENGTH_LONG).show();
         }
     }
-
-
 
 
     @Override
