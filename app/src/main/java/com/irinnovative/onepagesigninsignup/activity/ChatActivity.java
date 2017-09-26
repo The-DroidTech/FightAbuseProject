@@ -68,7 +68,7 @@ public class ChatActivity extends AppCompatActivity
                 childRoot.updateChildren(map);
 
 
-
+                sendMsg.setText(null);
 
             }
         });

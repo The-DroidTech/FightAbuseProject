@@ -79,6 +79,7 @@ public class ChatRoomActivity extends AppCompatActivity
                 Map<String,Object> map = new HashMap<String, Object>();
                 map.put(room_name.getText().toString(),"");
                 databaseReference.updateChildren(map);
+                room_name.setText(null);
 
             }
         });
