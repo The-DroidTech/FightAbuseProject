@@ -1,5 +1,6 @@
 package com.irinnovative.onepagesigninsignup.activity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -15,16 +16,18 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 import com.irinnovative.onepagesigninsignup.R;
 import com.irinnovative.onepagesigninsignup.pojo.Person;
 
@@ -33,9 +36,13 @@ import java.io.InputStream;
 
 public class ProfileActivity extends AppCompatActivity {
     private FirebaseUser user;
+    private StorageReference mStorageRef;
+
     private ImageView imProfilePic;
     private TextView textViewUsername,textViewBio,textViewCellphone,textViewEmail;
     int RESULT_LOAD_IMG = 1;
+    private Uri imageUri,downloadUri;
+    ProgressDialog pd;
 
     private String uid;
 
@@ -50,11 +57,15 @@ public class ProfileActivity extends AppCompatActivity {
         textViewCellphone = (TextView) findViewById(R.id.textView_profile_cellphone);
         textViewEmail = (TextView) findViewById(R.id.textView_profile_email);
 
+        pd = new ProgressDialog(this);
+        pd.setMessage("Uploading....");
+
         uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
         FirebaseDatabase database = FirebaseDatabase.getInstance();
+        mStorageRef = FirebaseStorage.getInstance().getReference().child(uid);
         final DatabaseReference myRef = database.getReference().child("Profile").child(uid);
-
         user = FirebaseAuth.getInstance().getCurrentUser();
+
 
         imProfilePic = (ImageView) findViewById(R.id.ImageView_user_pic);
 
@@ -81,6 +92,7 @@ public class ProfileActivity extends AppCompatActivity {
                 Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
                 photoPickerIntent.setType("image/*");
                 startActivityForResult(photoPickerIntent, RESULT_LOAD_IMG);
+
             }
         });
 
@@ -123,24 +135,30 @@ public class ProfileActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_OK) {
             try {
-                final Uri imageUri = data.getData();
+                imageUri = data.getData();
+                pd.show();
+
+                //uploading the image
+                UploadTask uploadTask = mStorageRef.putFile(imageUri);
+
+                uploadTask.addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                    @Override
+                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                        pd.dismiss();
+                        Toast.makeText(ProfileActivity.this, "Upload successful", Toast.LENGTH_SHORT).show();
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        pd.dismiss();
+                        Toast.makeText(ProfileActivity.this, "Upload Failed -> " + e, Toast.LENGTH_SHORT).show();
+                    }
+                });
                 final InputStream imageStream = getContentResolver().openInputStream(imageUri);
                 final Bitmap selectedImage = BitmapFactory.decodeStream(imageStream);
                 imProfilePic.setImageBitmap(selectedImage);
 
-                UserProfileChangeRequest profileChangeRequest = new UserProfileChangeRequest.Builder()
-                        .setPhotoUri(imageUri).build();
 
-                user.updateProfile(profileChangeRequest)
-                        .addOnCompleteListener(new OnCompleteListener<Void>() {
-                            @Override
-                            public void onComplete(@NonNull Task<Void> task) {
-                                if (task.isSuccessful()) {
-                                    Log.d("TAG", "User profile updated.");
-                                    Toast.makeText(getBaseContext(), "Successful", Toast.LENGTH_SHORT).show();
-                                }
-                            }
-                        });
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
                 Toast.makeText(ProfileActivity.this, "Something went wrong", Toast.LENGTH_LONG).show();
@@ -150,6 +168,8 @@ public class ProfileActivity extends AppCompatActivity {
             Toast.makeText(ProfileActivity.this, "You haven't picked Image", Toast.LENGTH_LONG).show();
         }
     }
+
+
 
 
     @Override
