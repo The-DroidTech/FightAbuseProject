@@ -96,7 +96,7 @@ public class ChatRoomActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
 
-                Map<String,Object> map = new HashMap<String, Object>();
+                Map<String,Object> map = new HashMap<>();
                 map.put(room_name.getText().toString(),"");
                 databaseReference.updateChildren(map);
                 room_name.setText(null);
@@ -117,7 +117,7 @@ public class ChatRoomActivity extends AppCompatActivity
                 {
 
                     //get rooms
-                    set.add( (String) ((DataSnapshot)iterator.next()).getKey());
+                    set.add( ((DataSnapshot)iterator.next()).getKey());
 
                 }
 
@@ -140,7 +140,8 @@ public class ChatRoomActivity extends AppCompatActivity
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 Intent intent = new Intent(ChatRoomActivity.this,ChatActivity.class);
-                intent.putExtra("Room_name", ((TextView)view).getText().toString());
+                roomName = ((TextView)view).getText().toString();
+                intent.putExtra("Room_name",roomName );
                 intent.putExtra("User_name", userName);
                 startActivity(intent);
             }
@@ -153,7 +154,7 @@ public class ChatRoomActivity extends AppCompatActivity
     private void request_name(){
 
         AlertDialog.Builder builder = new  AlertDialog.Builder(this);
-        builder.setTitle("Enter your user name!");
+        builder.setTitle("Enter your username!");
         final EditText editText = new EditText(this);
 
         builder.setView(editText);
@@ -166,7 +167,8 @@ public class ChatRoomActivity extends AppCompatActivity
 
                 if(!TextUtils.isEmpty(userName))
                 {
-
+                    //ok
+                    editText.setError("Enter Username");
                 }
                 else
                 {

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context="com.irinnovative.onepagesigninsignup.SocialMediaActivity">
+
+
+    <ImageView
+        android:id="@+id/logoSocialMedia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/untitled" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/follow"
+        android:textAlignment="center"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
+        android:textColor="@color/colorAccent"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/facebook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+
+        android:background="#3B5997"
+        android:drawableStart="@drawable/facebook"
+        android:drawablePadding="10dp"
+        android:onClick="facebook"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/facebook"
+        android:textAlignment="textStart" />
+
+
+    <Button
+        android:id="@+id/twitter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#33CCFF"
+        android:drawableStart="@drawable/twitter"
+        android:drawablePadding="10dp"
+        android:onClick="twitter"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/twitter"
+        android:textAlignment="textStart" />
+
+    <Button
+        android:id="@+id/instagram"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#F4823E"
+        android:drawableStart="@drawable/instagram"
+        android:drawablePadding="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/instagram"
+        android:textAlignment="textStart" />
+
+    <Button
+        android:id="@+id/web"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/colorBlackTrans"
+        android:drawableStart="@drawable/ic_website"
+        android:drawablePadding="10dp"
+        android:onClick="web"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/web"
+        android:textAlignment="textStart" />
+
+
+</LinearLayout>
