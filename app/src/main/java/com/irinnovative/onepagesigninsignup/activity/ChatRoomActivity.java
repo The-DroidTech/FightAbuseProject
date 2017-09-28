@@ -21,6 +21,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.irinnovative.onepagesigninsignup.R;
 import com.irinnovative.onepagesigninsignup.pojo.Chat;
+import com.spark.submitbutton.SubmitButton;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -33,6 +34,7 @@ public class ChatRoomActivity extends AppCompatActivity
 {
     private Button create_room;
     private EditText room_name;
+    private SubmitButton create_room1;
 
     private ListView roomList;
     private ArrayAdapter<String> roomAdapter;
@@ -53,7 +55,9 @@ public class ChatRoomActivity extends AppCompatActivity
 
 
 
-        create_room = (Button)findViewById(R.id.btnAddRoom);
+        //create_room = (Button)findViewById(R.id.btnAddRoom);
+
+        create_room1 = (SubmitButton)findViewById(R.id.btnAddRoom1);
         room_name = (EditText)findViewById(R.id.etRoomName);
         roomList = (ListView)findViewById(R.id.lvListRooms);
 
@@ -71,7 +75,7 @@ public class ChatRoomActivity extends AppCompatActivity
 
         request_name();
 
-
+        /*
         create_room.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -79,6 +83,21 @@ public class ChatRoomActivity extends AppCompatActivity
                 Map<String,Object> map = new HashMap<String, Object>();
                 map.put(room_name.getText().toString(),"");
                 databaseReference.updateChildren(map);
+                room_name.setText(null);
+
+            }
+        });
+
+        */
+
+        create_room1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Map<String,Object> map = new HashMap<String, Object>();
+                map.put(room_name.getText().toString(),"");
+                databaseReference.updateChildren(map);
+                room_name.setText(null);
 
             }
         });

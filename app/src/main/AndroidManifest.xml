@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.irinnovative.onepagesigninsignup">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -23,13 +26,26 @@
         <activity android:name=".activity.ContactsActivity" />
         <activity android:name=".MentorsActivity" />
         <activity android:name=".IconTextTabsActivity" />
-        <activity android:name=".activity.ProfileActivity" />
+        <activity
+            android:name=".activity.ProfileActivity"
+            android:theme="@style/AppTheme" />
         <activity android:name=".activity.PlacesActivity" />
         <activity android:name=".activity.AbuseActivity" />
         <activity android:name=".activity.SosActivity" />
         <activity android:name=".activity.SupportGroups" />
         <activity android:name=".MentorProfileActivity" />
+        <activity android:name=".activity.ChatRoomActivity" />
         <activity android:name=".activity.ChatActivity"></activity>
+        <activity android:name=".activity.SosDetailsActivity" />
+        <activity
+            android:name=".activity.TestomoniesActivity"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".activity.ChatActivity" />
+        <activity android:name=".EventsActivity" />
+        <activity android:name=".activity.MediaActivity" />
+        <activity android:name=".activity.MoviesActivity" />
+        <activity android:name=".activity.VideoActivity" />
+        <activity android:name=".activity.BooksActivity" />
     </application>
 
 </manifest>

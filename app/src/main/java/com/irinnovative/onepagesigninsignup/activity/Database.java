@@ -6,15 +6,15 @@ package com.irinnovative.onepagesigninsignup.activity;
 
 import android.database.sqlite.SQLiteOpenHelper;
 
-        import java.util.ArrayList;
-        import java.util.List;
+import java.util.ArrayList;
+import java.util.List;
 
-        import android.content.ContentValues;
-        import android.content.Context;
-        import android.database.Cursor;
-        import android.database.sqlite.SQLiteDatabase;
-        import android.database.sqlite.SQLiteDatabase.CursorFactory;
-        import android.database.sqlite.SQLiteOpenHelper;
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteDatabase.CursorFactory;
+import android.database.sqlite.SQLiteOpenHelper;
 
 import com.irinnovative.onepagesigninsignup.pojo.Sos;
 
@@ -22,41 +22,43 @@ public class Database extends SQLiteOpenHelper {
 
 
     public Database(Context context) {
-        super(context, DATABASE_NAME,null, DATABASE_VERSION);
+        super(context, DATABASE_NAME, null, DATABASE_VERSION);
         // TODO Auto-generated constructor stub
     }
 
-    private static final String TABLE_SOS ="contact";
+    private static final String TABLE_SOS = "contact";
     private static final String COLUMN_ID = "column_id";
     private static final String COLUMN_SOS_CONTACT_ONE = "contact_one";
-    private static final String COLUMN_SOS_CONTACT_TWO ="contact_two";
-    private static final String COLUMN_SOS_CONTACT_THREE ="contact_three";
+    private static final String COLUMN_SOS_CONTACT_TWO = "contact_two";
+    private static final String COLUMN_SOS_CONTACT_THREE = "contact_three";
 
-    private static final String COLUMN_SOS_CONTACT_MESSAGE ="contact_message";
+    private static final String COLUMN_SOS_CONTACT_MESSAGE = "contact_message";
 
     private static final String DATABASE_NAME = "contact.db";
     private static final int DATABASE_VERSION = 1;
 
-    private static final String DATABASE_CREATE_CONTACT ="create table "
+    private static final String DATABASE_CREATE_CONTACT = "create table "
             + TABLE_SOS
-            +"  ("+ COLUMN_ID +" integer primary key autoincrement, "
+            + "  (" + COLUMN_ID + " integer primary key autoincrement, "
             + COLUMN_SOS_CONTACT_ONE + " text not null, "
             + COLUMN_SOS_CONTACT_TWO + " text not null, "
             + COLUMN_SOS_CONTACT_THREE + " text not null, "
             + COLUMN_SOS_CONTACT_MESSAGE + " text not null);";
+
     @Override
     public void onCreate(SQLiteDatabase db) {
         // TODO Auto-generated method stub
         db.execSQL(DATABASE_CREATE_CONTACT);
     }
+
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // TODO Auto-generated method stub
-        db.execSQL("drop table if exists "+ TABLE_SOS);
+        db.execSQL("drop table if exists " + TABLE_SOS);
         onCreate(db);
     }
-    public long addPerson(Sos sos)
-    {
+
+    public long addPerson(Sos sos) {
         long id = 0;
         SQLiteDatabase db = this.getWritableDatabase();
 
@@ -66,7 +68,7 @@ public class Database extends SQLiteOpenHelper {
         cv.put(COLUMN_SOS_CONTACT_THREE, sos.getContact3());
         cv.put(COLUMN_SOS_CONTACT_MESSAGE, sos.getMessage());
 
-        id= db.insert(TABLE_SOS,null,cv);
+        id = db.insert(TABLE_SOS, null, cv);
 
         return id;
     }
@@ -126,14 +128,13 @@ public class Database extends SQLiteOpenHelper {
         return people;
     }
 */
-    public void deletePerson(long id)
-    {
+    public void deletePerson(long id) {
         SQLiteDatabase db = this.getWritableDatabase();
         String ids[] = {String.valueOf(id)};
         db.delete(TABLE_SOS, COLUMN_ID + " = ?", ids);
     }
-    public void updatePerson(Sos sos)
-    {
+
+    public void updatePerson(Sos sos) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
         cv.put(COLUMN_SOS_CONTACT_ONE, sos.getContact1());
