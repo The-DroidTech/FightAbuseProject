@@ -16,6 +16,7 @@ public class FireApp extends Application {
         super.onCreate();
 
         if (!FirebaseApp.getApps(this).isEmpty())
+
         {
             FirebaseDatabase.getInstance().setPersistenceEnabled(true);
 
