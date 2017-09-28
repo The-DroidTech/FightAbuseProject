@@ -30,8 +30,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
-public class ChatRoomActivity extends AppCompatActivity
-{
+public class ChatRoomActivity extends AppCompatActivity {
     private Button create_room;
     private EditText room_name;
     private SubmitButton create_room1;
@@ -54,19 +53,17 @@ public class ChatRoomActivity extends AppCompatActivity
         setContentView(R.layout.activity_chat_room);
 
 
-
         //create_room = (Button)findViewById(R.id.btnAddRoom);
 
-        create_room1 = (SubmitButton)findViewById(R.id.btnAddRoom1);
-        room_name = (EditText)findViewById(R.id.etRoomName);
-        roomList = (ListView)findViewById(R.id.lvListRooms);
+        create_room1 = (SubmitButton) findViewById(R.id.btnAddRoom1);
+        room_name = (EditText) findViewById(R.id.etRoomName);
+        roomList = (ListView) findViewById(R.id.lvListRooms);
 
         list_of_rooms = new ArrayList<>();
 
-        roomAdapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,list_of_rooms);
+        roomAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, list_of_rooms);
 
         roomList.setAdapter(roomAdapter);
-
 
 
         //databaseReference = FirebaseDatabase.getInstance().getReference().getRoot();
@@ -96,8 +93,8 @@ public class ChatRoomActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
 
-                Map<String,Object> map = new HashMap<>();
-                map.put(room_name.getText().toString(),"");
+                Map<String, Object> map = new HashMap<>();
+                map.put(room_name.getText().toString(), "");
                 databaseReference.updateChildren(map);
                 room_name.setText(null);
 
@@ -111,13 +108,12 @@ public class ChatRoomActivity extends AppCompatActivity
                 Iterator iterator = dataSnapshot.getChildren().iterator();
 
 
-                Set<String> set =  new HashSet<>();
+                Set<String> set = new HashSet<>();
 
-                while (iterator.hasNext())
-                {
+                while (iterator.hasNext()) {
 
                     //get rooms
-                    set.add( ((DataSnapshot)iterator.next()).getKey());
+                    set.add(((DataSnapshot) iterator.next()).getKey());
 
                 }
 
@@ -139,9 +135,9 @@ public class ChatRoomActivity extends AppCompatActivity
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                Intent intent = new Intent(ChatRoomActivity.this,ChatActivity.class);
-                roomName = ((TextView)view).getText().toString();
-                intent.putExtra("Room_name",roomName );
+                Intent intent = new Intent(ChatRoomActivity.this, ChatActivity.class);
+                roomName = ((TextView) view).getText().toString();
+                intent.putExtra("Room_name", roomName);
                 intent.putExtra("User_name", userName);
                 startActivity(intent);
             }
@@ -151,9 +147,9 @@ public class ChatRoomActivity extends AppCompatActivity
     }
 
 
-    private void request_name(){
+    private void request_name() {
 
-        AlertDialog.Builder builder = new  AlertDialog.Builder(this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Enter your username!");
         final EditText editText = new EditText(this);
 
@@ -165,13 +161,10 @@ public class ChatRoomActivity extends AppCompatActivity
 
                 userName = editText.getText().toString();
 
-                if(!TextUtils.isEmpty(userName))
-                {
+                if (!TextUtils.isEmpty(userName)) {
                     //ok
                     editText.setError("Enter Username");
-                }
-                else
-                {
+                } else {
 
                     request_name();
                 }
@@ -186,7 +179,7 @@ public class ChatRoomActivity extends AppCompatActivity
             }
         });
 
-            builder.show();
+        builder.show();
 
 
     }
