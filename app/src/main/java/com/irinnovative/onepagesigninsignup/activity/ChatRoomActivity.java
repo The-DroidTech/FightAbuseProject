@@ -63,7 +63,7 @@ public class ChatRoomActivity extends AppCompatActivity
 
         list_of_rooms = new ArrayList<>();
 
-        roomAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,list_of_rooms);
+        roomAdapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,list_of_rooms);
 
         roomList.setAdapter(roomAdapter);
 
@@ -80,6 +80,7 @@ public class ChatRoomActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
 
+
                 Map<String,Object> map = new HashMap<String, Object>();
                 map.put(room_name.getText().toString(),"");
                 databaseReference.updateChildren(map);
@@ -89,6 +90,7 @@ public class ChatRoomActivity extends AppCompatActivity
         });
 
         */
+
 
         create_room1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -109,7 +111,7 @@ public class ChatRoomActivity extends AppCompatActivity
                 Iterator iterator = dataSnapshot.getChildren().iterator();
 
 
-                Set<String> set =  new HashSet<String>();
+                Set<String> set =  new HashSet<>();
 
                 while (iterator.hasNext())
                 {
