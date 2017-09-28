@@ -50,6 +50,7 @@ public class ChatActivity extends AppCompatActivity
         userName = getIntent().getExtras().get("User_name").toString();
 
 
+
         setTitle(roomName);
 
 
