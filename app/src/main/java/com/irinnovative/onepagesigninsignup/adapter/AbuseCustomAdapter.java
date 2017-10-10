@@ -1,0 +1,54 @@
+package com.irinnovative.onepagesigninsignup.adapter;
+
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+import com.irinnovative.onepagesigninsignup.R;
+import com.irinnovative.onepagesigninsignup.pojo.Abuse;
+
+import java.util.ArrayList;
+
+import de.hdodenhof.circleimageview.CircleImageView;
+
+/**
+ * Created by codetribe on 9/22/2017.
+ */
+
+public class AbuseCustomAdapter extends RecyclerView.Adapter<AbuseCustomAdapter.ViewHolder>{
+    private ArrayList<Abuse> abuse;
+
+    public AbuseCustomAdapter(ArrayList<Abuse> abuse) {
+        this.abuse = abuse;
+    }
+    @Override
+    public AbuseCustomAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_row, parent, false);
+        return new ViewHolder(view);    }
+
+    @Override
+    public void onBindViewHolder(AbuseCustomAdapter.ViewHolder holder, int position) {
+        holder.topicTextView.setText( abuse.get(position).getTopic());
+
+        holder.img_profile.setImageResource(abuse.get(position).getImg());
+    }
+
+    @Override
+    public int getItemCount() {
+        return abuse.size();
+    }
+    public class ViewHolder extends RecyclerView.ViewHolder{
+        private TextView topicTextView,tv_age;
+        private CircleImageView img_profile;
+        public ViewHolder(View view) {
+            super(view);
+
+            topicTextView = (TextView)view.findViewById(R.id.txt_name);
+
+            img_profile = (CircleImageView) view.findViewById(R.id.image_view);
+        }
+    }
+}
+
