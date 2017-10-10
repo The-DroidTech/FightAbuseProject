@@ -1,93 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#FFFFFF"
+    android:orientation="vertical"
     tools:context="com.irinnovative.onepagesigninsignup.SocialMediaActivity">
 
-    <LinearLayout
+
+    <ImageView
+        android:id="@+id/logoSocialMedia"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_marginBottom="10dp">
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/untitled" />
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/untitled"
-            android:scaleType="centerCrop"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/follow"
+        android:textAlignment="center"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
+        android:textColor="@color/colorAccent"
+        android:textSize="16sp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentTop="true"
-            android:layout_margin="5dp"
-            android:textAlignment="center"
-            android:text="FOLLOW US ON HERE !"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
-            android:textSize="16dp"
-            android:textColor="@color/colorAccent"
-            android:layout_marginBottom="10dp"/>
+    <Button
+        android:id="@+id/facebook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
 
-        <Button
-            android:id="@+id/facebook"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-
-            android:background="#3B5997"
-            android:drawableLeft="@drawable/facebook"
-            android:drawablePadding="10dp"
-            android:onClick="facebook"
-            android:paddingLeft="10dp"
-            android:text="FACEBOOK"
-            android:textAlignment="textStart" />
+        android:background="#3B5997"
+        android:drawableStart="@drawable/facebook"
+        android:drawablePadding="10dp"
+        android:onClick="facebook"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/facebook"
+        android:textAlignment="textStart" />
 
 
-        <Button
-            android:id="@+id/twitter"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="#33CCFF"
-            android:drawableLeft="@drawable/twitter"
-            android:drawablePadding="10dp"
-            android:onClick="twitter"
-            android:paddingLeft="10dp"
-            android:text="Twitter"
-            android:textAlignment="textStart" />
+    <Button
+        android:id="@+id/twitter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#33CCFF"
+        android:drawableStart="@drawable/twitter"
+        android:drawablePadding="10dp"
+        android:onClick="twitter"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/twitter"
+        android:textAlignment="textStart" />
 
-        <Button
-            android:id="@+id/instagram"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="#F4823E"
-            android:drawableLeft="@drawable/instagram"
-            android:drawablePadding="10dp"
-            android:onClick="instagram"
-            android:paddingLeft="10dp"
-            android:text="Instagram"
-            android:textAlignment="textStart" />
+    <Button
+        android:id="@+id/instagram"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#F4823E"
+        android:drawableStart="@drawable/instagram"
+        android:drawablePadding="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/instagram"
+        android:textAlignment="textStart" />
 
-        <Button
-            android:id="@+id/web"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@color/colorBlackTrans"
-            android:drawableLeft="@drawable/ic_website"
-            android:drawablePadding="10dp"
-            android:onClick="web"
-            android:paddingLeft="10dp"
-            android:text="website"
-            android:textAlignment="textStart" />
+    <Button
+        android:id="@+id/web"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/colorBlackTrans"
+        android:drawableStart="@drawable/ic_website"
+        android:drawablePadding="10dp"
+        android:onClick="web"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/web"
+        android:textAlignment="textStart" />
 
 
-    </LinearLayout>
 </LinearLayout>

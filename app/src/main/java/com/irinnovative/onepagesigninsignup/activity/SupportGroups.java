@@ -8,7 +8,6 @@ import android.widget.ImageView;
 
 import com.irinnovative.onepagesigninsignup.EventsActivity;
 import com.irinnovative.onepagesigninsignup.R;
-import com.irinnovative.onepagesigninsignup.SocialMediaActivity;
 
 public class SupportGroups extends AppCompatActivity {
 
@@ -23,7 +22,7 @@ public class SupportGroups extends AppCompatActivity {
         communities.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SupportGroups.this, ChatRoomActivity.class);
+                Intent intent = new Intent(SupportGroups.this, ChatActivity.class);
                 startActivity(intent);
             }
         });
@@ -47,12 +46,6 @@ public class SupportGroups extends AppCompatActivity {
     public void media (View v){
 
         startActivity(new Intent(SupportGroups.this,MediaActivity.class));
-
-    }
-
-    public void socialMedia (View v){
-
-        startActivity(new Intent(SupportGroups.this,SocialMediaActivity.class));
 
     }
 }

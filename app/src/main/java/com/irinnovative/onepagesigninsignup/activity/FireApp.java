@@ -5,9 +5,6 @@ import android.app.Application;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.FirebaseDatabase;
 
-/**
- * Created by codetribe on 20/09/2017.
- */
 
 public class FireApp extends Application {
 
@@ -16,8 +13,10 @@ public class FireApp extends Application {
         super.onCreate();
 
         if (!FirebaseApp.getApps(this).isEmpty())
+
         {
-            FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+             FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+
 
         }
 

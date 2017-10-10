@@ -1,8 +1,6 @@
 package com.irinnovative.onepagesigninsignup.pojo;
 
-/**
- * Created by codetribe on 15/09/2017.
- */
+
 
 public class Chat
 {

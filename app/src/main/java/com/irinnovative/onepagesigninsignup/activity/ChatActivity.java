@@ -45,8 +45,11 @@ public class ChatActivity extends AppCompatActivity
 
 
 
-        roomName = getIntent().getExtras().get("Room_name").toString();
-        userName = getIntent().getExtras().get("User_name").toString();
+
+        roomName = (String) getIntent().getExtras().get("Room_name");
+        userName = (String) getIntent().getExtras().get("User_name");
+
+
 
         setTitle(roomName);
 
@@ -68,7 +71,7 @@ public class ChatActivity extends AppCompatActivity
                 childRoot.updateChildren(map);
 
 
-
+                sendMsg.setText(null);
 
             }
         });
