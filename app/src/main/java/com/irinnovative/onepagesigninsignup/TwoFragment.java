@@ -1,25 +1,22 @@
 package com.irinnovative.onepagesigninsignup;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ListView;
 
-import com.irinnovative.onepagesigninsignup.activity.AbuseActivity;
-import com.irinnovative.onepagesigninsignup.adapter.AbuseAdapter;
+import com.irinnovative.onepagesigninsignup.adapter.AbuseCustomAdapter;
 import com.irinnovative.onepagesigninsignup.pojo.Abuse;
 
 import java.util.ArrayList;
 
 
 public class TwoFragment extends Fragment {
-    private ListView lvAbuse;
-    ArrayList<Abuse> listAbuse = new ArrayList<>();
+     RecyclerView lvAbuse;
+     ArrayList<Abuse> listAbuse = new ArrayList<>();
 
     public TwoFragment() {
         // Required empty public constructor
@@ -41,11 +38,11 @@ public class TwoFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        lvAbuse = (ListView) getActivity().findViewById(R.id.lvAbuse);
-        AbuseAdapter adapter = new AbuseAdapter(getActivity(),listAbuse);
+        lvAbuse = (RecyclerView) getActivity().findViewById(R.id.card_recycler_view);
+        AbuseCustomAdapter adapter = new AbuseCustomAdapter(listAbuse);
         lvAbuse.setAdapter(adapter);
 
-        lvAbuse.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        /*lvAbuse.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
@@ -54,6 +51,7 @@ public class TwoFragment extends Fragment {
                 startActivity(intent);
             }
         });
+        */
 
     }
 
