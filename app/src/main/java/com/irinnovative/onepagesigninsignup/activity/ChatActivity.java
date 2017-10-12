@@ -46,6 +46,7 @@ public class ChatActivity extends AppCompatActivity
 
 
 
+
         roomName = (String) getIntent().getExtras().get("Room_name");
         userName = (String) getIntent().getExtras().get("User_name");
 
