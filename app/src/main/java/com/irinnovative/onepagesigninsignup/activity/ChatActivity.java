@@ -46,6 +46,7 @@ public class ChatActivity extends AppCompatActivity
 
 
 
+
         roomName = (String) getIntent().getExtras().get("Room_name");
         userName = (String) getIntent().getExtras().get("User_name");
 
@@ -54,7 +55,7 @@ public class ChatActivity extends AppCompatActivity
         setTitle(roomName);
 
 
-        rootRoomName = FirebaseDatabase.getInstance().getReference().getRoot().child(roomName);
+        rootRoomName = FirebaseDatabase.getInstance().getReference().getRoot().child("ChatGroups").child(roomName);
 
 
         sendBtn.setOnClickListener(new View.OnClickListener() {
