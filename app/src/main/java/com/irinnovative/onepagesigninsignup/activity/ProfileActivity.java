@@ -16,10 +16,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -37,13 +41,15 @@ import java.io.InputStream;
 public class ProfileActivity extends AppCompatActivity {
     private FirebaseUser user;
     private StorageReference mStorageRef;
+    private DatabaseReference myRef,uploadRef;
 
     private ImageView imProfilePic;
     private TextView textViewUsername, textViewBio, textViewCellphone, textViewEmail;
     int RESULT_LOAD_IMG = 1;
+    private Person value;
+
     private Uri imageUri, downloadUri;
     ProgressDialog pd;
-
     private String uid;
 
     @Override
@@ -60,11 +66,13 @@ public class ProfileActivity extends AppCompatActivity {
         pd = new ProgressDialog(this);
         pd.setMessage("Uploading....");
 
-        uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        mStorageRef = FirebaseStorage.getInstance().getReference().child(uid);
-        final DatabaseReference myRef = database.getReference().child("Profile").child(uid);
         user = FirebaseAuth.getInstance().getCurrentUser();
+        uid = user.getUid();
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+
+        mStorageRef = FirebaseStorage.getInstance().getReference().child(uid);
+        myRef = database.getReference().child("Profile").child(uid);
+        uploadRef = database.getReference().child("Profile").child(uid).child("imageUrl");
 
 
         imProfilePic = (ImageView) findViewById(R.id.ImageView_user_pic);
@@ -97,17 +105,25 @@ public class ProfileActivity extends AppCompatActivity {
         });
 
 
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
         // Read from the database
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
-                Person value = dataSnapshot.getValue(Person.class);
+                value = dataSnapshot.getValue(Person.class);
                 if (value != null) {
                     textViewUsername.setText(value.getUsername());
                     textViewBio.setText(value.getBio());
                     textViewCellphone.setText(value.getCellphone());
+
+                    Glide.with(getApplicationContext()).load(value.getImageUrl()).into(imProfilePic);
+
                 }
 
 
@@ -121,11 +137,7 @@ public class ProfileActivity extends AppCompatActivity {
             }
         });
 
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
+       // mStorageRef.ad
 
     }
 
@@ -138,12 +150,32 @@ public class ProfileActivity extends AppCompatActivity {
                 pd.show();
 
                 //uploading the image
-                UploadTask uploadTask = mStorageRef.putFile(imageUri);
+                UploadTask uploadTask = mStorageRef.child(uid).putFile(imageUri);
 
                 uploadTask.addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                     @Override
                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                        Uri downloadUrl = taskSnapshot.getDownloadUrl();
+                        value.setImageUrl(downloadUrl.toString());
+                        myRef.setValue(value);
                         pd.dismiss();
+
+                        UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
+                                .setPhotoUri(downloadUrl)
+                                .build();
+
+                        if ( user != null ) {
+                            user.updateProfile(profileUpdates)
+                                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<Void> task) {
+                                            if (task.isSuccessful()) {
+                                                Log.d("Profile Updated ", "User profile updated.");
+                                            }
+                                        }
+                                    });
+                        }
+
                         Toast.makeText(ProfileActivity.this, "Upload successful", Toast.LENGTH_SHORT).show();
                     }
                 }).addOnFailureListener(new OnFailureListener() {
