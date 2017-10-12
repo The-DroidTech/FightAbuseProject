@@ -67,7 +67,7 @@ public class ChatRoomActivity extends AppCompatActivity {
 
 
         //databaseReference = FirebaseDatabase.getInstance().getReference().getRoot();
-        databaseReference = FirebaseDatabase.getInstance().getReference().getRoot();
+        databaseReference = FirebaseDatabase.getInstance().getReference().getRoot().child("ChatGroups");
 
 
         request_name();
@@ -93,8 +93,10 @@ public class ChatRoomActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+
+                roomName = room_name.getText().toString();
                 Map<String, Object> map = new HashMap<>();
-                map.put(room_name.getText().toString(), "");
+                map.put(roomName, "");
                 databaseReference.updateChildren(map);
                 room_name.setText(null);
 
@@ -138,7 +140,7 @@ public class ChatRoomActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 Intent intent = new Intent(ChatRoomActivity.this, ChatActivity.class);
-                roomName = ((TextView) view).getText().toString();
+                //roomName = ((TextView) view).getText().toString();
                 intent.putExtra("Room_name", roomName);
                 intent.putExtra("User_name", userName);
                 startActivity(intent);
