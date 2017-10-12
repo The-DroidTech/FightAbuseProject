@@ -7,14 +7,15 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:paddingStart="16dp">
+
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/image_view_abuse"
+        android:id="@+id/image_view_mentors"
         android:layout_width="75dp"
         android:layout_height="75dp"
-        android:paddingBottom="16dp"
         android:layout_gravity="center_horizontal"
-        android:scaleType="centerCrop"
-        />
+        android:paddingBottom="16dp"
+        android:scaleType="centerCrop" />
+
     <android.support.v7.widget.CardView
         android:id="@+id/card"
         android:layout_width="match_parent"
@@ -28,19 +29,18 @@
             android:paddingStart="16dp">
 
             <TextView
-                android:id="@+id/txt_topic"
+                android:id="@+id/txt_mentor_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="10dp"
-                android:text="Grace Mathole"
+                android:text="Seth Markus"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                 android:textColor="@android:color/black"
                 android:textStyle="normal" />
 
-
             <TextView
-                android:id="@+id/txt_desc"
+                android:id="@+id/txt_institution"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top"

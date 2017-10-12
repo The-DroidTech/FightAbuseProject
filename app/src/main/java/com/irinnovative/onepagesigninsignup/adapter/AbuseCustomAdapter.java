@@ -30,8 +30,8 @@ public class AbuseCustomAdapter extends RecyclerView.Adapter<AbuseCustomAdapter.
 
     @Override
     public void onBindViewHolder(AbuseCustomAdapter.ViewHolder holder, int position) {
-        holder.topicTextView.setText( abuse.get(position).getTopic());
-
+        holder.topicTextView.setText(abuse.get(position).getTopic());
+        holder.descTextView.setText(abuse.get(position).getDesc());
         holder.img_profile.setImageResource(abuse.get(position).getImg());
     }
 
@@ -40,14 +40,14 @@ public class AbuseCustomAdapter extends RecyclerView.Adapter<AbuseCustomAdapter.
         return abuse.size();
     }
     public class ViewHolder extends RecyclerView.ViewHolder{
-        private TextView topicTextView,tv_age;
+        private TextView topicTextView,descTextView;
         private CircleImageView img_profile;
         public ViewHolder(View view) {
             super(view);
 
-            topicTextView = (TextView)view.findViewById(R.id.txt_name);
-
-            img_profile = (CircleImageView) view.findViewById(R.id.image_view);
+            topicTextView = (TextView)view.findViewById(R.id.txt_topic);
+            descTextView = (TextView) view.findViewById(R.id.txt_desc);
+            img_profile = (CircleImageView) view.findViewById(R.id.image_view_abuse);
         }
     }
 }
