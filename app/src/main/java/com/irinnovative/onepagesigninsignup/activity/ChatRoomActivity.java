@@ -141,7 +141,7 @@ public class ChatRoomActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(ChatRoomActivity.this, ChatActivity.class);
                 //roomName = ((TextView) view).getText().toString();
-                intent.putExtra("Room_name", roomName);
+                intent.putExtra("Room_name", list_of_rooms.get(position));
                 intent.putExtra("User_name", userName);
                 startActivity(intent);
             }

@@ -1,8 +1,11 @@
 package com.irinnovative.onepagesigninsignup.activity;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -55,6 +58,9 @@ public class ChatActivity extends AppCompatActivity
         setTitle(roomName);
 
 
+        //getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
+
+
         rootRoomName = FirebaseDatabase.getInstance().getReference().getRoot().child("ChatGroups").child(roomName);
 
 
@@ -77,6 +83,15 @@ public class ChatActivity extends AppCompatActivity
             }
         });
 
+
+       /* sendMsg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.showSoftInput(sendMsg, InputMethodManager.SHOW_IMPLICIT);
+            }
+        });
+        */
 
         rootRoomName.addChildEventListener(new ChildEventListener() {
             @Override

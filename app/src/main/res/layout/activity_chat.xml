@@ -24,7 +24,7 @@
         android:layout_toStartOf="@+id/btnSendMessage"
         android:ems="10"
         android:hint="Type Message"
-        android:inputType="textPersonName" />
+        android:inputType="text" />
 
     <ScrollView
         android:layout_width="match_parent"
