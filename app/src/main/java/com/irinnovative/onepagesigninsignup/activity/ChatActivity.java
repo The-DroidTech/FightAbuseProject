@@ -6,8 +6,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.google.firebase.database.ChildEventListener;
@@ -17,6 +19,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.irinnovative.onepagesigninsignup.R;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -26,6 +29,10 @@ public class ChatActivity extends AppCompatActivity
     private Button sendBtn;
     private TextView recieveMsg;
     private EditText sendMsg;
+
+    private ListView listChat;
+    private ArrayAdapter<String> chatAdapter;
+    private ArrayList<String> list_of_chats;
 
 
 
@@ -43,8 +50,17 @@ public class ChatActivity extends AppCompatActivity
 
 
         sendBtn = (Button)findViewById(R.id.btnSendMessage);
-        recieveMsg =(TextView)findViewById(R.id.txtViewMessage);
+        //recieveMsg =(TextView)findViewById(R.id.txtViewMessage);
         sendMsg =(EditText)findViewById(R.id.etTypeMessage);
+
+
+        listChat = (ListView) findViewById(R.id.lvViewMessage);
+
+        list_of_chats = new ArrayList<>();
+
+        chatAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, list_of_chats);
+
+        listChat.setAdapter(chatAdapter);
 
 
 
@@ -133,7 +149,12 @@ public class ChatActivity extends AppCompatActivity
         chatUserName = (String) dataSnapshot.child("name").getValue();
         chatMessage =  (String) dataSnapshot.child("message").getValue();
 
-        recieveMsg.append(chatUserName + ": " +  chatMessage + "\n\n" );
+
+        //recieveMsg.append(chatUserName + ": " +  chatMessage + "\n\n" );
+        chatAdapter.add(chatUserName + "\n" + chatMessage);
+
+
+        chatAdapter.notifyDataSetChanged();
 
     }
 
