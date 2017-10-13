@@ -54,7 +54,7 @@ public class ChatActivity extends AppCompatActivity
         setTitle(roomName);
 
 
-        rootRoomName = FirebaseDatabase.getInstance().getReferenceFromUrl("https://fightabusechat.firebaseio.com/").getRoot().child(roomName);
+        rootRoomName = FirebaseDatabase.getInstance().getReference().getRoot().child(roomName);
 
 
         sendBtn.setOnClickListener(new View.OnClickListener() {

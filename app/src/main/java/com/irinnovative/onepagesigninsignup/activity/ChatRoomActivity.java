@@ -67,7 +67,7 @@ public class ChatRoomActivity extends AppCompatActivity {
 
 
         //databaseReference = FirebaseDatabase.getInstance().getReference().getRoot();
-        databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://fightabusechat.firebaseio.com/").getRoot();
+        databaseReference = FirebaseDatabase.getInstance().getReference().getRoot();
 
 
         request_name();
@@ -100,6 +100,8 @@ public class ChatRoomActivity extends AppCompatActivity {
 
             }
         });
+
+
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
