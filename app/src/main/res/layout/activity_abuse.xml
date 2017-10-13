@@ -26,18 +26,13 @@
         android:textStyle="normal"
         tools:text="Grace Mathole"/>
 
-    <ImageView
-        android:id="@+id/image_abuse"
-        android:layout_gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:scaleType="centerCrop"/>
-
     <TextView
         android:id="@+id/txt_abuse_desc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:padding="16dp"
+        android:layout_gravity="center_vertical"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
         tools:text="asdsad"/>
 </LinearLayout>

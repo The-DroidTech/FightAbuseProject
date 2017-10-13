@@ -4,14 +4,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.irinnovative.onepagesigninsignup.R;
 import com.irinnovative.onepagesigninsignup.pojo.Mentor;
 
 import java.util.ArrayList;
-
-import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
  * Created by codetribe on 10/11/2017.
@@ -47,13 +46,13 @@ public class MentorsDataAdapter extends RecyclerView.Adapter<MentorsDataAdapter.
     }
     public class ViewHolder extends RecyclerView.ViewHolder{
         private TextView tv_name,tv_institution;
-        private CircleImageView img_profile;
+        private ImageView img_profile;
         public ViewHolder(View view) {
             super(view);
 
             tv_name = (TextView)view.findViewById(R.id.txt_mentor_name);
             tv_institution = (TextView)view.findViewById(R.id.txt_institution);
-            img_profile = (CircleImageView) view.findViewById(R.id.image_view_mentors);
+            img_profile = (ImageView) view.findViewById(R.id.image_view_mentors);
         }
     }
 

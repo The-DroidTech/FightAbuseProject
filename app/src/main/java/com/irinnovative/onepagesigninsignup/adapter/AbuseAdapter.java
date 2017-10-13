@@ -10,9 +10,6 @@ import android.widget.TextView;
 
 import com.irinnovative.onepagesigninsignup.R;
 import com.irinnovative.onepagesigninsignup.pojo.Abuse;
-import com.irinnovative.onepagesigninsignup.pojo.Mentor;
-
-import java.util.ArrayList;
 
 /**
  * Created by Code Tribe on 2017/09/02.
@@ -20,8 +17,8 @@ import java.util.ArrayList;
 
 public class AbuseAdapter extends ArrayAdapter<Abuse>{
 
-    public AbuseAdapter(Activity context, ArrayList<Abuse> words){
-        super(context,0,words);
+    public AbuseAdapter(Activity context, int resources){
+        super(context,resources);
     }
 
     @Override

@@ -14,6 +14,10 @@ public class Abuse implements Serializable{
     public Abuse() {
     }
 
+    public Abuse(String topic) {
+        this.topic = topic;
+    }
+
     public Abuse(String topic, String desc, int img) {
         this.topic = topic;
         this.desc = desc;
