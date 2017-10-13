@@ -14,6 +14,8 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -21,6 +23,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.irinnovative.onepagesigninsignup.R;
 import com.irinnovative.onepagesigninsignup.pojo.Chat;
+import com.irinnovative.onepagesigninsignup.pojo.Person;
+import com.irinnovative.onepagesigninsignup.pojo.Sos;
 import com.spark.submitbutton.SubmitButton;
 
 import java.util.ArrayList;
@@ -43,7 +47,9 @@ public class ChatRoomActivity extends AppCompatActivity {
     private String roomName;
     private String chatkey = "Chat";
 
-    private DatabaseReference databaseReference;
+    private DatabaseReference databaseReference,profReference;
+    private FirebaseUser user;
+    private Person person;
     private Chat chat;
 
 
@@ -52,8 +58,32 @@ public class ChatRoomActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat_room);
 
+        databaseReference = FirebaseDatabase.getInstance().getReference().getRoot().child("ChatGroups");
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        user = FirebaseAuth.getInstance().getCurrentUser();
+        profReference = database.getReference().child("Profile").child(user.getUid());
 
+        profReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                Person value = dataSnapshot.getValue(Person.class);
+                Sos sosValue = dataSnapshot.getValue(Sos.class);
+
+                if (value != null) {
+                    userName = value.getUsername();
+
+                }
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
         //create_room = (Button)findViewById(R.id.btnAddRoom);
+
+
 
         create_room1 = (SubmitButton) findViewById(R.id.btnAddRoom1);
         room_name = (EditText) findViewById(R.id.etRoomName);
@@ -67,10 +97,9 @@ public class ChatRoomActivity extends AppCompatActivity {
 
 
         //databaseReference = FirebaseDatabase.getInstance().getReference().getRoot();
-        databaseReference = FirebaseDatabase.getInstance().getReference().getRoot().child("ChatGroups");
 
 
-        request_name();
+
 
         /*
         create_room.setOnClickListener(new View.OnClickListener() {
@@ -151,41 +180,6 @@ public class ChatRoomActivity extends AppCompatActivity {
     }
 
 
-    private void request_name() {
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Enter your username!");
-        final EditText editText = new EditText(this);
-
-        builder.setView(editText);
-
-        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-
-                userName = editText.getText().toString();
-
-                if (!TextUtils.isEmpty(userName)) {
-                    //ok
-                    editText.setError("Enter Username");
-                } else {
-
-                    request_name();
-                }
-
-
-            }
-        }).setNegativeButton("Quit", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.cancel();
-                request_name();
-            }
-        });
-
-        builder.show();
-
-
-    }
 
 }

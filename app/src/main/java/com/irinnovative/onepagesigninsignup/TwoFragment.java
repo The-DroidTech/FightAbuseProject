@@ -1,17 +1,24 @@
 package com.irinnovative.onepagesigninsignup;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.irinnovative.onepagesigninsignup.activity.AbuseActivity;
 import com.irinnovative.onepagesigninsignup.adapter.AbuseCustomAdapter;
 import com.irinnovative.onepagesigninsignup.pojo.Abuse;
+import com.irinnovative.onepagesigninsignup.pojo.Mentor;
+import com.irinnovative.onepagesigninsignup.pojo.RecyclerItemClickListener;
 
 import java.util.ArrayList;
+
+import static android.os.Build.VERSION_CODES.M;
 
 
 public class TwoFragment extends Fragment {
@@ -25,14 +32,19 @@ public class TwoFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         populate();
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
+
         return inflater.inflate(R.layout.fragment_two, container, false);
+
     }
 
     @Override
@@ -42,6 +54,10 @@ public class TwoFragment extends Fragment {
         AbuseCustomAdapter adapter = new AbuseCustomAdapter(listAbuse);
         lvAbuse.setAdapter(adapter);
 
+        RecyclerView recyclerView = (RecyclerView) getView().findViewById(R.id.card_recycler_view);
+        recyclerView.setHasFixedSize(true);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
+        recyclerView.setLayoutManager(layoutManager);
         /*lvAbuse.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -52,6 +68,25 @@ public class TwoFragment extends Fragment {
             }
         });
         */
+        //Handles clicks in Recycler view items
+        recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getActivity(), recyclerView, new RecyclerItemClickListener
+                .OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                //handle click events here
+                Abuse abuse = listAbuse.get(position);
+
+                Intent intent = new Intent(getActivity(), AbuseActivity.class);
+                intent.putExtra("content",abuse);
+                startActivity(intent);
+
+            }
+
+            @Override
+            public void onItemLongClick(View view, int position) {
+                //handle longClick if any
+            }
+        }));
 
     }
 
@@ -64,6 +99,10 @@ public class TwoFragment extends Fragment {
 
     public void populate()
     {
+
+
+        final ArrayList<Mentor> listMentors;
+
         listAbuse.add(new Abuse("Physical Abuse","Any intentional use of physical force with the intent to control a partner through fear or injuryPhysical abuse in a relationship often starts gradually, such as with a push or a slap, and then becomes progressively worse over time, physical violence is always illegal. If you have been physically abused, there are things you can do to get support..",R.drawable.physicalabuse));
         listAbuse.add(new Abuse("Emotional/Verbal Abuse","An attempt to control a partner through the manipulation of their self-esteem, sense of personal security, " +
                 "relationships with others, and/or their perception of reality. Often it results in the victim feeling worthless and responsible for the abuse.",R.drawable.emotional));
