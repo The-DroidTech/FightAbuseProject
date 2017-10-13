@@ -46,7 +46,7 @@ public class SosDetailsActivity extends AppCompatActivity {
         sosContact3 = (TextInputEditText) findViewById(R.id.sos3);
         sosMessage = (TextInputEditText) findViewById(R.id.message_update);
         btnUpdate = (Button) findViewById(R.id.btnUpdate);
-        btnSignOut = (Button) findViewById(R.id.btnSignout);
+
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
@@ -68,16 +68,6 @@ public class SosDetailsActivity extends AppCompatActivity {
                 startActivity(new Intent(SosDetailsActivity.this, ProfileActivity.class));
             }
         });
-
-        btnSignOut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(getBaseContext(), MainActivity.class));
-
-            }
-        });
-
 
     }
 

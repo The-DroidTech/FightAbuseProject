@@ -86,6 +86,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     //User is signed in
                     Intent intent = new Intent(MainActivity.this,SplashActivity.class);
                     startActivity(intent);
+                    finish();
                     Log.d("TAG", "onAuthStateChanged:signed_in:" + user.getUid());
                 } else {
                     // User is signed out
