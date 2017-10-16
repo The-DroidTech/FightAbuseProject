@@ -14,13 +14,17 @@
     </string-array>
 
 
-
-
     <string name="sos_info">
 SOS offers our clients access to appropriate emergency assistance when:
 (1) you don’t know who to call
 (2) you don’t know where you are
 (3) you want to notify your emergency contacts about your emergency and the exact location.
 </string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 
 </resources>

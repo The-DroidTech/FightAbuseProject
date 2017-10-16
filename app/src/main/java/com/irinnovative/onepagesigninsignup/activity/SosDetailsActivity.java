@@ -66,6 +66,7 @@ public class SosDetailsActivity extends AppCompatActivity {
                 refSos.setValue(sos);
 
                 startActivity(new Intent(SosDetailsActivity.this, ProfileActivity.class));
+                finish();
             }
         });
 
