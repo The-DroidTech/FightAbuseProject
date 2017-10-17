@@ -27,52 +27,7 @@
         android:background="#000">
     </ImageSwitcher>
 
-    <RelativeLayout
-        style="@style/Animation.AppCompat.Dialog"
-        android:layout_width="match_parent"
-        android:layout_height="51dp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:background="@color/colorPrimary"
-        android:padding="10dp">
 
-        <Button
-            android:id="@+id/buttonNext"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/txt_hotel_rating"
-            android:layout_alignBottom="@+id/txt_hotel_rating"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:background="@color/colorPrimary"
-            android:text="NEXT"
-            android:textColor="#fff"
-            android:textStyle="bold" />
-
-
-        <RatingBar
-            style="@android:style/Widget.Holo.RatingBar.Small"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_toRightOf="@+id/txt_hotel_rating"
-            android:paddingLeft="10dp"
-            android:rating="3.7"
-            android:stepSize="0.1" />
-
-        <TextView
-            android:id="@+id/txt_hotel_rating"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="5dp"
-            android:text="4.3"
-            android:textColor="@android:color/white"
-            android:textSize="14sp"
-
-            />
-
-    </RelativeLayout>
 
 
     <LinearLayout

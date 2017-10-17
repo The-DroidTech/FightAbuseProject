@@ -6,6 +6,7 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
 import com.irinnovative.onepagesigninsignup.activity.HomeActivity;
+import com.irinnovative.onepagesigninsignup.activity.NavigationActivity;
 
 public class SplashActivity extends AppCompatActivity {
     private static int SPLASH_TIME_OUT = 5000;
@@ -19,7 +20,7 @@ public class SplashActivity extends AppCompatActivity {
 
             @Override
             public void run(){
-                Intent homeIntent = new Intent(SplashActivity.this,HomeActivity.class);
+                Intent homeIntent = new Intent(SplashActivity.this,NavigationActivity.class);
                 startActivity(homeIntent);
                 finish();
             }

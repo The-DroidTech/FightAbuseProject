@@ -40,7 +40,6 @@ public class PlacesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_hotel);
         imageSwitcher = (ImageSwitcher) findViewById(R.id.hotel_image_switch);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-        btnNext = (Button) findViewById(R.id.buttonNext);
         txtDescription = (TextView) findViewById(R.id.txt_hotel_desc);
         layout = (LinearLayout) findViewById(R.id.linearDetails);
         btnAddress = (ImageButton) findViewById(R.id.btn_place);
@@ -70,16 +69,6 @@ public class PlacesActivity extends AppCompatActivity {
             }
         });
 
-        btnNext.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                currentIndex++;
-                if(currentIndex == count){
-                    currentIndex = 0;
-                }
-                imageSwitcher.setImageResource(imageIds[currentIndex]);
-            }
-        });
 
         btnAddress.setOnClickListener(new View.OnClickListener() {
             @Override
