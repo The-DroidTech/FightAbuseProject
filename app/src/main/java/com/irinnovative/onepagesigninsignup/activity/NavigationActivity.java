@@ -1,5 +1,6 @@
 package com.irinnovative.onepagesigninsignup.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,11 +13,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 
+import com.irinnovative.onepagesigninsignup.IconTextTabsActivity;
+import com.irinnovative.onepagesigninsignup.InstitutionActivity;
+import com.irinnovative.onepagesigninsignup.MentorsActivity;
 import com.irinnovative.onepagesigninsignup.R;
 
 public class NavigationActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    ImageView sos;
+    int count = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,8 +37,10 @@ public class NavigationActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent intent = new Intent(getBaseContext(),ChatRoomActivity.class);
+                startActivity(intent);
+                /*Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();*/
             }
         });
 
@@ -82,19 +92,39 @@ public class NavigationActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_profile) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+            Intent intent = new Intent(this,ProfileActivity.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_learn) {
+            Intent intent = new Intent(this,IconTextTabsActivity.class);
+            startActivity(intent);
 
-        } else if (id == R.id.nav_slideshow) {
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_mentor) {
+            Intent intent = new Intent(this,MentorsActivity.class);
+            startActivity(intent);
 
-        } else if (id == R.id.nav_share) {
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_report) {
+            Intent intent = new Intent(this,ContactsActivity.class);
+            startActivity(intent);
+
+        } else if (id == R.id.nav_support) {
+            Intent intent = new Intent(this,InstitutionActivity.class);
+            startActivity(intent);
+
+        } else if (id == R.id.nav_book) {
+            Intent intent = new Intent(this,BooksActivity.class);
+            startActivity(intent);
+
+
+        } else if (id == R.id.nav_testimony) {
+            Intent intent = new Intent(this,TestomoniesActivity.class);
+            startActivity(intent);
 
         }
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
