@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#FFFFFF"
+    android:background="#2fbec1"
     tools:context="com.irinnovative.onepagesigninsignup.SplashActivity"
     android:weightSum="1">
 
@@ -16,7 +16,7 @@
         android:layout_height="228dp"
         android:layout_gravity="center"
         android:scaleType="fitXY"
-        app:srcCompat="@drawable/untitled"
+        app:srcCompat="@drawable/logo_app"
         android:layout_weight="0.84" />
 
     <ee.subscribe.gooeyloader.GooeyLoaderView
