@@ -47,14 +47,14 @@
                 android:layout_height="200dp"
 
 
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
                 android:layout_gravity="center_horizontal"
                 android:onClick="proPic"
                 android:scaleType="centerCrop"
                 android:src="@drawable/default_pic"
                 app:civ_border_color="@color/colorPrimaryDark"
-                app:civ_border_width="2dp" />
+                app:civ_border_width="2dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
 
 
         </RelativeLayout>

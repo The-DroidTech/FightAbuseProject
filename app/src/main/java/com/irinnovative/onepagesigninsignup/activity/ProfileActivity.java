@@ -7,6 +7,7 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
@@ -55,8 +56,9 @@ public class ProfileActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
-        getSupportActionBar().setTitle("PROFILE");
+        setContentView(R.layout.profile_update);
+       // getSupportActionBar().setTitle("PROFILE");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         textViewUsername = (TextView) findViewById(R.id.textView_profile_username);
         textViewBio = (TextView) findViewById(R.id.textView_profile_bio);
@@ -220,6 +222,9 @@ public class ProfileActivity extends AppCompatActivity {
             return true;
         } else if (id == R.id.updatSos) {
             startActivity(new Intent(this, SosDetailsActivity.class));
+        }if(id == android.R.id.home)
+        {
+            onBackPressed();
         }
 
 
