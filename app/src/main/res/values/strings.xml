@@ -20,7 +20,7 @@ SOS offers our clients access to appropriate emergency assistance when:
 (2) you don’t know where you are
 (3) you want to notify your emergency contacts about your emergency and the exact location.
 </string>
-    <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="title_activity_navigation">Chat Rooms</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

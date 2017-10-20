@@ -57,7 +57,7 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile_update);
-       // getSupportActionBar().setTitle("PROFILE");
+       //getSupportActionBar().setTitle("PROFILE");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         textViewUsername = (TextView) findViewById(R.id.textView_profile_username);
@@ -120,7 +120,8 @@ public class ProfileActivity extends AppCompatActivity {
                 // whenever data at this location is updated.
                 value = dataSnapshot.getValue(Person.class);
                 if (value != null) {
-                    textViewUsername.setText(value.getUsername());
+                    getSupportActionBar().setTitle(value.getUsername());
+                    //setTitle(value.getUsername());
                     textViewBio.setText(value.getBio());
                     textViewCellphone.setText(value.getCellphone());
 
