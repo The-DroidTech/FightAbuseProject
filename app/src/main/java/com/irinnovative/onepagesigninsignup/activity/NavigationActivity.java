@@ -239,9 +239,7 @@ public class NavigationActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+
 
         return super.onOptionsItemSelected(item);
     }
@@ -309,7 +307,7 @@ public class NavigationActivity extends AppCompatActivity
                 Map<String, Object> map = new HashMap<>();
                 map.put(roomName, "");
                 databaseReference.updateChildren(map);
-               // room_name.setText(null);
+                room_name.setText(null);
 
 
                 if (!TextUtils.isEmpty(roomName)) {
