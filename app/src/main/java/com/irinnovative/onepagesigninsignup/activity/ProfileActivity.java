@@ -42,7 +42,7 @@ import java.io.InputStream;
 public class ProfileActivity extends AppCompatActivity {
     private FirebaseUser user;
     private StorageReference mStorageRef;
-    private DatabaseReference myRef,uploadRef;
+    private DatabaseReference myRef, uploadRef;
 
     private ImageView imProfilePic;
     private TextView textViewUsername, textViewBio, textViewCellphone, textViewEmail;
@@ -57,7 +57,7 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile_update);
-       //getSupportActionBar().setTitle("PROFILE");
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         textViewUsername = (TextView) findViewById(R.id.textView_profile_username);
@@ -140,7 +140,7 @@ public class ProfileActivity extends AppCompatActivity {
             }
         });
 
-       // mStorageRef.ad
+        // mStorageRef.ad
 
     }
 
@@ -167,7 +167,7 @@ public class ProfileActivity extends AppCompatActivity {
                                 .setPhotoUri(downloadUrl)
                                 .build();
 
-                        if ( user != null ) {
+                        if (user != null) {
                             user.updateProfile(profileUpdates)
                                     .addOnCompleteListener(new OnCompleteListener<Void>() {
                                         @Override
@@ -219,8 +219,8 @@ public class ProfileActivity extends AppCompatActivity {
         int id = item.getItemId();
         if (id == R.id.updatSos) {
             startActivity(new Intent(this, SosDetailsActivity.class));
-        }if(id == android.R.id.home)
-        {
+        }
+        if (id == android.R.id.home) {
             onBackPressed();
         }
 
