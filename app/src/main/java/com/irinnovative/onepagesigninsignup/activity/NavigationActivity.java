@@ -275,12 +275,6 @@ public class NavigationActivity extends AppCompatActivity
             Intent intent = new Intent(this,IconTextTabsActivity.class);
             startActivity(intent);
 
-
-        } else if (id == R.id.nav_mentor) {
-            Intent intent = new Intent(this,MentorsActivity.class);
-            startActivity(intent);
-
-
         } else if (id == R.id.nav_report) {
             Intent intent = new Intent(this,ContactsActivity.class);
             startActivity(intent);
