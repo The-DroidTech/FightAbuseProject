@@ -17,7 +17,7 @@ public class SupportGroups extends AppCompatActivity {
         setContentView(R.layout.activity_support_groups);
 
         //this activates the chat section
-        ImageView communities = (ImageView)findViewById(R.id.communities);
+        ImageView communities = (ImageView) findViewById(R.id.communities);
 
         communities.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,22 +30,22 @@ public class SupportGroups extends AppCompatActivity {
 
     }
 
-    public void support (View v){
+    public void support(View v) {
 
-        startActivity(new Intent(SupportGroups.this,TestomoniesActivity.class));
+        startActivity(new Intent(SupportGroups.this, TestomoniesActivity.class));
 
     }
 
-    public void events (View v){
+    public void events(View v) {
 
         startActivity(new Intent(SupportGroups.this, EventsActivity.class));
 
     }
 
 
-    public void media (View v){
+    public void media(View v) {
 
-        startActivity(new Intent(SupportGroups.this,MediaActivity.class));
+        startActivity(new Intent(SupportGroups.this, MediaActivity.class));
 
     }
 }
