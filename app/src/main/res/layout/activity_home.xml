@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context="com.irinnovative.onepagesigninsignup.activity.MainActivity">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="profile"
+            android:scaleType="centerCrop"
+            android:src="@drawable/untitled" />
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="10dp">
+
+
+            <TableRow>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="2"
+                    android:background="#BFDC92"
+                    android:onClick="profile"
+                    android:src="@drawable/ic_person_black_24dp" />
+
+            </TableRow>
+
+
+            <LinearLayout>
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="2"
+                    android:text="Profile"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#000">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <TableRow>
+
+                <ImageView
+                    android:id="@+id/sosButton"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="1"
+                    android:background="#0065A6"
+                    android:onClick="sos"
+                    android:src="@drawable/ic_call_white_24dp" />
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="1"
+                    android:background="#EC8300"
+                    android:onClick="mentors"
+                    android:src="@drawable/ic_supervisor_account_black_24dp" />
+
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="15dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:text="sos"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#000">
+
+                </TextView>
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="15dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:text="Know your Mentors"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#000" />
+            </TableRow>
+
+
+            <TableRow>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_weight="1"
+                    android:background="#70BEDF"
+                    android:onClick="learn"
+                    android:src="@drawable/learn" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_weight="1"
+                    android:background="#965FA6"
+                    android:onClick="support"
+                    android:src="@drawable/global" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="15dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:text="Learn more"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#000">
+
+                </TextView>
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="15dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:text="Communities"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#000" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_weight="1"
+                    android:background="#FFC61F"
+                    android:onClick="institution"
+                    android:src="@drawable/build" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_weight="1"
+                    android:background="#90C93D"
+                    android:onClick="contacts"
+                    android:src="@drawable/institution" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="15dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:text="Support Centres"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#000">
+
+                </TextView>
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="15dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:text="Report Abuse"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#000" />
+            </TableRow>
+
+
+        </TableLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    android:orientation="vertical"
+    tools:context="com.irinnovative.onepagesigninsignup.activity.TestomoniesActivity">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="profile"
+            android:scaleType="centerCrop"
+            android:src="@drawable/untitled"
+            android:layout_marginBottom="5dp"/>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:text="WINE ABIT WITH JUST ONE CLICK"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
+            android:textSize="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"/>
+
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="14dp">
+
+            <TableRow>
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:onClick="cry"
+                    android:src="@drawable/ic_local_movies" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:onClick="damage"
+                    android:src="@drawable/ic_local_movies" />
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:onClick="be"
+                    android:src="@drawable/ic_local_movies" />
+
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="15dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:text="I won't cry"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#fff">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="15dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:text="damaged"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#fff">
+
+                </TextView>
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="15dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:text="Be a voice"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#fff" />
+            </TableRow>
+
+
+            <TableRow>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:onClick="broken"
+                    android:src="@drawable/ic_local_movies" />
+
+                <ImageView
+                    android:id="@+id/communities"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:onClick="beautiful"
+                    android:src="@drawable/ic_local_movies" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:onClick="fight"
+                    android:src="@drawable/ic_local_movies" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="15dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:text="Broken Girl"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="15dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:text="Beautiful"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#fff">
+
+                </TextView>
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="15dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:text="Fight Back"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#fff" />
+            </TableRow>
+
+            <TableRow>
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:onClick="climb"
+                    android:src="@drawable/ic_local_movies" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:onClick="here"
+                    android:src="@drawable/ic_local_movies" />
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:onClick="wide"
+                    android:src="@drawable/ic_local_movies" />
+
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="15dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:text="The Climb"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#fff">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="15dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:text="Here"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#fff">
+
+                </TextView>
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="15dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:text="Wide open"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#fff" />
+            </TableRow>
+
+
+
+
+
+
+
+
+
+
+        </TableLayout>
+
+    </LinearLayout>
+
+</ScrollView>

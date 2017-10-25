@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_person_black_24dp"
+            android:title="Profile" />
+        <item
+            android:id="@+id/nav_mentor"
+            android:icon="@drawable/ic_supervisor_account_black_24dp"
+            android:title="Mentor" />
+        <item
+            android:id="@+id/nav_learn"
+            android:icon="@drawable/learn"
+            android:title="Learn More" />
+        <item
+            android:id="@+id/nav_support"
+            android:icon="@drawable/build"
+            android:title="Support Centres" />
+
+        <item
+            android:id="@+id/nav_report"
+            android:icon="@drawable/institution"
+            android:title="Report Abuse" />
+    </group>
+
+    <item android:title="Others">
+        <menu>
+            <item
+                android:id="@+id/nav_book"
+                android:icon="@drawable/ic_import_contacts_black_24dp"
+                android:title="Books" />
+            <item
+                android:id="@+id/nav_testimony"
+                android:icon="@drawable/ic_local"
+                android:title="Testimonies" />
+
+            <item android:id="@+id/log_out"
+                android:icon="@drawable/ic_assignment_return_black_48dp"
+                android:title ="Log out">
+            </item>
+        </menu>
+    </item>
+
+</menu>
