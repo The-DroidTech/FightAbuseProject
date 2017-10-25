@@ -22,7 +22,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -46,10 +48,13 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
+import static com.irinnovative.onepagesigninsignup.R.id.fab;
+
 public class NavigationActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     private Button create_room;
     private EditText room_name;
+    private TextView editNavUsername;
     private SubmitButton create_room1;
 
     private ListView roomList;
@@ -75,6 +80,7 @@ public class NavigationActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,10 +100,19 @@ public class NavigationActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        View hView =  navigationView.getHeaderView(0);
+        final TextView nav_userName = (TextView) hView.findViewById(R.id.drawerTextName);
+        final TextView nav_userEmail = (TextView)hView.findViewById(R.id.drawerTextEmail);
+        final ImageView nav_userImage = (ImageView) hView.findViewById(R.id.drawerImageView);
+
+
         databaseReference = FirebaseDatabase.getInstance().getReference().getRoot().child("ChatGroups");
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         user = FirebaseAuth.getInstance().getCurrentUser();
         profReference = database.getReference().child("Profile").child(user.getUid());
+
+
+
 
         profReference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -107,7 +122,9 @@ public class NavigationActivity extends AppCompatActivity
 
                 if (value != null) {
                     userName = value.getUsername();
-
+                    nav_userName.setText(userName);
+                    nav_userEmail.setText(user.getEmail());
+                    Glide.with(getApplicationContext()).load(value.getImageUrl()).into(nav_userImage);
                 }
 
             }
@@ -270,15 +287,6 @@ public class NavigationActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_support) {
             Intent intent = new Intent(this,InstitutionActivity.class);
-            startActivity(intent);
-
-        } else if (id == R.id.nav_book) {
-            Intent intent = new Intent(this,BooksActivity.class);
-            startActivity(intent);
-
-
-        } else if (id == R.id.nav_testimony) {
-            Intent intent = new Intent(this,TestomoniesActivity.class);
             startActivity(intent);
 
         } else if (id== R.id.log_out)
