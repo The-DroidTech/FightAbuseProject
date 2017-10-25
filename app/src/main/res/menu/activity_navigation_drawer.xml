@@ -27,14 +27,7 @@
 
     <item android:title="Others">
         <menu>
-            <item
-                android:id="@+id/nav_book"
-                android:icon="@drawable/ic_import_contacts_black_24dp"
-                android:title="Books" />
-            <item
-                android:id="@+id/nav_testimony"
-                android:icon="@drawable/ic_local"
-                android:title="Testimonies" />
+          
 
             <item android:id="@+id/log_out"
                 android:icon="@drawable/ic_assignment_return_black_48dp"

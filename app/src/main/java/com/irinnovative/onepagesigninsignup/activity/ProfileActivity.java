@@ -8,11 +8,13 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -39,17 +41,22 @@ import com.irinnovative.onepagesigninsignup.pojo.Person;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 
+import static com.irinnovative.onepagesigninsignup.R.string.bio;
+
 public class ProfileActivity extends AppCompatActivity {
     private FirebaseUser user;
     private StorageReference mStorageRef;
     private DatabaseReference myRef, uploadRef;
 
     private ImageView imProfilePic;
-    private TextView textViewUsername, textViewBio, textViewCellphone, textViewEmail;
+    private TextView textViewUsername, textViewEmail;
+    private TextInputEditText textViewBio, username;
+    private EditText textViewCellphone;
     int RESULT_LOAD_IMG = 1;
     private Person value;
 
-    private Uri imageUri, downloadUri;
+    private Uri imageUri;
+    private String sDownloadUri;
     ProgressDialog pd;
     private String uid;
 
@@ -59,10 +66,11 @@ public class ProfileActivity extends AppCompatActivity {
         setContentView(R.layout.profile_update);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Update Profile");
 
-        textViewUsername = (TextView) findViewById(R.id.textView_profile_username);
-        textViewBio = (TextView) findViewById(R.id.textView_profile_bio);
-        textViewCellphone = (TextView) findViewById(R.id.textView_profile_cellphone);
+        username = (TextInputEditText) findViewById(R.id.user_Username);
+        textViewBio = (TextInputEditText) findViewById(R.id.textView_profile_bio);
+        textViewCellphone = (EditText) findViewById(R.id.textView_profile_cellphone);
         textViewEmail = (TextView) findViewById(R.id.textView_profile_email);
 
         pd = new ProgressDialog(this);
@@ -120,11 +128,11 @@ public class ProfileActivity extends AppCompatActivity {
                 // whenever data at this location is updated.
                 value = dataSnapshot.getValue(Person.class);
                 if (value != null) {
-                    getSupportActionBar().setTitle(value.getUsername());
-                    //setTitle(value.getUsername());
+
+                    username.setText(value.getUsername());
                     textViewBio.setText(value.getBio());
                     textViewCellphone.setText(value.getCellphone());
-
+                    sDownloadUri = value.getImageUrl();
                     Glide.with(getApplicationContext()).load(value.getImageUrl()).into(imProfilePic);
 
                 }
@@ -159,13 +167,15 @@ public class ProfileActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                         Uri downloadUrl = taskSnapshot.getDownloadUrl();
-                        value.setImageUrl(downloadUrl.toString());
+                        sDownloadUri = downloadUrl.toString();
+                        value.setImageUrl(sDownloadUri);
                         myRef.setValue(value);
                         pd.dismiss();
 
                         UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
                                 .setPhotoUri(downloadUrl)
                                 .build();
+
 
                         if (user != null) {
                             user.updateProfile(profileUpdates)
@@ -218,7 +228,14 @@ public class ProfileActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         if (id == R.id.updatSos) {
-            startActivity(new Intent(this, SosDetailsActivity.class));
+            pd.show();
+            Person person = new Person(uid, username.getText().toString(), textViewBio.getText().toString(), textViewCellphone.getText().toString(), sDownloadUri);
+            myRef.setValue(person).addOnSuccessListener(new OnSuccessListener<Void>() {
+                @Override
+                public void onSuccess(Void aVoid) {
+                    pd.dismiss();
+                }
+            });
         }
         if (id == android.R.id.home) {
             onBackPressed();

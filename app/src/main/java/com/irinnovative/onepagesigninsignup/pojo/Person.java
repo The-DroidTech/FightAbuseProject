@@ -18,6 +18,13 @@ public class Person {
         this.imageUrl = imageUrl;
     }
 
+    public Person(String id, String username, String bio, String cellphone) {
+        this.id = id;
+        this.username = username;
+        this.bio = bio;
+        this.cellphone = cellphone;
+    }
+
     public String getUsername() {
         return username;
     }
