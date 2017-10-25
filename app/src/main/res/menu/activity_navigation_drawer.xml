@@ -6,10 +6,7 @@
             android:id="@+id/nav_profile"
             android:icon="@drawable/ic_person_black_24dp"
             android:title="Profile" />
-        <item
-            android:id="@+id/nav_mentor"
-            android:icon="@drawable/ic_supervisor_account_black_24dp"
-            android:title="Mentor" />
+
         <item
             android:id="@+id/nav_learn"
             android:icon="@drawable/learn"
@@ -27,7 +24,7 @@
 
     <item android:title="Others">
         <menu>
-          
+
 
             <item android:id="@+id/log_out"
                 android:icon="@drawable/ic_assignment_return_black_48dp"
