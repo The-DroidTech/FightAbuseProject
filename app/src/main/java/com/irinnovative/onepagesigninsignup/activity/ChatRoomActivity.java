@@ -56,7 +56,7 @@ public class ChatRoomActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chat_room);
+        setContentView(R.layout.content_navigation);
 
         databaseReference = FirebaseDatabase.getInstance().getReference().getRoot().child("ChatGroups");
         FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -85,7 +85,7 @@ public class ChatRoomActivity extends AppCompatActivity {
 
 
 
-        create_room1 = (SubmitButton) findViewById(R.id.btnAddRoom1);
+        //create_room1 = (SubmitButton) findViewById(R.id.btnAddRoom1);
         room_name = (EditText) findViewById(R.id.etRoomName);
         roomList = (ListView) findViewById(R.id.lvListRooms);
 

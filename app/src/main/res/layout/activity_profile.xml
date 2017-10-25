@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
     android:orientation="vertical"
     tools:context="com.irinnovative.onepagesigninsignup.activity.ProfileActivity">
 
@@ -25,7 +24,7 @@
             android:layout_margin="5dp"
             android:layout_marginBottom="10dp"
             android:textAlignment="center"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
+
             android:textSize="16dp"
             tools:text="GRACE MATHOLE" />
 
@@ -74,7 +73,6 @@
                 android:layout_marginTop="15dp"
                 android:text="BIO"
                 android:textAlignment="center"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
                 android:textSize="18dp"
                 android:textStyle="bold" />
 
@@ -84,9 +82,9 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:layout_margin="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
                 android:layout_marginBottom="10dp"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
                 android:textSize="16dp"
                 tools:text="My name is Grace Mathole and my journey to hell and back began twelve years ago. I met him when he moved in next door to me. We became friends and later he moved in with me and we became an item. He had me hook, line and sinker, a real charmer. He was a rebel, and life became fast and exciting. Parties, dancing, drinking and then more drinking until he physically abused me daily." />
 
@@ -98,7 +96,6 @@
                 android:layout_marginTop="10dp"
                 android:text="Contact Details"
                 android:textAlignment="center"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
                 android:textSize="18dp"
                 android:textStyle="bold" />
 
@@ -119,7 +116,7 @@
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_weight="0.1"
-                    android:src="@drawable/ic_call_white_24dp" />
+                    android:src="@drawable/ic_call_black_24dp" />
 
                 <TextView
                     android:id="@+id/textView_profile_cellphone"
@@ -128,7 +125,6 @@
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_weight="1"
-                    android:textColor="#fff"
                     tools:text="021 5569556" />
 
 
@@ -142,7 +138,7 @@
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_weight="0.1"
-                    android:src="@drawable/ic_mail" />
+                    android:src="@drawable/ic_email_black_48dp" />
 
                 <TextView
                     android:id="@+id/textView_profile_email"
@@ -151,7 +147,6 @@
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_weight="1"
-                    android:textColor="#fff"
                     tools:text="edith@childtraumacentre.co.za">
 
                 </TextView>
