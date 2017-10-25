@@ -1,32 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#2fbec1"
+    android:background="@drawable/homescreen"
     tools:context="com.irinnovative.onepagesigninsignup.SplashActivity"
     android:weightSum="1">
 
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="228dp"
-        android:layout_gravity="center"
-        android:scaleType="fitXY"
-        app:srcCompat="@drawable/logo_app"
-        android:layout_weight="0.84" />
-
     <ee.subscribe.gooeyloader.GooeyLoaderView
         android:id="@+id/gooey_loader"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_centerInParent="true"
-        android:layout_marginBottom="50dp"
-        android:layout_weight="0.14"
-        app:glv_color="@color/colorPrimaryDark"
+        android:layout_height="50dp"
+        app:glv_color="@color/black"
+        android:layout_marginBottom="40dp"
+        android:layout_alignParentBottom="true"
         app:glv_duration_in_ms="3500" />
 
-</LinearLayout>
+</RelativeLayout>

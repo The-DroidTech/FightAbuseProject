@@ -1,5 +1,6 @@
 package com.irinnovative.onepagesigninsignup.activity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnSignup;
     private Button btnSignin;
     LinearLayout llsignin,llsignup;
+    ProgressDialog pd;
     private TextInputEditText textEmail,textSignUpEmail;
     private TextInputEditText textPassword,textSignUpPassword;
 
@@ -56,6 +58,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        pd = new ProgressDialog(this);
+        pd.setMessage("Loading....");
 
 
         llSignin = (LinearLayout) findViewById(R.id.llSignin);
@@ -84,9 +89,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user != null) {
                     //User is signed in
-                    Intent intent = new Intent(MainActivity.this,SplashActivity.class);
-                    startActivity(intent);
-                    finish();
+                    if(user.isEmailVerified())
+                    {
+                        Intent intent = new Intent(MainActivity.this,SplashActivity.class);
+                        startActivity(intent);
+                        finish();
+                    }
+                    else {
+                        verifyEmail(false);
+                    }
+
                     Log.d("TAG", "onAuthStateChanged:signed_in:" + user.getUid());
                 } else {
                     // User is signed out
@@ -128,6 +140,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if(validate(email))
                 {
                     if(!password.isEmpty()){
+                        pd.show();
                         signIn(email,password);
                     }
 
@@ -153,7 +166,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if(validate(email))
                 {
                     if(!password.isEmpty()){
+                        pd.show();
                         createAcount(email,password);
+
                     }
 
                 }
@@ -245,6 +260,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return matcher.find();
     }
 
+    public void verifyEmail(final boolean isToast)
+    {
+        final FirebaseUser user = mAuth.getCurrentUser();
+        user.sendEmailVerification()
+                .addOnCompleteListener(this, new OnCompleteListener() {
+                    @Override
+                    public void onComplete(@NonNull Task task) {
+
+                        if (task.isSuccessful()) {
+                            if(isToast) {
+                                Toast.makeText(MainActivity.this,
+                                        "Verification email sent to " + user.getEmail(),
+                                        Toast.LENGTH_SHORT).show();
+                            }
+                        } else {
+                            Log.e("Log", "sendEmailVerification", task.getException());
+                            Toast.makeText(MainActivity.this,
+                                    "Failed to send verification email.",
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+
+    }
+
     public void forgotPassword(String email){
         FirebaseAuth.getInstance().sendPasswordResetEmail("user@example.com")
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -261,10 +301,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     {
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         Log.d("TAG", "createUserWithEmail:onComplete:" + task.isSuccessful());
-
+                        pd.dismiss();
+                        verifyEmail(true);
                         // If sign in fails, display a message to the user. If sign in succeeds
                         // the auth state listener will be notified and logic to handle the
                         // signed in user can be handled in the listener.
@@ -285,11 +327,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         Log.d("TAG", "signInWithEmail:onComplete:" + task.isSuccessful());
-
+                        pd.dismiss();
                         // If sign in fails, display a message to the user. If sign in succeeds
                         // the auth state listener will be notified and logic to handle the
                         // signed in user can be handled in the listener.
                         if (!task.isSuccessful()) {
+
                             Log.w("TAG", "signInWithEmail:failed", task.getException());
                             Toast.makeText(getApplicationContext(), "Failed",
                                     Toast.LENGTH_SHORT).show();

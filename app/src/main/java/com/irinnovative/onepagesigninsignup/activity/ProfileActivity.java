@@ -217,11 +217,7 @@ public class ProfileActivity extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        if (id == R.id.log_out) {
-            FirebaseAuth.getInstance().signOut();
-            startActivity(new Intent(this, MainActivity.class));
-            return true;
-        } else if (id == R.id.updatSos) {
+        if (id == R.id.updatSos) {
             startActivity(new Intent(this, SosDetailsActivity.class));
         }if(id == android.R.id.home)
         {

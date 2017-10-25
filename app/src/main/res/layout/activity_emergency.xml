@@ -7,433 +7,409 @@
     tools:context="com.irinnovative.onepagesigninsignup.activity.ContactsActivity">
 
     <LinearLayout
-
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:text="QUICK DIAL"
-            android:textAllCaps="true"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
-            android:textDirection="inherit"
-            android:textSize="20sp">
-        </TextView>
-
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:background="@color/colorPrimaryDark"
-            android:paddingBottom="14dp"
-            >
-            <TableRow>
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="70dp"
-                    android:layout_marginTop="14dp"
-                    android:layout_weight="2"
-                    android:onClick="powa"
-                    android:src="@drawable/ic_call_white_24dp"/>
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="70dp"
-                    android:layout_marginTop="14dp"
-                    android:layout_weight="2"
-                    android:onClick="saps"
-                    android:src="@drawable/ic_call_white_24dp"/>
-                />
-
-            </TableRow>
-
-            <TableRow>
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="15dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="4dp"
-                    android:layout_weight="2"
-                    android:text="powa"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"
-                    android:textColor="#fff"
-                    >
-
-                </TextView>
-
-                <TextView
-
-                    android:layout_width="0dp"
-                    android:layout_height="15dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="4dp"
-                    android:layout_weight="2"
-                    android:text="saps"
-                    android:textColor="#fff"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"/>
-            </TableRow>
-
-
-            <TableRow>
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="15dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="4dp"
-                    android:layout_weight="2"
-                    android:text="0115916803"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"
-                    android:textColor="#fff"
-                    >
-
-                </TextView>
-
-                <TextView
-
-                    android:layout_width="0dp"
-                    android:layout_height="15dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="4dp"
-                    android:layout_weight="2"
-                    android:text="10111"
-                    android:textColor="#fff"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"/>
-            </TableRow>
-
-
-
 
 
-
-            <TableRow>
-
-                <ImageView
-
-                    android:layout_width="0dp"
-                    android:layout_height="70dp"
-                    android:layout_marginTop="14dp"
-                    android:layout_weight="2"
-                    android:onClick="cellphone"
-                    android:src="@drawable/ic_call_white_24dp"/>
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="70dp"
-                    android:layout_marginTop="14dp"
-                    android:layout_weight="2"
-                    android:onClick="ambulance"
-                    android:src="@drawable/ic_call_white_24dp"/>
-
-            </TableRow>
-            <TableRow>
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="15dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="4dp"
-                    android:layout_weight="2"
-                    android:text="cell phone emergency"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"
-                    android:textColor="#fff"
-                    >
-
-                </TextView>
-
-                <TextView
-
-                    android:layout_width="0dp"
-                    android:layout_height="15dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="4dp"
-                    android:layout_weight="2"
-                    android:text="Ambulance"
-                    android:textColor="#fff"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"/>
-            </TableRow>
-
-            <TableRow>
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="15dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="4dp"
-                    android:layout_weight="2"
-                    android:text="112"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"
-                    android:textColor="#fff"
-                    >
-
-                </TextView>
-
-                <TextView
-
-                    android:layout_width="0dp"
-                    android:layout_height="15dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="4dp"
-                    android:layout_weight="2"
-                    android:text="10177"
-                    android:textColor="#fff"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"/>
-            </TableRow>
-
-
-
-            <TableRow>
-
-                <ImageView
-
-                    android:layout_width="0dp"
-                    android:layout_height="70dp"
-                    android:layout_marginTop="14dp"
-                    android:layout_weight="2"
-                    android:onClick="drReddy"
-                    android:src="@drawable/ic_call_white_24dp"/>
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="70dp"
-                    android:layout_marginTop="14dp"
-                    android:layout_weight="2"
-                    android:onClick="destiny"
-                    android:src="@drawable/ic_call_white_24dp"/>
-            </TableRow>
-
-            <TableRow>
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="15dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_weight="2"
-                    android:text="Dr Reddy's help line"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"
-                    android:textColor="#fff"
-                    >
-
-                </TextView>
-
-                <TextView
-
-                    android:layout_width="0dp"
-                    android:layout_height="15dp"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_weight="2"
-                    android:text="Destiny Helpline"
-                    android:textColor="#fff"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"/>
-            </TableRow>
-
-            <TableRow>
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="15dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_weight="2"
-                    android:text="0800205026"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"
-                    android:textColor="#fff"
-                    >
-
-                </TextView>
-
-                <TextView
-
-                    android:layout_width="0dp"
-                    android:layout_height="15dp"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_weight="2"
-                    android:text="0800414243"
-                    android:textColor="#fff"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"/>
-            </TableRow>
-
-            <TableRow>
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="70dp"
-                    android:layout_weight="2"
-                    android:onClick="social"
-                    android:layout_marginTop="24dp"
-                    android:src="@drawable/ic_call_white_24dp"/>
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="70dp"
-                    android:layout_weight="2"
-                    android:layout_marginTop="24dp"
-                    android:onClick="sucide"
-                    android:src="@drawable/ic_call_white_24dp"/>
-            </TableRow>
-
-            <TableRow>
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="15dp"
-                    android:layout_weight="2"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginTop="4dp"
-                    android:text="Department of social Devlopment Substance abuse"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"
-                    android:textColor="#fff"
-                    >
-
-                </TextView>
-
-                <TextView
-
-                    android:layout_width="0dp"
-                    android:layout_height="15dp"
-                    android:layout_weight="2"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginTop="4dp"
-                    android:text="Sucide Crisis line"
-                    android:textColor="#fff"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"
-                    />
-            </TableRow>
-
-            <TableRow>
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="15dp"
-                    android:layout_weight="2"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginTop="4dp"
-                    android:text="0800121314"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"
-                    android:textColor="#fff"
-                    >
-
-                </TextView>
-
-                <TextView
-
-                    android:layout_width="0dp"
-                    android:layout_height="15dp"
-                    android:layout_weight="2"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginTop="4dp"
-                    android:text="0800567567"
-                    android:textColor="#fff"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"
-                    />
-            </TableRow>
-
-            <TableRow>
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="70dp"
-                    android:layout_weight="2"
-                    android:onClick="sadag"
-                    android:layout_marginTop="24dp"
-                    android:src="@drawable/ic_call_white_24dp"/>
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="70dp"
-                    android:layout_weight="2"
-                    android:layout_marginTop="24dp"
-                    android:onClick="akeso"
-                    android:src="@drawable/ic_call_white_24dp"/>
-            </TableRow>
-
-            <TableRow>
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="15dp"
-                    android:layout_weight="2"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginTop="4dp"
-                    android:text="SADAG Mental Health line"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"
-                    android:textColor="#fff"
-                    >
-
-                </TextView>
-
-                <TextView
-
-                    android:layout_width="0dp"
-                    android:layout_height="15dp"
-                    android:layout_weight="2"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginTop="4dp"
-                    android:text="Akeso Pyschiatric response"
-                    android:textColor="#fff"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"
-                    />
-            </TableRow>
-
-            <TableRow>
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="15dp"
-                    android:layout_weight="2"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginTop="4dp"
-                    android:text="0112344837"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"
-                    android:textColor="#fff"
-                    >
-
-                </TextView>
-
-                <TextView
-
-                    android:layout_width="0dp"
-                    android:layout_height="15dp"
-                    android:layout_weight="2"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginTop="4dp"
-                    android:text="0861435787"
-                    android:textColor="#fff"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"
-                    />
-            </TableRow>
-
-
-
-
-
-        </TableLayout>
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/emergency_appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+</android.support.design.widget.AppBarLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="14dp">
+
+        <TableRow>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="14dp"
+                android:layout_weight="2"
+                android:onClick="powa"
+                android:src="@drawable/phoneone" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="14dp"
+                android:layout_weight="2"
+                android:onClick="saps"
+                android:src="@drawable/phoneone" />
+            />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="2"
+                android:text="powa"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryDark">
+
+            </TextView>
+
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="2"
+                android:text="saps"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryDark" />
+        </TableRow>
+
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="2"
+                android:text="0115916803"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryDark">
+
+            </TextView>
+
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="2"
+                android:text="10111"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryDark" />
+        </TableRow>
+
+
+        <TableRow>
+
+            <ImageView
+
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="14dp"
+                android:layout_weight="2"
+                android:onClick="cellphone"
+                android:src="@drawable/phoneone" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="14dp"
+                android:layout_weight="2"
+                android:onClick="ambulance"
+                android:src="@drawable/phoneone" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="2"
+                android:text="cell phone emergency"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryDark">
+
+            </TextView>
+
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="2"
+                android:text="Ambulance"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryDark" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="2"
+                android:text="112"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryDark">
+
+            </TextView>
+
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="2"
+                android:text="10177"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryDark" />
+        </TableRow>
+
+
+        <TableRow>
+
+            <ImageView
+
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="14dp"
+                android:layout_weight="2"
+                android:onClick="drReddy"
+                android:src="@drawable/phoneone" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="14dp"
+                android:layout_weight="2"
+                android:onClick="destiny"
+                android:src="@drawable/phoneone" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="2"
+                android:text="Dr Reddy's help line"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryDark">
+
+            </TextView>
+
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="2"
+                android:text="Destiny Helpline"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryDark" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="2"
+                android:text="0800205026"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryDark">
+
+            </TextView>
+
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="2"
+                android:text="0800414243"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryDark" />
+        </TableRow>
+
+        <TableRow>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="24dp"
+                android:layout_weight="2"
+                android:onClick="social"
+                android:src="@drawable/phoneone" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="24dp"
+                android:layout_weight="2"
+                android:onClick="sucide"
+                android:src="@drawable/phoneone" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="2"
+                android:text="Department of social Devlopment Substance abuse"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryDark">
+
+            </TextView>
+
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="2"
+                android:text="Sucide Crisis line"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryDark" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="2"
+                android:text="0800121314"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryDark">
+
+            </TextView>
+
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="2"
+                android:text="0800567567"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryDark" />
+        </TableRow>
+
+        <TableRow>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="24dp"
+                android:layout_weight="2"
+                android:onClick="sadag"
+                android:src="@drawable/phoneone" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="24dp"
+                android:layout_weight="2"
+                android:onClick="akeso"
+                android:src="@drawable/phoneone" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="2"
+                android:text="SADAG Mental Health line"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryDark">
+
+            </TextView>
+
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="2"
+                android:text="Akeso Pyschiatric response"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryDark" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="2"
+                android:text="0112344837"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryDark">
+
+            </TextView>
+
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="2"
+                android:text="0861435787"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryDark" />
+        </TableRow>
+
+
+    </TableLayout>
 
     </LinearLayout>
-
 </ScrollView>

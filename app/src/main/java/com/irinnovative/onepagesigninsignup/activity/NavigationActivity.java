@@ -281,6 +281,10 @@ public class NavigationActivity extends AppCompatActivity
             Intent intent = new Intent(this,TestomoniesActivity.class);
             startActivity(intent);
 
+        } else if (id== R.id.log_out)
+        {
+            FirebaseAuth.getInstance().signOut();
+            startActivity(new Intent(this, MainActivity.class));
         }
 
 
