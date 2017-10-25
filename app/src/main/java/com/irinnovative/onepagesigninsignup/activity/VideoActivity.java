@@ -41,12 +41,12 @@ public class VideoActivity extends AppCompatActivity {
         startActivity(rockintent);
     }
 
-    public void love (View v) {
+    public void love(View v) {
         Intent loveintent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=xImqF2-oaf8"));
         startActivity(loveintent);
     }
 
-    public void inspired (View v) {
+    public void inspired(View v) {
         Intent inspiredintent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=xctvXwngaw0"));
         startActivity(inspiredintent);
     }
@@ -60,8 +60,6 @@ public class VideoActivity extends AppCompatActivity {
         Intent thatsItintent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.dvrcv.org.au/stories/true-stories/stories-women/kazs-story"));
         startActivity(thatsItintent);
     }
-
-
 
 
 }
