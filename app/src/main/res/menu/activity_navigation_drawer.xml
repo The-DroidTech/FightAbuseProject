@@ -37,6 +37,7 @@
                 android:title="Testimonies" />
 
             <item android:id="@+id/log_out"
+                android:icon="@drawable/ic_assignment_return_black_48dp"
                 android:title ="Log out">
             </item>
         </menu>
