@@ -4,19 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/homescreen"
-    tools:context="com.irinnovative.onepagesigninsignup.SplashActivity"
-    android:weightSum="1">
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context="com.irinnovative.onepagesigninsignup.SplashActivity">
 
 
     <ee.subscribe.gooeyloader.GooeyLoaderView
         android:id="@+id/gooey_loader"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        app:glv_color="@color/black"
-        android:layout_marginBottom="40dp"
         android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        app:glv_color="@color/black"
         app:glv_duration_in_ms="3500" />
 
 </RelativeLayout>
