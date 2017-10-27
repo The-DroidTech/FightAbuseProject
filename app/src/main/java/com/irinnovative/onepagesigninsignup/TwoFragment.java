@@ -18,8 +18,6 @@ import com.irinnovative.onepagesigninsignup.pojo.RecyclerItemClickListener;
 
 import java.util.ArrayList;
 
-import static android.os.Build.VERSION_CODES.M;
-
 
 public class TwoFragment extends Fragment {
      RecyclerView lvAbuse;
@@ -34,6 +32,7 @@ public class TwoFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         populate();
+
 
     }
 
@@ -54,10 +53,10 @@ public class TwoFragment extends Fragment {
         AbuseCustomAdapter adapter = new AbuseCustomAdapter(listAbuse);
         lvAbuse.setAdapter(adapter);
 
-        RecyclerView recyclerView = (RecyclerView) getView().findViewById(R.id.card_recycler_view);
-        recyclerView.setHasFixedSize(true);
+        //RecyclerView recyclerView = (RecyclerView) getView().findViewById(R.id.card_recycler_view);
+        lvAbuse.setHasFixedSize(true);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
-        recyclerView.setLayoutManager(layoutManager);
+        lvAbuse.setLayoutManager(layoutManager);
         /*lvAbuse.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -69,7 +68,7 @@ public class TwoFragment extends Fragment {
         });
         */
         //Handles clicks in Recycler view items
-        recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getActivity(), recyclerView, new RecyclerItemClickListener
+        lvAbuse.addOnItemTouchListener(new RecyclerItemClickListener(getActivity(), lvAbuse, new RecyclerItemClickListener
                 .OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
@@ -107,9 +106,10 @@ public class TwoFragment extends Fragment {
         listAbuse.add(new Abuse("Emotional/Verbal Abuse","An attempt to control a partner through the manipulation of their self-esteem, sense of personal security, " +
                 "relationships with others, and/or their perception of reality. Often it results in the victim feeling worthless and responsible for the abuse.",R.drawable.emotional));
         listAbuse.add(new Abuse("Sexual Abuse","Any behaviors that impact a person’s ability to control their sexual activity or the circumstances in which sexual activity occurs,Most victims and perpetrators know each other. Immediate reactions to sexual abuse include shock, fear or disbelief. Long-term symptoms include anxiety, fear or post-traumatic stress disorder,while efforts to treat sex offenders remain unpromising, psychological interventions for survivors — especially group therapy — appears effective.",R.drawable.sexabuse));
-        listAbuse.add(new Abuse("Digital Abuse","This is a form of emotional/verbal abuse that uses technology or social media to intimidate, harass, bully, stalk or threaten a current or ex-partner.",R.drawable.digital));
+        listAbuse.add(new Abuse("Digital Abuse","This is a form of emotional/verbal abuse that uses technology or social media to intimidate, harass, bully, stalk or threaten a current or ex-partner.",R.drawable.digiital));
         listAbuse.add(new Abuse("Financial Abuse","The use of finances or access to finances to control a partner. It’s one of the powerful forms of abuse, and common method of " +
                 "entrapping a partner in the relationship. It’s often given as the reason that victims of abuser stayed in or returned to an abusive relationship.",R.drawable.financial));
-
+        listAbuse.add(new Abuse("Child abuse ","Child abuse is any action by another person – adult or child – that causes significant harm to a child. It can be physical, sexual or emotional, but can just as often be about a lack of love, care and attention. We know that neglect, whatever form it takes, can be just as damaging to a child as physical abuse.",R.drawable.childabuse));
+       // listAbuse.add(new Abuse("Discriminatory abuse","Discriminatory abuse is when someone picks on you or treats you unfairly because something about you is different. This can include unfair or less favourable treatment due to a person's race, gender, age, disability, religion, sexuality, appearance or cultural background.",R.drawable.discrim ));
     }
 }
