@@ -1,11 +1,8 @@
 package com.irinnovative.onepagesigninsignup.activity;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.WindowManager;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -47,6 +44,7 @@ public class ChatActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_chat);
+
 
 
         sendBtn = (Button)findViewById(R.id.btnSendMessage);

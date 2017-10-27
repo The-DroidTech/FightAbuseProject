@@ -42,15 +42,15 @@ public class IconTextTabsActivity extends AppCompatActivity {
 
     private void setupTabIcons() {
         //tabLayout.getTabAt(0).setIcon(tabIcons[0]);
-        tabLayout.getTabAt(0).setIcon(tabIcons[0]);
-        tabLayout.getTabAt(1).setIcon(tabIcons[1]);
+        tabLayout.getTabAt(0);
+        tabLayout.getTabAt(1);
     }
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         // adapter.addFrag(new OneFragment(), "NEWS FEED");
-        adapter.addFrag(new TwoFragment(), "TYPES OF ABUSE");
-        adapter.addFrag(new ThreeFragment(), "ABOUT");
+        adapter.addFrag(new TwoFragment(), "Types of Abuse");
+        adapter.addFrag(new ThreeFragment(), "About us");
         viewPager.setAdapter(adapter);
     }
 

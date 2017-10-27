@@ -5,6 +5,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -38,8 +40,11 @@ public class PlacesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hotel);
+
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+       // getSupportActionBar().setTitle("Hotel");
         imageSwitcher = (ImageSwitcher) findViewById(R.id.hotel_image_switch);
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+       // toolbar = (Toolbar) findViewById(R.id.toolbar);
         txtDescription = (TextView) findViewById(R.id.txt_hotel_desc);
         layout = (LinearLayout) findViewById(R.id.linearDetails);
         btnAddress = (ImageButton) findViewById(R.id.btn_place);
@@ -52,11 +57,10 @@ public class PlacesActivity extends AppCompatActivity {
         Intent intent = getIntent();
         final Place place = (Place) intent.getSerializableExtra("places");
 
-        toolbar.setTitle(place.getName());
         txtDescription.setText(place.getDesc());
         final int[] imageIds = place.getImageURl();
         final int count = imageIds.length;
-
+       // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
        imageSwitcher.setFactory(new ViewSwitcher.ViewFactory() {
             @Override
             public View makeView() {
@@ -144,5 +148,28 @@ public class PlacesActivity extends AppCompatActivity {
         imageSwitcher.setOutAnimation(out);
 
 
+
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.profile_update, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        if (id == android.R.id.home) {
+
+            onBackPressed();
+        }
+
+
+        return super.onOptionsItemSelected(item);
     }
 }

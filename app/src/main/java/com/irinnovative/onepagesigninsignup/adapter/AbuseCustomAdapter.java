@@ -4,14 +4,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.irinnovative.onepagesigninsignup.R;
 import com.irinnovative.onepagesigninsignup.pojo.Abuse;
 
 import java.util.ArrayList;
-
-import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
  * Created by codetribe on 9/22/2017.
@@ -31,7 +30,7 @@ public class AbuseCustomAdapter extends RecyclerView.Adapter<AbuseCustomAdapter.
     @Override
     public void onBindViewHolder(AbuseCustomAdapter.ViewHolder holder, int position) {
         holder.topicTextView.setText(abuse.get(position).getTopic());
-        holder.descTextView.setText(abuse.get(position).getDesc());
+      //  holder.descTextView.setText(abuse.get(position).getDesc());
         holder.img_profile.setImageResource(abuse.get(position).getImg());
     }
 
@@ -41,13 +40,13 @@ public class AbuseCustomAdapter extends RecyclerView.Adapter<AbuseCustomAdapter.
     }
     public class ViewHolder extends RecyclerView.ViewHolder{
         private TextView topicTextView,descTextView;
-        private CircleImageView img_profile;
+        private ImageView img_profile;
         public ViewHolder(View view) {
             super(view);
 
             topicTextView = (TextView)view.findViewById(R.id.txt_topic);
-            descTextView = (TextView) view.findViewById(R.id.txt_desc);
-            img_profile = (CircleImageView) view.findViewById(R.id.image_view_abuse);
+          //  descTextView = (TextView) view.findViewById(R.id.txt_desc);
+            img_profile = (ImageView) view.findViewById(R.id.image_view_abuse);
         }
     }
 }
