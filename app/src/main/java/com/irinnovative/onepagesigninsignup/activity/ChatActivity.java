@@ -27,8 +27,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ChatActivity extends AppCompatActivity
-{
+public class ChatActivity extends AppCompatActivity {
 
     private Button sendBtn;
     private TextView recieveMsg;
@@ -40,11 +39,10 @@ public class ChatActivity extends AppCompatActivity
     private ArrayList<ChatMessage> list_of_chats;
 
 
-
     DatabaseReference rootRoomName;
 
 
-    String userName, roomName, chatUserName, chatMessageTxt,chatDate,userId;
+    String userName, roomName, chatUserName, chatMessageTxt, chatDate, userId;
 
 
     @Override
@@ -55,9 +53,9 @@ public class ChatActivity extends AppCompatActivity
 
         user = FirebaseAuth.getInstance().getCurrentUser();
         initControls();
-       // sendBtn = (Button)findViewById(R.id.btnSendMessage);
+        // sendBtn = (Button)findViewById(R.id.btnSendMessage);
         //recieveMsg =(TextView)findViewById(R.id.txtViewMessage);
-       // sendMsg =(EditText)findViewById(R.id.etTypeMessage);
+        // sendMsg =(EditText)findViewById(R.id.etTypeMessage);
 
 
         //listChat = (ListView) findViewById(R.id.lvViewMessage);
@@ -69,12 +67,8 @@ public class ChatActivity extends AppCompatActivity
         //listChat.setAdapter(chatAdapter);
 
 
-
-
-
         roomName = (String) getIntent().getExtras().get("Room_name");
         userName = (String) getIntent().getExtras().get("User_name");
-
 
 
         setTitle(roomName);
@@ -86,7 +80,6 @@ public class ChatActivity extends AppCompatActivity
         rootRoomName = FirebaseDatabase.getInstance().getReference().getRoot().child("ChatGroups").child(roomName);
 
 
-
         listChat = (ListView) findViewById(R.id.lvViewMessage);
         sendMsg = (EditText) findViewById(R.id.etTypeMessage);
         sendBtn = (Button) findViewById(R.id.btnSendMessage);
@@ -95,8 +88,6 @@ public class ChatActivity extends AppCompatActivity
         //TextView companionLabel = (TextView) findViewById(R.id.friendLabel);
         LinearLayout container = (LinearLayout) findViewById(R.id.container);
         //companionLabel.setText("My Buddy");
-
-
 
 
         sendBtn.setOnClickListener(new View.OnClickListener() {
@@ -124,7 +115,7 @@ public class ChatActivity extends AppCompatActivity
                 map.put("name", userName);
                 map.put("message", sendMsg.getText().toString());
                 map.put("date", chatMessage.getDate());
-                map.put("userId",user.getUid());
+                map.put("userId", user.getUid());
 
                 childRoot.updateChildren(map);
 
@@ -201,11 +192,10 @@ public class ChatActivity extends AppCompatActivity
 
     }
 
-    private void update_message(DataSnapshot dataSnapshot)
-    {
+    private void update_message(DataSnapshot dataSnapshot) {
 
         chatUserName = (String) dataSnapshot.child("name").getValue();
-        chatMessageTxt =  (String) dataSnapshot.child("message").getValue();
+        chatMessageTxt = (String) dataSnapshot.child("message").getValue();
         chatDate = (String) dataSnapshot.child("date").getValue();
         userId = (String) dataSnapshot.child("userId").getValue();
 
@@ -226,7 +216,7 @@ public class ChatActivity extends AppCompatActivity
         //displayMessage(chatMessage);
 
         listChat.setAdapter(adapter);
-       //adapter.notifyDataSetChanged();
+        //adapter.notifyDataSetChanged();
 
     }
 
@@ -236,7 +226,7 @@ public class ChatActivity extends AppCompatActivity
         sendMsg = (EditText) findViewById(R.id.etTypeMessage);
         sendBtn = (Button) findViewById(R.id.btnSendMessage);
 
-       // TextView meLabel = (TextView) findViewById(R.id.meLbl);
+        // TextView meLabel = (TextView) findViewById(R.id.meLbl);
         //TextView companionLabel = (TextView) findViewById(R.id.friendLabel);
         LinearLayout container = (LinearLayout) findViewById(R.id.container);
         //companionLabel.setText("My Buddy");
@@ -255,14 +245,14 @@ public class ChatActivity extends AppCompatActivity
                 DatabaseReference childRoot = rootRoomName.push();
 
                 ChatMessage chatMessage = new ChatMessage();
-               // chatMessage.setId(childRoot + "");//dummy
+                // chatMessage.setId(childRoot + "");//dummy
                 chatMessage.setUserName(userName);
                 chatMessage.setMessage(messageText);
                 chatMessage.setDate(DateFormat.getDateTimeInstance().format(new Date()));
                 chatMessage.setMe(true);
                 chatMessage.setUserId(userId);
 
-               // childRoot.setValue(chatMessage);
+                // childRoot.setValue(chatMessage);
 
 
                 Map<String, Object> map = new HashMap<>();
@@ -270,7 +260,7 @@ public class ChatActivity extends AppCompatActivity
                 map.put("name", userName);
                 map.put("message", sendMsg.getText().toString());
                 map.put("date", chatMessage.getDate());
-                map.put("userId",chatMessage.getUserId());
+                map.put("userId", chatMessage.getUserId());
 
                 childRoot.updateChildren(map);
 
@@ -293,8 +283,7 @@ public class ChatActivity extends AppCompatActivity
     }
 
 
-
-    private void loadDummyHistory(){
+    private void loadDummyHistory() {
 
         list_of_chats = new ArrayList<ChatMessage>();
 
@@ -314,7 +303,7 @@ public class ChatActivity extends AppCompatActivity
         adapter = new ChatAdapter(ChatActivity.this, new ArrayList<ChatMessage>());
         listChat.setAdapter(adapter);
 
-        for(int i=0; i<list_of_chats.size(); i++) {
+        for (int i = 0; i < list_of_chats.size(); i++) {
             ChatMessage message = list_of_chats.get(i);
             displayMessage(message);
         }
