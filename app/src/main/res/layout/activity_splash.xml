@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/homescreen"
+    android:background="@drawable/splash"
     android:orientation="vertical"
     android:weightSum="1"
     tools:context="com.irinnovative.onepagesigninsignup.SplashActivity">
@@ -16,7 +16,7 @@
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="40dp"
-        app:glv_color="@color/black"
+        app:glv_color="@color/white"
         app:glv_duration_in_ms="3500" />
 
 </RelativeLayout>
