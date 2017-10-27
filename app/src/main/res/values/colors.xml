@@ -5,8 +5,8 @@
     <color name="colorAccent">#009688</color>
 
 
-    <color name="colorPrimaryTrans">#a0673AB7</color>
-    <color name="colorAccentTrans">#a0009688</color>
+    <color name="colorPrimaryTrans">#015e5d</color>
+    <color name="colorAccentTrans">#00afaf</color>
     <color name="colorBlackTrans">#a0000000</color>
 
     <color name="colorTitle">#ffffff</color>
