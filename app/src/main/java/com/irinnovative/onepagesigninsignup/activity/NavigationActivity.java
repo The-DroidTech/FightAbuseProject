@@ -262,7 +262,7 @@ public class NavigationActivity extends AppCompatActivity
             Intent intent = new Intent(this,ProfileActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_learn) {
-            Intent intent = new Intent(this,IconTextTabsActivity.class);
+            Intent intent = new Intent(this,AbuseTypeActivity.class);
             startActivity(intent);
 
         } else if (id == R.id.nav_report) {
