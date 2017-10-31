@@ -37,11 +37,11 @@
 
             <TextView
                 android:id="@+id/txt_abuse_topic"
-                android:layout_width="match_parent"
+                android:layout_width="353dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
                 android:text="Seth Markus"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                 android:textColor="@android:color/black"
@@ -50,10 +50,10 @@
 
             <TextView
                 android:id="@+id/txt_abuse_desc"
-                android:layout_width="match_parent"
+                android:layout_width="353dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
                 android:layout_gravity="top"
+                android:layout_marginStart="16dp"
                 android:layout_weight="1"
                 android:text="Innovation hub"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
