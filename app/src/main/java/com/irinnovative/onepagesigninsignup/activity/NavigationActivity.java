@@ -60,7 +60,7 @@ public class NavigationActivity extends AppCompatActivity
     private String roomName;
     private String chatkey = "Chat";
 
-    private DatabaseReference databaseReference,profReference;
+    private DatabaseReference databaseReference, profReference;
     private FirebaseUser user;
     private Person person;
     private Chat chat;
@@ -90,9 +90,9 @@ public class NavigationActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        View hView =  navigationView.getHeaderView(0);
+        View hView = navigationView.getHeaderView(0);
         final TextView nav_userName = (TextView) hView.findViewById(R.id.drawerTextName);
-        final TextView nav_userEmail = (TextView)hView.findViewById(R.id.drawerTextEmail);
+        final TextView nav_userEmail = (TextView) hView.findViewById(R.id.drawerTextEmail);
         final ImageView nav_userImage = (ImageView) hView.findViewById(R.id.drawerImageView);
 
 
@@ -100,8 +100,6 @@ public class NavigationActivity extends AppCompatActivity
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         user = FirebaseAuth.getInstance().getCurrentUser();
         profReference = database.getReference().child("Profile").child(user.getUid());
-
-
 
 
         profReference.addValueEventListener(new ValueEventListener() {
@@ -125,7 +123,6 @@ public class NavigationActivity extends AppCompatActivity
             }
         });
         //create_room = (Button)findViewById(R.id.btnAddRoom);
-
 
 
         //create_room1 = (SubmitButton) findViewById(R.id.btnAddRoom1);
@@ -259,22 +256,21 @@ public class NavigationActivity extends AppCompatActivity
 
         if (id == R.id.nav_profile) {
             // Handle the camera action
-            Intent intent = new Intent(this,ProfileActivity.class);
+            Intent intent = new Intent(this, ProfileActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_learn) {
-            Intent intent = new Intent(this,AbuseTypeActivity.class);
+            Intent intent = new Intent(this, AbuseTypeActivity.class);
             startActivity(intent);
 
         } else if (id == R.id.nav_report) {
-            Intent intent = new Intent(this,ContactsActivity.class);
+            Intent intent = new Intent(this, ContactsActivity.class);
             startActivity(intent);
 
         } else if (id == R.id.nav_support) {
-            Intent intent = new Intent(this,InstitutionActivity.class);
+            Intent intent = new Intent(this, InstitutionActivity.class);
             startActivity(intent);
 
-        } else if (id== R.id.log_out)
-        {
+        } else if (id == R.id.log_out) {
             FirebaseAuth.getInstance().signOut();
             startActivity(new Intent(this, MainActivity.class));
         }

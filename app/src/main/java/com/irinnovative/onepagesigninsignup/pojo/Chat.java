@@ -1,13 +1,11 @@
 package com.irinnovative.onepagesigninsignup.pojo;
 
 
-
-public class Chat
-{
+public class Chat {
     private String roomName;
     private String userName;
     private String message;
-
+    private String userID;
 
     public Chat(String roomName, String userName) {
         this.roomName = roomName;
@@ -47,5 +45,13 @@ public class Chat
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public String getUserID() {
+        return userID;
+    }
+
+    public void setUserID(String userID) {
+        this.userID = userID;
     }
 }

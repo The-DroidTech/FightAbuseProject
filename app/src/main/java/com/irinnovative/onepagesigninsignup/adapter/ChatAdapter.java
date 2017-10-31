@@ -77,7 +77,7 @@ public class ChatAdapter extends BaseAdapter {
         Boolean test = chatMessage.getIsme();
         setAlignment(holder, test);
         holder.txtMessage.setText(chatMessage.getMessage());
-        holder.txtInfo.setText(chatMessage.getDate());
+        holder.txtInfo.setText(chatMessage.getUserName()+"\n"+chatMessage.getDate());
 
 
         return convertView;
