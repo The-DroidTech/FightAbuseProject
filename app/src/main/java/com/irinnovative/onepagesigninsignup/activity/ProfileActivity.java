@@ -159,7 +159,8 @@ public class ProfileActivity extends AppCompatActivity {
             try {
                 imageUri = data.getData();
                 pd.show();
-
+                final InputStream imageStream = getContentResolver().openInputStream(imageUri);
+                final Bitmap selectedImage = BitmapFactory.decodeStream(imageStream);
                 //uploading the image
                 UploadTask uploadTask = mStorageRef.child(uid).putFile(imageUri);
 
@@ -190,6 +191,8 @@ public class ProfileActivity extends AppCompatActivity {
                         }
 
                         Toast.makeText(ProfileActivity.this, "Upload successful", Toast.LENGTH_SHORT).show();
+
+                        imProfilePic.setImageBitmap(selectedImage);
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
@@ -198,9 +201,7 @@ public class ProfileActivity extends AppCompatActivity {
                         Toast.makeText(ProfileActivity.this, "Upload Failed -> " + e, Toast.LENGTH_SHORT).show();
                     }
                 });
-                final InputStream imageStream = getContentResolver().openInputStream(imageUri);
-                final Bitmap selectedImage = BitmapFactory.decodeStream(imageStream);
-                imProfilePic.setImageBitmap(selectedImage);
+
 
 
             } catch (FileNotFoundException e) {
@@ -227,6 +228,7 @@ public class ProfileActivity extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+
         if (id == R.id.updatSos) {
             pd.show();
             Person person = new Person(uid, username.getText().toString(), textViewBio.getText().toString(), textViewCellphone.getText().toString(), sDownloadUri);

@@ -23,9 +23,10 @@
         <activity android:name=".SplashActivity" />
         <activity android:name=".activity.HomeActivity" />
         <activity android:name=".InstitutionActivity" />
-        <activity android:name=".activity.ContactsActivity"
-            android:theme="@style/AppTheme"
-            android:label="@string/title_activity_contacts"/>
+        <activity
+            android:name=".activity.ContactsActivity"
+            android:label="@string/title_activity_contacts"
+            android:theme="@style/AppTheme" />
         <activity android:name=".MentorsActivity" />
         <activity android:name=".IconTextTabsActivity" />
         <activity
@@ -50,7 +51,9 @@
         <activity
             android:name=".activity.NavigationActivity"
             android:label="@string/title_activity_navigation"
-            android:theme="@style/AppTheme.NoActionBar.FullScreen"></activity>
+            android:theme="@style/AppTheme.NoActionBar.FullScreen" />
+        <activity android:name=".activity.About" />
+        <activity android:name=".activity.AbuseTypeActivity"></activity>
     </application>
 
 </manifest>

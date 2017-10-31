@@ -94,7 +94,7 @@
 
             android:orientation="vertical">
 
-            `
+
 
             <TextView
                 android:layout_width="match_parent"
