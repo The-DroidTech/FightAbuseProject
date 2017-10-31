@@ -121,7 +121,7 @@ public class ChatActivity extends AppCompatActivity {
 
                 sendMsg.setText("");
 
-                displayMessage(chatMessage);
+                //displayMessage(chatMessage);
             }
         });
 
@@ -209,6 +209,14 @@ public class ChatActivity extends AppCompatActivity {
         chatMessage.setMessage(chatMessageTxt);
         chatMessage.setDate(chatDate);
         chatMessage.setUserId(userId);
+        if(user.getUid().equals(chatMessage.getUserId()))
+        {
+            chatMessage.setMe(true);
+        }
+        else {
+            chatMessage.setMe(false);
+        }
+
 
 
         adapter.add(chatMessage);
@@ -287,7 +295,7 @@ public class ChatActivity extends AppCompatActivity {
 
         list_of_chats = new ArrayList<ChatMessage>();
 
-        ChatMessage msg = new ChatMessage();
+        /*ChatMessage msg = new ChatMessage();
         //msg.setId(1 + "");
         msg.setMe(false);
         msg.setMessage("Hi");
@@ -298,7 +306,7 @@ public class ChatActivity extends AppCompatActivity {
         msg1.setMe(false);
         msg1.setMessage("How r u doing???");
         msg1.setDate(DateFormat.getDateTimeInstance().format(new Date()));
-        list_of_chats.add(msg1);
+        list_of_chats.add(msg1);*/
 
         adapter = new ChatAdapter(ChatActivity.this, new ArrayList<ChatMessage>());
         listChat.setAdapter(adapter);
