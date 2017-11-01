@@ -27,14 +27,7 @@ public class InstitutionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_institution);
 
-
-
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//       getSupportActionBar().setTitle("Update Profile");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         populate();
         PlacesAdapter adapter = new PlacesAdapter(this, listPlaces);
@@ -257,12 +250,8 @@ public class InstitutionActivity extends AppCompatActivity {
 
 
     }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.profile_update, menu);
-        return true;
-    }
+
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
