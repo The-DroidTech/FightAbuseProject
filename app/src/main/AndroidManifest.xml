@@ -43,7 +43,8 @@
         <activity android:name=".activity.SupportGroups" />
         <activity android:name=".MentorProfileActivity" />
         <activity android:name=".activity.ChatRoomActivity" />
-        <activity android:name=".activity.ChatActivity" />
+        <activity android:name=".activity.ChatActivity"
+            android:theme="@style/AppTheme"/>
         <activity android:name=".activity.SosDetailsActivity" />
         <activity
             android:name=".activity.TestomoniesActivity"
