@@ -43,7 +43,7 @@ public class ChatActivity extends AppCompatActivity {
     DatabaseReference rootRoomName;
 
 
-    String userName, roomName, chatUserName, chatMessageTxt, chatDate, userId,roomId;
+    String userName, roomName, chatUserName, chatMessageTxt, chatDate, userId, roomId;
 
 
     @Override
@@ -212,14 +212,11 @@ public class ChatActivity extends AppCompatActivity {
         chatMessage.setMessage(chatMessageTxt);
         chatMessage.setDate(chatDate);
         chatMessage.setUserId(userId);
-        if(user.getUid().equals(chatMessage.getUserId()))
-        {
+        if (user.getUid().equals(chatMessage.getUserId())) {
             chatMessage.setMe(true);
-        }
-        else {
+        } else {
             chatMessage.setMe(false);
         }
-
 
 
         adapter.add(chatMessage);
@@ -336,5 +333,5 @@ public class ChatActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-    
+
 }
