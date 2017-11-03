@@ -143,6 +143,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         pd.show();
                         signIn(email,password);
                     }
+                    else
+                    {
+                        textPassword.setError("Enter Password");
+                    }
 
                 }
                 else {

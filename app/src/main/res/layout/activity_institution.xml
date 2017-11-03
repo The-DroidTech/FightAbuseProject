@@ -7,15 +7,6 @@
     android:layout_height="match_parent"
     tools:context="com.irinnovative.onepagesigninsignup.InstitutionActivity">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbarIns"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        app:title="Institutions"
-        android:titleMargin="50dp"
-        app:titleTextColor="@android:color/white" />
-
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
