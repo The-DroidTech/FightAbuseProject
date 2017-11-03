@@ -1,8 +1,10 @@
 package com.irinnovative.onepagesigninsignup.activity;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -11,11 +13,11 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -30,20 +32,18 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.irinnovative.onepagesigninsignup.IconTextTabsActivity;
 import com.irinnovative.onepagesigninsignup.InstitutionActivity;
 import com.irinnovative.onepagesigninsignup.R;
+import com.irinnovative.onepagesigninsignup.adapter.ChatRoomAdapter;
 import com.irinnovative.onepagesigninsignup.pojo.Chat;
+import com.irinnovative.onepagesigninsignup.pojo.ChatRoom;
 import com.irinnovative.onepagesigninsignup.pojo.Person;
 import com.irinnovative.onepagesigninsignup.pojo.Sos;
 import com.spark.submitbutton.SubmitButton;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Map;
-import java.util.Set;
 
 public class NavigationActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -53,11 +53,19 @@ public class NavigationActivity extends AppCompatActivity
     private SubmitButton create_room1;
 
     private ListView roomList;
-    private ArrayAdapter<String> roomAdapter;
-    private ArrayList<String> list_of_rooms;
+    private ChatRoomAdapter roomAdapter;
+
+
+    private ChatRoomAdapter chatRoomChatRoomAdapter;
+    private ChatRoom chatRoom;
+
+    private ArrayList<ChatRoom> list_of_rooms;
+    private ArrayList<String> list_of_rooms_id;
+    private ArrayList<String> list_of_room;
 
     private String userName;
     private String roomName;
+    private String roomDescription;
     private String chatkey = "Chat";
 
     private DatabaseReference databaseReference, profReference;
@@ -66,6 +74,7 @@ public class NavigationActivity extends AppCompatActivity
     private Chat chat;
     ImageView sos;
     int count = 0;
+    Context context;
 
 
     @Override
@@ -75,10 +84,10 @@ public class NavigationActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        context = getBaseContext();
 
-       /*
        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        */
+
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -122,6 +131,28 @@ public class NavigationActivity extends AppCompatActivity
 
             }
         });
+
+
+
+        chatRoom = new ChatRoom();
+        chatRoom.setRoomName(roomName);
+        chatRoom.setRoomDescription(roomDescription);
+
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                request_name();
+
+            }
+        });
+
+
+
+
+
+
         //create_room = (Button)findViewById(R.id.btnAddRoom);
 
 
@@ -129,12 +160,16 @@ public class NavigationActivity extends AppCompatActivity
         //room_name = (EditText) findViewById(R.id.etRoomName);
         roomList = (ListView) findViewById(R.id.lvListRooms);
 
+
+
+
         list_of_rooms = new ArrayList<>();
 
-        roomAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, list_of_rooms);
 
-        roomList.setAdapter(roomAdapter);
+       // chatRoomChatRoomAdapter = new ChatRoomAdapter(NavigationActivity.this,list_of_rooms);
 
+        //roomAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, list_of_rooms);
+        //roomList.setAdapter(chatRoomChatRoomAdapter);
 
         //databaseReference = FirebaseDatabase.getInstance().getReference().getRoot();
 
@@ -173,7 +208,59 @@ public class NavigationActivity extends AppCompatActivity
         });
 */
 
+        /*
+        databaseReference.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
 
+            }
+
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+        */
+
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                list_of_rooms = new ArrayList<>();
+                list_of_rooms_id = new ArrayList<>();
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    Log.i("Ygritte", snapshot.toString());
+                    ChatRoom chatRoom = snapshot.getValue(ChatRoom.class);
+                    list_of_rooms.add(chatRoom);
+                    list_of_rooms_id.add(snapshot.getKey());
+                }
+                roomAdapter = new ChatRoomAdapter(context,list_of_rooms);
+                roomAdapter.notifyDataSetChanged();
+                roomList.setAdapter(roomAdapter);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+        /*
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -188,10 +275,16 @@ public class NavigationActivity extends AppCompatActivity
                     //get rooms
                     set.add(((DataSnapshot) iterator.next()).getKey());
 
+
                 }
 
                 list_of_rooms.clear();
+
+                list_of_room = new ArrayList<>();
+
                 list_of_rooms.addAll(set);
+
+
 
                 roomAdapter.notifyDataSetChanged();
 
@@ -203,18 +296,22 @@ public class NavigationActivity extends AppCompatActivity
             }
         });
 
+        */
 
         roomList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 Intent intent = new Intent(NavigationActivity.this, ChatActivity.class);
-                //roomName = ((TextView) view).getText().toString();
-                intent.putExtra("Room_name", list_of_rooms.get(position));
+                roomName = list_of_rooms.get(position).getRoomName();
+                String roomId = list_of_rooms_id.get(position);
+                intent.putExtra("Room_name", roomName);
                 intent.putExtra("User_name", userName);
+                intent.putExtra("room_id", roomId);
                 startActivity(intent);
             }
         });
+
 
     }
 
@@ -241,10 +338,7 @@ public class NavigationActivity extends AppCompatActivity
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
         //noinspection SimplifiableIfStatement
-
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -296,10 +390,10 @@ public class NavigationActivity extends AppCompatActivity
                 roomName = editText.getText().toString();
 
                 //roomName = room_name.getText().toString();
-                Map<String, Object> map = new HashMap<>();
-                map.put(roomName, "");
-                databaseReference.updateChildren(map);
-                room_name.setText(null);
+                //Map<String, Object> map = new HashMap<>();
+                //map.put(roomName, "");
+                //databaseReference.updateChildren(map);
+                //room_name.setText(null);
 
 
                 if (!TextUtils.isEmpty(roomName)) {
@@ -316,12 +410,60 @@ public class NavigationActivity extends AppCompatActivity
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.cancel();
-                request_name();
+               // request_name();
+            }
+        });
+
+        request_room_desc();
+
+        builder.show();
+
+
+    }
+
+
+    private void request_room_desc()
+    {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Enter room description!");
+        final EditText editText = new EditText(this);
+
+        builder.setView(editText);
+
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+                roomDescription = editText.getText().toString();
+
+                //roomName = room_name.getText().toString();
+                Map<String, Object> map = new HashMap<>();
+                map.put("roomName", roomName);
+                map.put("roomDescription", roomDescription);
+                //databaseReference.updateChildren(map);
+              //  room_name.setText(null);
+
+
+                if (!TextUtils.isEmpty(roomDescription)) {
+                    //ok
+                    editText.setError("Enter room description!");
+                } else {
+
+                    request_room_desc();
+                }
+
+
+            }
+        }).setNegativeButton("Quit", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+                // request_name();
             }
         });
 
         builder.show();
-
 
     }
 }
