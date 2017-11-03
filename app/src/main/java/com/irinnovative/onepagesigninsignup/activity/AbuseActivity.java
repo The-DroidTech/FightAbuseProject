@@ -20,15 +20,9 @@ public class AbuseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_abuse);
+        setContentView(R.layout.abuse_layout1);
 
-
-       //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         txtTopic = (TextView) findViewById(R.id.txt_abuse_topic);
         txtDesc = (TextView) findViewById(R.id.txt_abuse_desc);
@@ -36,7 +30,7 @@ public class AbuseActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         Abuse abuse = (Abuse) intent.getSerializableExtra("content");
-        toolbar.setTitle(abuse.getTopic());
+        setTitle(abuse.getTopic());
 
         txtTopic.setText(abuse.getTopic());
         txtDesc.setText(abuse.getDesc());
