@@ -42,7 +42,7 @@ public class ChatActivity extends AppCompatActivity {
     DatabaseReference rootRoomName;
 
 
-    String userName, roomName, chatUserName, chatMessageTxt, chatDate, userId;
+    String userName, roomName, chatUserName, chatMessageTxt, chatDate, userId,roomId;
 
 
     @Override
@@ -69,6 +69,7 @@ public class ChatActivity extends AppCompatActivity {
 
         roomName = (String) getIntent().getExtras().get("Room_name");
         userName = (String) getIntent().getExtras().get("User_name");
+        roomId = (String) getIntent().getExtras().get("room_id");
 
 
         setTitle(roomName);
@@ -77,7 +78,7 @@ public class ChatActivity extends AppCompatActivity {
         //getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
 
 
-        rootRoomName = FirebaseDatabase.getInstance().getReference().getRoot().child("ChatGroups").child(roomName);
+        rootRoomName = FirebaseDatabase.getInstance().getReference().getRoot().child("ChatMessages").child(roomId);
 
 
         listChat = (ListView) findViewById(R.id.lvViewMessage);

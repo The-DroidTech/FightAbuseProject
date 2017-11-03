@@ -32,9 +32,6 @@
                     />
 
 
-
-
-
             </android.support.design.widget.CollapsingToolbarLayout>
 
 
@@ -177,7 +174,6 @@
                 </TableLayout>
 
 
-
             </LinearLayout>
 
 
@@ -191,8 +187,6 @@
             app:layout_anchorGravity="bottom|right|end"
             app:layout_anchor="@id/android_appbar_layout"
             android:src="@drawable/ic_camera" />
-
-
 
     </android.support.design.widget.CoordinatorLayout>
 
