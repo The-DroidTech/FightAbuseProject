@@ -3,7 +3,6 @@ package com.irinnovative.onepagesigninsignup.activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.TextInputEditText;
 import android.support.percent.PercentLayoutHelper;
@@ -20,6 +19,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private LinearLayout llSignin;
     private Button btnSignup;
     private Button btnSignin;
+    private ImageView imSignInLogo;
     LinearLayout llsignin,llsignup;
     ProgressDialog pd;
     private TextInputEditText textEmail,textSignUpEmail;
@@ -76,6 +77,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         llSignup = (LinearLayout) findViewById(R.id.llSignup);
         llSignin = (LinearLayout) findViewById(R.id.llSignin);
+
+        imSignInLogo = (ImageView) llSignin.findViewById(R.id.imageViewLogin);
+        Glide.with(getApplicationContext()).load(R.drawable.iconvebalize).into(imSignInLogo);
 
         textEmail = (TextInputEditText) findViewById(R.id.text_input_email);
         textPassword = (TextInputEditText) findViewById(R.id.text_input_password);

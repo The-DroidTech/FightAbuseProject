@@ -21,11 +21,10 @@
 
 
             <ImageView
-                android:id="@+id/ImageView_user_pic"
+                android:id="@+id/ImageView_about_header"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                android:src="@drawable/andrea_dondolo"
                 app:layout_collapseMode="parallax"
                 app:layout_collapseParallaxMultiplier="0.7"
 
@@ -55,14 +54,79 @@
             android:orientation="vertical">
 
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:textSize="12sp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:text="Information About VerbaLize Application\n----------------------------------------------------------\n
+VerbaLize app is a solution to assist individuals who have suffered the brutality of abuse. In the hopes of eradicating abuse in the communities verbaLise was developed.
 
+The name was used to motivate individuals’ to speak against abuse.
 
+Data charges may apply…………………"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
 
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                tools:ignore="SmallSp" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
 
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:text="The mission About VerbaLize Application\n----------------------------------------------------------\n
 
+VerbaLize App is set on ensuring that communities become safer from the cancer of abuse by providing information as a guideline on all kinds of abuse. Breaking the silence through the support groups and mentors. Accessibility of information through numerous institutions for rehabilitation or healing purposes.
+.
+"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
 
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:text="The Founders of verbaLize app\n----------------------------------------------------------\n
+Thabang Chabalala
+Lesedi Lebogo
+Thabiso Malete
 
+"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:id="@+id/image_view_about1"
+                android:layout_width="match_parent"
+                android:layout_height="197dp"
+                android:scaleType="centerCrop"
+                android:layout_margin="6dp" />
+
+            <ImageView
+                android:id="@+id/image_view_about2"
+                android:layout_width="match_parent"
+                android:layout_height="197dp"
+                android:layout_margin="6dp"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/image_view_about3"
+                android:layout_width="match_parent"
+                android:layout_margin="6dp"
+                android:layout_height="197dp"
+                android:scaleType="centerCrop" />
 
 
         </LinearLayout>
