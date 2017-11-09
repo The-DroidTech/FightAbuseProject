@@ -40,7 +40,8 @@ public class ChatRoomAdapter extends BaseAdapter {
             vi = inflater.inflate(R.layout.list_row, null);
 
         TextView roomName = (TextView)vi.findViewById(R.id.tvRoomName); // title
-        TextView roomDesc = (TextView)vi.findViewById(R.id.tvDesc); // artist name
+        TextView roomDesc = (TextView)vi.findViewById(R.id.tvDesc);
+        // artist name
 
         ChatRoom chatRoom = chatRooms.get(position);
         
