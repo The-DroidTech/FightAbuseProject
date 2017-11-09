@@ -34,6 +34,7 @@
                 android:gravity="center"
                 android:paddingTop="15dp"
                 android:text="Signin"
+                android:fontFamily="sans-serif"
                 android:textAllCaps="true"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
@@ -43,6 +44,7 @@
                 layout="@layout/layout_signin"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+
                 android:gravity="center"></include>
         </LinearLayout>
 
@@ -52,6 +54,7 @@
             android:layout_height="match_parent"
             android:layout_alignParentRight="true"
             android:background="#008975"
+            android:fontFamily="sans-serif"
             android:gravity="center_horizontal"
             android:orientation="horizontal"
             app:layout_widthPercent="15%">
@@ -64,6 +67,7 @@
                 android:paddingTop="15dp"
                 android:rotation="180"
                 android:text="Signup"
+                android:fontFamily="sans-serif"
                 android:textAllCaps="true"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
