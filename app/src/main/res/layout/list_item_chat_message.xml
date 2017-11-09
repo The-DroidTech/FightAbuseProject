@@ -16,6 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="25sp"
             android:layout_gravity="right"
+            android:fontFamily="sans-serif"
             android:textColor="@android:color/darker_gray"
             android:textSize="8sp"
             android:textStyle="italic" />
@@ -35,6 +36,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxWidth="240dp"
+                android:fontFamily="sans-serif"
                 android:textColor="@android:color/black" />
 
         </LinearLayout>

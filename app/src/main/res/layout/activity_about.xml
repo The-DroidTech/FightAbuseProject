@@ -59,14 +59,13 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:textSize="12sp"
+                android:fontFamily="sans-serif"
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="15dp"
                 android:text="Information About VerbaLize Application\n----------------------------------------------------------\n
 VerbaLize app is a solution to assist individuals who have suffered the brutality of abuse. In the hopes of eradicating abuse in the communities verbaLise was developed.
 
-The name was used to motivate individuals’ to speak against abuse.
-
-Data charges may apply…………………"
+The name was used to motivate individuals’ to speak against abuse."
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
 
                 android:textColor="@color/black"
@@ -77,7 +76,7 @@ Data charges may apply…………………"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-
+                android:fontFamily="sans-serif"
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="15dp"
                 android:text="The mission About VerbaLize Application\n----------------------------------------------------------\n
@@ -93,7 +92,7 @@ VerbaLize App is set on ensuring that communities become safer from the cancer o
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-
+                android:fontFamily="sans-serif"
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="15dp"
                 android:text="The Founders of verbaLize app\n----------------------------------------------------------\n

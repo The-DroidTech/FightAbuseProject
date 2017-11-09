@@ -82,6 +82,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
+                android:fontFamily="sans-serif"
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp"
                 tools:text="012 456 98775" />
@@ -101,7 +102,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:layout_marginLeft="10dp"
-
+                android:fontFamily="sans-serif"
                 android:text="Description"
                 android:textSize="16dp"
                 android:textStyle="bold" />
@@ -111,9 +112,11 @@
                 android:id="@+id/txt_hotel_desc"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
+                android:fontFamily="sans-serif"
+                android:textSize="16dp"
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="10dp"
-                android:text="yrdtydfhjyuggyujyuftyrru76trtyutjyutrhyrhyrhyrhy" />
+                android:text="hy" />
 
         </LinearLayout>
     </LinearLayout>

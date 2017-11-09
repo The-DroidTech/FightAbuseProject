@@ -44,6 +44,7 @@
         android:layout_below="@id/tvRoomName"
         android:textColor="#343434"
         android:textSize="10dip"
+		android:fontFamily="sans-serif"
         android:layout_marginTop="1dip"
         android:layout_toRightOf="@+id/thumbnail"
         android:text="Just gona stand there and ..." />
