@@ -41,8 +41,11 @@ public class PlacesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hotel);
 
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-       // getSupportActionBar().setTitle("Hotel");
+
         imageSwitcher = (ImageSwitcher) findViewById(R.id.hotel_image_switch);
        // toolbar = (Toolbar) findViewById(R.id.toolbar);
         txtDescription = (TextView) findViewById(R.id.txt_hotel_desc);
@@ -56,7 +59,7 @@ public class PlacesActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         final Place place = (Place) intent.getSerializableExtra("places");
-
+        getSupportActionBar().setTitle(place.getName());
         txtDescription.setText(place.getDesc());
         final int[] imageIds = place.getImageURl();
         final int count = imageIds.length;
@@ -65,7 +68,7 @@ public class PlacesActivity extends AppCompatActivity {
             @Override
             public View makeView() {
                 ImageView imageView = new ImageView(getApplicationContext());
-                imageView.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
+                imageView.setScaleType(ImageView.ScaleType.FIT_XY);
                 imageView.setLayoutParams(new ImageSwitcher.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
 
 
@@ -150,12 +153,7 @@ public class PlacesActivity extends AppCompatActivity {
 
 
     }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.profile_update, menu);
-        return true;
-    }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

@@ -11,15 +11,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|enterAlways"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            app:title="Institutions"
-            app:titleTextColor="@android:color/white" />
 
         <ImageSwitcher
             android:id="@+id/hotel_image_switch"
@@ -28,7 +19,8 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:animationCache="true"
-            android:background="#000"></ImageSwitcher>
+           >
+        </ImageSwitcher>
 
 
         <LinearLayout
