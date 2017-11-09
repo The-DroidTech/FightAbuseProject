@@ -24,6 +24,9 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.google.firebase.auth.FirebaseUser;
 import com.irinnovative.onepagesigninsignup.R;
 import com.irinnovative.onepagesigninsignup.SplashActivity;
@@ -314,18 +317,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         Log.d("TAG", "createUserWithEmail:onComplete:" + task.isSuccessful());
                         pd.dismiss();
-                        verifyEmail(true);
+
                         // If sign in fails, display a message to the user. If sign in succeeds
                         // the auth state listener will be notified and logic to handle the
                         // signed in user can be handled in the listener.
+                        if(task.isSuccessful()){
+                            verifyEmail(true);
+                        }
                         if (!task.isSuccessful()) {
-                            Toast.makeText(getApplicationContext(), "Unsuccessful",
-                                    Toast.LENGTH_SHORT).show();
+
+                            try {
+                                throw task.getException();
+                            } catch(FirebaseAuthWeakPasswordException e) {
+                                textSignUpPassword.setError(getString(R.string.error_weak_password));
+                                textSignUpPassword.requestFocus();
+                            }catch(FirebaseAuthUserCollisionException e) {
+                                textSignUpEmail.setError(getString(R.string.error_user_exists));
+                                textSignUpEmail.requestFocus();
+                            } catch(Exception e) {
+                                Log.e("TAG", e.getMessage());
+                            }
+                            //Toast.makeText(getApplicationContext(), "Unsuccessful",Toast.LENGTH_SHORT).show();
                         }
 
                         // ...
                     }
                 });
+
     }
 
     public void signIn(String email,String password)
@@ -341,10 +359,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         // signed in user can be handled in the listener.
                         if (!task.isSuccessful()) {
 
-                            Log.w("TAG", "signInWithEmail:failed", task.getException());
-                            Toast.makeText(getApplicationContext(), "Failed",
-                                    Toast.LENGTH_SHORT).show();
+                            try {
+                                throw task.getException();
+                            } catch(FirebaseAuthInvalidCredentialsException e) {
+                                textPassword.setError(getString(R.string.error_invalid_email));
+                                textPassword.requestFocus();
+                            }  catch(Exception e) {
+                                Log.e("TAG", e.getMessage());
+                            }
                         }
+
+
 
                         // ...
                     }
