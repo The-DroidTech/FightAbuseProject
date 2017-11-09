@@ -12,19 +12,17 @@
 	<LinearLayout android:id="@+id/thumbnail"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:padding="3dip"
         android:layout_alignParentLeft="true"
-        android:background="@drawable/image_bg"
 	    android:layout_marginRight="5dip">
 
 		<ImageView
 			android:id="@+id/list_image_row"
-	        android:layout_width="50dip"
-	        android:layout_height="50dip"
+	        android:layout_width="63dip"
+	        android:layout_height="63dip"
 	        android:src="@drawable/logo_app"/>
 
 	</LinearLayout>
-    
+
 	<!-- Title Of Song-->
     <TextView
         android:id="@+id/tvRoomName"
@@ -33,6 +31,7 @@
         android:layout_alignTop="@+id/thumbnail"
         android:layout_toRightOf="@+id/thumbnail"
         android:text="Rihanna Love the way lie"
+		android:paddingTop="10dp"
         android:textColor="#040404"
         android:typeface="sans" 
         android:textSize="15dip"
