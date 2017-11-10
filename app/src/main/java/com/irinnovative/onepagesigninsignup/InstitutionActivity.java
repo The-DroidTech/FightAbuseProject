@@ -50,7 +50,8 @@ public class InstitutionActivity extends AppCompatActivity {
         //SAPSAC
 
         listPlaces.add(new Place("The South African Professional Society on the Abuse of Children",
-                "The South African Professional Society on the Abuse of Children (SAPSAC) is a multi-professional society established in March 1999 to provide professionals who are active in the field of abused children with a forum for structured and systematic exchange of information on the subject of child abuse. It is a non-political and non-governmental organisation registered as an NPO and it provides for membership from the following professions:\n" +
+                "The South African Professional Society on the Abuse of Children (SAPSAC) is a multi-professional society established in March 1999 to provide professionals who are active in the field of abused children with a forum for structured and systematic exchange of information on the subject of child abuse. " +
+                        "It is a non-political and non-governmental organisation registered as an NPO and it provides for membership from the following professions:\n" +
                         "\n" +
                         "Legal Professions (Private and employed within the South African Judicial System)\n" +
                         "Medical Professions (Medical Doctors and Nursing Professionals)\n" +
@@ -69,7 +70,9 @@ public class InstitutionActivity extends AppCompatActivity {
         listPlaces.add(new Place("People Oppressing Women Abuse",
                 "POWA is a “feminist, women’s rights organisation that provides both services, and engages in advocacy in order to ensure the realisation of women’s rights and thereby improve women’s quality of life”.\n" +
                         "\n" +
-                        "POWA’s uniqueness as an organisation is in providing both services to survivors and engaging in advocacy using a feminist and intersectional analysis. Our work is rooted in the belief that change can only be said to be effective when women’s lives are directly improved through our interventions. We also believe that there is no single route to change, and thus constantly seek new and creative approaches in our programming to achieve the change we seek. ",
+                        "POWA’s uniqueness as an organisation is in providing both services to survivors and engaging in advocacy using a feminist and intersectional analysis. " +
+                        "Our work is rooted in the belief that change can only be said to be effective when women’s lives are directly improved through our interventions. " +
+                        "We also believe that there is no single route to change, and thus constantly seek new and creative approaches in our programming to achieve the change we seek. ",
                 new int[]{R.drawable.powa}, "PO Box 93416, Yeoville 2143\n" +
                 "Johannesburg\n"
                 ,
@@ -80,11 +83,14 @@ public class InstitutionActivity extends AppCompatActivity {
         listPlaces.add(new Place("Women & Men Against Child Abuse",
                 "Women & Men Against Child Abuse are concerned about a recent incident where a victim of domestic violence was subjected to gross misconduct by the SAPS. \n" +
                         "\n" +
-                        "The victim in this case was physically assaulted by her husband, a British national and father of her 5-year old child. When she failed to show up for work, her employer went to check on her and found her battered, upon which she took her to a doctor for examination. ”.\n" +
+                        "The victim in this case was physically assaulted by her husband, a British national and father of her 5-year old child. When she failed to show up for work," +
+                        " her employer went to check on her and found her battered, upon which she took her to a doctor for examination. ”.\n" +
                         "\n" +
                         "Women & Men Against Child Abuse are concerned about a recent incident where a victim of domestic violence was subjected to gross misconduct by the SAPS. \n" +
                         "\n" +
-                        "The victim in this case was physically assaulted by her husband, a British national and father of her 5-year old child. When she failed to show up for work, her employer went to check on her and found her battered, upon which she took her to a doctor for examination. The doctor instructed them to obtain a J88 form from the police station. At Edenvale police station they were wrongly informed by Captain Nthite that a J88 form differs with each police station, and had to collect one at Boksburg Police Station. ",
+                        "The victim in this case was physically assaulted by her husband, a British national and father of her 5-year old child. When she failed to show up for work," +
+                        " her employer went to check on her and found her battered, upon which she took her to a doctor for examination. The doctor instructed them to obtain a J88 form from the police station. " +
+                        "At Edenvale police station they were wrongly informed by Captain Nthite that a J88 form differs with each police station, and had to collect one at Boksburg Police Station. ",
                 new int[]{R.drawable.men_against}, " 6 Benton House,\n" +
                 "Bond Street Business Park,\n" +
                 "cnr Bond Str and Kent Ave, Randburg\n" +
@@ -94,12 +100,16 @@ public class InstitutionActivity extends AppCompatActivity {
 
         //Life Line
 
-        listPlaces.add(new Place("LIFE LINE",
-                "LifeLine South Africa was a service organisation, responding to emotional trauma and individual crises, with a view to providing emotional support. Our range of services focused on supporting and/or developing individuals, enabling them to cope more effectively with the emotional effects of trauma. These services were primarily counselling and personal growth training and development. A diverse range of projects have been initiated and are run by our centres around the region.\n" +
+        listPlaces.add(new Place("Life Line",
+                "LifeLine South Africa was a service organisation, responding to emotional trauma and individual crises, with a view to providing emotional support. " +
+                        "Our range of services focused on supporting and/or developing individuals, enabling them to cope more effectively with the emotional effects of trauma. " +
+                        "These services were primarily counselling and personal growth training and development. A diverse range of projects have been initiated and are run by our centres around the region.\n" +
                         "\n" +
-                        "As much as these services are still required in communities all around South Africa, we can bring about far more sustainable, effective societal change through a more engaging, proactive approach that focuses on groups of people rather than individuals.\n" +
+                        "As much as these services are still required in communities all around South Africa, we can bring about far more sustainable," +
+                        " effective societal change through a more engaging, proactive approach that focuses on groups of people rather than individuals.\n" +
                         "\n" +
-                        "Hence the transformation of the organisation, as reflected in the newly defined vision and mission. Fulfilling this purpose requires an innovative, passionate, diverse group of people with integrity, commitment and a desire to bring about social change.",
+                        "Hence the transformation of the organisation, as reflected in the newly defined vision and mission. " +
+                        "Fulfilling this purpose requires an innovative, passionate, diverse group of people with integrity, commitment and a desire to bring about social change.",
                 new int[]{R.drawable.blue},
                 "28 Melle Street\n" +
                         "Braamfontein\n" +
@@ -109,8 +119,9 @@ public class InstitutionActivity extends AppCompatActivity {
 
         //Tears Foundation
 
-        listPlaces.add(new Place("TEARS Foundation",
-                "TEARS Foundation is responsible for the sourcing and collating of a data-base comprised of a fully comprehensive network of services; medical, medico-legal, legal and psychological, currently available throughout South Africa, for the assistance and support of survivors of rape and sexual abuse.. \n" +
+        listPlaces.add(new Place("Tears Foundation",
+                "TEARS Foundation is responsible for the sourcing and collating of a data-base comprised of a fully comprehensive network of services; medical, medico-legal, legal and psychological, " +
+                        "currently available throughout South Africa, for the assistance and support of survivors of rape and sexual abuse.\n" +
                         "\n" +
                         "TEARS Foundation, founded in 2012 is a Registered NPO and PBO that uses technology innovatively in the scourge against domestic violence, sexual assault and child abuse.,",
                 new int[]{R.drawable.tear}, " Tears Foundation\n" +
@@ -126,13 +137,16 @@ public class InstitutionActivity extends AppCompatActivity {
         //Child Line
 
         listPlaces.add(new Place("Childline South Africa ",
-                "Childline SA is primarily a counselling service for children up to the age of 18. We chat to children from all over South Africa as well as adults that have concerns about children.\n" +
+                "Childline SA is primarily a counselling service for children up to the age of 18." +
+                        " We chat to children from all over South Africa as well as adults that have concerns about children.\n" +
                         "\n" +
                         "We are available Monday-Friday, 2pm-6pm, except on public holidays.\n" +
                         "\n" +
                         "We know it can sometimes be scary talking to counsellors. Especially for the first time. You might be unsure about what to say or how they'll react. Or wonder who they are?\n" +
                         "\n" +
-                        "They're a bunch of different people, some old and some young. They all work for us across South Africa. They have all sorts of hobbies and interests. But most importantly, they all care about young people and give up some their time to volunteer as counsellors. They have been trained on our Crisisline Counselling Course and are constantly updated with issues you may be facing.\n" +
+                        "They're a bunch of different people, some old and some young. They all work for us across South Africa. They have all sorts of hobbies and interests. But most importantly," +
+                        " they all care about young people and give up some their time to volunteer as counsellors." +
+                        " They have been trained on our Crisisline Counselling Course and are constantly updated with issues you may be facing.\n" +
                         "\n" +
                         "You can talk to them about anything, from self-harm and sexting to exam stress and eating problems.,",
                 new int[]{R.drawable.childline_south_africa_logo}, " T 24 Stephen Dlamini Road" +
@@ -167,9 +181,11 @@ public class InstitutionActivity extends AppCompatActivity {
                         "\n" +
                         "We have a vision of a South Africa in which women are safe in their communities, and where the criminal justice system supports and empowers rape survivors.\n" +
                         "\n" +
-                        "Our goal is to promote an end to violence against women – specifically rape. Rape survivors are key to successful convictions and their empowerment is based on safety, respect, support and the ability to make informed choices as they embark on this difficult and challenging journey.\n" +
+                        "Our goal is to promote an end to violence against women – specifically rape. Rape survivors are key to successful convictions and their empowerment is based on safety, " +
+                        "respect, support and the ability to make informed choices as they embark on this difficult and challenging journey.\n" +
                         "\n" +
-                        "We aim to reduce the trauma experienced by survivors and encourage them to report rape. We support communities in challenging high rape rates and flaws in the criminal justice system.",
+                        "We aim to reduce the trauma experienced by survivors and encourage them to report rape. " +
+                        "We support communities in challenging high rape rates and flaws in the criminal justice system.",
                 new int[]{R.drawable.rapecrisis}, " 23 Trill Road, Observatory" +
                 " Cape Town \n" +
                 "  7925\n"
@@ -183,7 +199,9 @@ public class InstitutionActivity extends AppCompatActivity {
                         "\n" +
                         "Last year, our dedicated team of over 200 staff and volunteers reached over 47,000 children and individuals through protection, adoption, foster care, residential care, education and training work.\n" +
                         "\n" +
-                        "Since 1909, Jo’burg Child Welfare has played a pivotal role in child care and protection strategies across the country. Nationally we advise on legislation to protect children, and through advocacy work we ensure children have a voice to influence services which affect them. We support those who have no where else to turn..",
+                        "Since 1909, Jo’burg Child Welfare has played a pivotal role in child care and protection strategies across the country. " +
+                        "Nationally we advise on legislation to protect children, and through advocacy work we ensure children have a voice to influence services which affect them. " +
+                        "We support those who have no where else to turn.",
                 new int[]{R.drawable.jhb}, " 1st Floor, Edura House" +
                 " 41 Fox Street \n" +
                 "  Johannesburg\n"
@@ -193,9 +211,16 @@ public class InstitutionActivity extends AppCompatActivity {
         //The South African Depression and Anxiety Group
 
         listPlaces.add(new Place(" The South African Depression and Anxiety Group ",
-                "Mental illness, and the stigma surrounding it, is a critical issue in South Africa. The South African Depression and Anxiety Group (SADAG) is at the forefront of patient advocacy, education and destigmatisation of mental illness in the country. Its expertise lies in assisting patients and callers throughout South Africa with mental health queries.\n" +
+                "Mental illness, and the stigma surrounding it, is a critical issue in South Africa. " +
+                        "The South African Depression and Anxiety Group (SADAG) is at the forefront of patient advocacy, education and destigmatisation of mental illness in the country. " +
+                        "Its expertise lies in assisting patients and callers throughout South Africa with mental health queries.\n" +
                         "\n" +
-                        "SADAG is a Non-Profit Organisation, a Registered Section 21 Company, with an 18a tax exemption. It has on its board a powerful team of Patients, Psychiatrists, Psychologists, and General Practitioners. SADAG was established twenty years ago to serve as a support network for the thousands of South Africans who live with mental health problems. Currently, it is estimated that 1 in 5 people will, or do, suffer from a mental illness. SADAG manages a 16-line counselling-and-referral call centre, and is the voice of patient advocacy, working in urban, peri-urban, and the most rural communities across South Africa.",
+                        "SADAG is a Non-Profit Organisation, a Registered Section 21 Company, with an 18a tax exemption. " +
+                        "It has on its board a powerful team of Patients, Psychiatrists, Psychologists, and General Practitioners. " +
+                        "SADAG was established twenty years ago to serve as a support network for the thousands of South Africans who live with mental health problems." +
+                        "Currently, it is estimated that 1 in 5 people will, " +
+                        "or do, suffer from a mental illness. SADAG manages a 16-line counselling-and-referral call centre, and is the voice of patient advocacy, " +
+                        "working in urban, peri-urban, and the most rural communities across South Africa.",
                 new int[]{R.drawable.sadag}, " Catherine St, Johannesburg" +
                 " 2000 \n" +
                 "  South Africa\n"
@@ -205,7 +230,9 @@ public class InstitutionActivity extends AppCompatActivity {
         //Jelly Beans
 
         listPlaces.add(new Place(" The South African Depression and Anxiety Group ",
-                "At Jelly Beanz, we believe children should be free. Free to live. To love. To learn. To play and to grow, knowing that they matter. We know that most children and families who’ve experienced trauma and abuse don’t have access to mental health services and the support they need. So we reach out to the most vulnerable and disadvantaged.\n" +
+                "At Jelly Beanz, we believe children should be free. Free to live. To love. To learn. To play and to grow," +
+                        " knowing that they matter. We know that most children and families who’ve experienced trauma and abuse don’t have access to mental health services and the support they need. " +
+                        "So we reach out to the most vulnerable and disadvantaged.\n" +
                         "PROJECTS " +
                         "AND PROGRAMMES " +
                         "We provide individual and group therapy to children who’ve suffered trauma and abuse\n" +
@@ -222,11 +249,15 @@ public class InstitutionActivity extends AppCompatActivity {
         listPlaces.add(new Place(" South African MALE SURVIVORS of Sexual Abuse",
                 "A new organization has emerged to provide a support structure for non-offending male survivors of sexual abuse and rape.\n" +
                         "\n" +
-                        "South African MALE SURVIVORS of Sexual Abuse  NPC is a non-profit company registered in terms of section 14 of the Companies Act, 2008  in South Africa. registration number  2012/176739/08 and is based in the central business district of Johannesburg, South Africa.\n" +
+                        "South African MALE SURVIVORS of Sexual Abuse  NPC is a non-profit company registered in terms of section 14 of the Companies Act, 2008  in South Africa." +
+                        " registration number  2012/176739/08 and is based in the central business district of Johannesburg, South Africa.\n" +
                         "\n" +
-                        "The new acronym  SAMSOSA (South African Male Survivors of Sexual Abuse) will serve as a resource and referral centre, providing information, support and training for victims, affected individuals and organisations in a safe, non-judgmental structure. In addition, we will act as an advocacy group for non-offending male rape and abuse survivors to create awareness and understanding that will change social attitudes and structures.\n" +
+                        "The new acronym  SAMSOSA (South African Male Survivors of Sexual Abuse) will serve as a resource and referral centre, providing information, support and training for victims, affected individuals and organisations in a safe, non-judgmental structure. " +
+                        "In addition, we will act as an advocacy group for non-offending male rape and abuse survivors to create awareness and understanding that will change social attitudes and structures.\n" +
                         "\n" +
-                        "The rape and sexual abuse of both adult and young men around the world has been so greatly ignored, disrespected and discounted for, that it has created a major misconception in many that such an occurrence does not exist. Many services currently available are solely focused on meeting the needs of female victims who have been abused and sexually assaulted and in this exclusivity silently perpetuate the fallacy that male rape does not exist. The vast majority of male rape and abuse victims will never report their trauma due to a lack of awareness and misunderstandings of male sexual abuse as well as the current lack of support services available, instead they choose to suffer its effects alone and in silence.",
+                        "The rape and sexual abuse of both adult and young men around the world has been so greatly ignored, disrespected and discounted for, that it has created a major misconception in many that such an occurrence does not exist. " +
+                        "Many services currently available are solely focused on meeting the needs of female victims who have been abused and sexually assaulted and in this exclusivity silently perpetuate the fallacy that male rape does not exist. " +
+                        "The vast majority of male rape and abuse victims will never report their trauma due to a lack of awareness and misunderstandings of male sexual abuse as well as the current lack of support services available, instead they choose to suffer its effects alone and in silence.",
                 new int[]{R.drawable.samosa}, "\n  1st Floor, SEWAFRICA House" +
                 " 136 Pritchard Street \n" +
                 "   Johannesburg, South Africa\n"
