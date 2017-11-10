@@ -12,7 +12,8 @@
     <string name="facebook">FACEBOOK</string>
     <string name="twitter">Twitter</string>
     <string name="instagram">Instagram</string>
-    <string name="web">website</string>
+    <string name="text_disclaimer">Agree to terms and conditions</string>
+    <string name="disclaimer_manifest">Terms and Conditions</string>
 
 
     <string-array name="accountType">
@@ -35,7 +36,7 @@ SOS offers our clients access to appropriate emergency assistance when:
 
     <string name="action_settings">Settings</string>
     <string name="bio">BIO</string>
-    <string name="error_weak_password">Provide a strong password</string>
+    <string name="error_weak_password">Should be 6 characters or more</string>
     <string name="error_invalid_email">Invalid Emaild or password</string>
     <string name="error_user_exists">User already exists</string>
 
