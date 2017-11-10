@@ -40,8 +40,11 @@ public class PlacesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hotel);
 
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("Institution Info");
+
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         imageSwitcher = (ImageSwitcher) findViewById(R.id.hotel_image_switch);
        // toolbar = (Toolbar) findViewById(R.id.toolbar);
         txtDescription = (TextView) findViewById(R.id.txt_hotel_desc);
@@ -55,7 +58,7 @@ public class PlacesActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         final Place place = (Place) intent.getSerializableExtra("places");
-
+        getSupportActionBar().setTitle(place.getName());
         txtDescription.setText(place.getDesc());
         final int[] imageIds = place.getImageURl();
         final int count = imageIds.length;
@@ -64,7 +67,7 @@ public class PlacesActivity extends AppCompatActivity {
             @Override
             public View makeView() {
                 ImageView imageView = new ImageView(getApplicationContext());
-                imageView.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
+                imageView.setScaleType(ImageView.ScaleType.FIT_XY);
                 imageView.setLayoutParams(new ImageSwitcher.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
 
 
@@ -149,6 +152,7 @@ public class PlacesActivity extends AppCompatActivity {
 
 
     }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

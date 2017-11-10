@@ -6,11 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.irinnovative.onepagesigninsignup.activity.MainActivity">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scaleType="centerCrop"
-        android:src="@drawable/support" />
+
 
     <android.support.percent.PercentRelativeLayout
         android:layout_width="match_parent"
@@ -23,7 +19,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentLeft="true"
-            android:background="@color/colorPrimaryTrans"
             android:orientation="horizontal"
             app:layout_widthPercent="85%">
 
@@ -36,7 +31,7 @@
                 android:text="Signin"
                 android:fontFamily="sans-serif"
                 android:textAllCaps="true"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text_color"
                 android:textSize="20sp"
                 android:visibility="gone" />
 
@@ -44,7 +39,6 @@
                 layout="@layout/layout_signin"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-
                 android:gravity="center"></include>
         </LinearLayout>
 
@@ -53,8 +47,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentRight="true"
-            android:background="#008975"
             android:fontFamily="sans-serif"
+            android:background="#20B2AA"
             android:gravity="center_horizontal"
             android:orientation="horizontal"
             app:layout_widthPercent="15%">
@@ -69,7 +63,7 @@
                 android:text="Signup"
                 android:fontFamily="sans-serif"
                 android:textAllCaps="true"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text_color"
                 android:textSize="20sp"
                 android:visibility="visible" />
 

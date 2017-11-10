@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ImageView imSignInLogo;
     LinearLayout llsignin,llsignup;
     ProgressDialog pd;
-    private TextInputEditText textEmail,textSignUpEmail;
+    private TextInputEditText textEmail,textSignUpEmail,textSignUpCell;
     private TextInputEditText textPassword,textSignUpPassword;
 
     public static final Pattern VALID_EMAIL_ADDRESS_REGEX =
@@ -88,6 +88,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         textPassword = (TextInputEditText) findViewById(R.id.text_input_password);
         textSignUpEmail = (TextInputEditText) findViewById(R.id.text_input_signup_email);
         textSignUpPassword = (TextInputEditText) findViewById(R.id.text_input_signup_password);
+        textSignUpCell = (TextInputEditText) findViewById(R.id.text_input_signup_cell);
 
         mAuth = FirebaseAuth.getInstance();
         mAuthListener = new FirebaseAuth.AuthStateListener() {
@@ -109,7 +110,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Log.d("TAG", "onAuthStateChanged:signed_in:" + user.getUid());
                 } else {
                     // User is signed out
-                    Toast.makeText(MainActivity.this,"sign in",Toast.LENGTH_LONG).show();
+                    //Toast.makeText(MainActivity.this,"sign in",Toast.LENGTH_LONG).show();
                     Log.d("TAG", "onAuthStateChanged:signed_out");
                 }
                 // ...
@@ -143,6 +144,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 String email = textEmail.getText().toString();
                 String password = textPassword.getText().toString();
+                String cell = textSignUpCell.getText().toString();
 
                 if(validate(email))
                 {
