@@ -33,7 +33,8 @@
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="15dp"
                 android:fontFamily="sans-serif"
-                android:text= "                                             Disclaimer\n                                           -----------------\nVerbaLize disclaims responsibility for the actions of users on our website or app. We do not claim ownership or endorse any of the content that is broadcast on our platform.
+                android:text= "                                       Disclaimer\n                                    --------------------\n\nVerbaLize disclaims responsibility for the actions of users on our website or app. We do not claim ownership or endorse any of the content that is broadcast on our platform.
+
 
 Fundamentally, human nature cannot be controlled and people you connect to may behave inappropriately. These people are solely responsible for their own behavior. If a stranger on our website is breaking our chat rules, including our Terms and Conditions, or otherwise making you uncomfortable in any way, please do not hesitate to disconnect from the chat.
 
@@ -71,7 +72,7 @@ Fundamentally, human nature cannot be controlled and people you connect to may b
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
                 android:textColor="@color/black"
 
-                android:textSize="12sp"
+                android:textSize="14sp"
                 android:textStyle="normal"
                 tools:ignore="SmallSp" />
 
