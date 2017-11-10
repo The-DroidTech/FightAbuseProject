@@ -60,10 +60,8 @@
                 android:fontFamily="sans-serif"
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="15dp"
-                android:text="Information About VerbaLize Application\n----------------------------------------------------------\n
-VerbaLize app is a solution to assist individuals who have suffered the brutality of abuse. In the hopes of eradicating abuse in the communities verbaLise was developed.
-
-The name was used to motivate individuals’ to speak against abuse."
+                android:text="Information About VerbaLize Application\n---------------------------------------------------------------------\n
+VerbaLize is a mobile application that give abuse victims a platform, which offers them a wide variety of information, about different types of abuse and the effects they have on a victim. The application also has a reporting  abuse to the relevant institutions to handle and assist victims with their problems. In hopes of eradicating abuse in the community. The name was inspired and motivated to give individuals a voice to verbalize against abuse."
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
 
                 android:textColor="@color/black"
@@ -77,9 +75,9 @@ The name was used to motivate individuals’ to speak against abuse."
                 android:fontFamily="sans-serif"
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="15dp"
-                android:text="The mission About VerbaLize Application\n----------------------------------------------------------\n
+                android:text="The mission About VerbaLize Application\n----------------------------------------------------------------------\n
 
-VerbaLize App is set on ensuring that communities become safer from the cancer of abuse by providing information as a guideline on all kinds of abuse. Breaking the silence through the support groups and mentors. Accessibility of information through numerous institutions for rehabilitation or healing purposes.
+The VerbaLize application is set on ensuring a safer community through mass communication, within the community using our interactive build in chat rooms, and verbalizing incidents of abuse, and in retrospect making the community a safer environment. In the end breaking the silence caused by the cancer we have come to know as abuse
 .
 "
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
@@ -93,37 +91,70 @@ VerbaLize App is set on ensuring that communities become safer from the cancer o
                 android:fontFamily="sans-serif"
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="15dp"
-                android:text="The Founders of verbaLize app\n----------------------------------------------------------\n
-Thabang Chabalala
-Lesedi Lebogo
-Thabiso Malete
-
-"
+                android:text="The verbaLize App Developers\n-------------------------------------------------------"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
                 android:textSize="12sp"
                 android:textColor="@color/black"
                 android:textStyle="normal" />
 
-            <ImageView
+
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/image_view_about1"
-                android:layout_width="match_parent"
-                android:layout_height="197dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
                 android:scaleType="centerCrop"
-                android:layout_margin="6dp" />
+                android:src="@drawable/edith_kriel"
+                 />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:gravity="center"
+                android:fontFamily="sans-serif"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:text="Lesedi Lebogo"/>
 
-            <ImageView
+
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/image_view_about2"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/edith_kriel"
+               />
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="197dp"
-                android:layout_margin="6dp"
-                android:scaleType="centerCrop" />
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:gravity="center"
+                android:fontFamily="sans-serif"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:text="Thabang Chabalala"/>
 
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/image_view_about3"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/edith_kriel"
+                />
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_margin="6dp"
-                android:layout_height="197dp"
-                android:scaleType="centerCrop" />
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:gravity="center"
+                android:fontFamily="sans-serif"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:text="Thabiso Tony Malete"/>
 
 
         </LinearLayout>
