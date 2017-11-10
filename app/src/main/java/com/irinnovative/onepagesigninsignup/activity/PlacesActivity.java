@@ -5,7 +5,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
@@ -41,8 +40,8 @@ public class PlacesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hotel);
 
-        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-       // getSupportActionBar().setTitle("Hotel");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Institution Info");
         imageSwitcher = (ImageSwitcher) findViewById(R.id.hotel_image_switch);
        // toolbar = (Toolbar) findViewById(R.id.toolbar);
         txtDescription = (TextView) findViewById(R.id.txt_hotel_desc);
@@ -149,12 +148,6 @@ public class PlacesActivity extends AppCompatActivity {
 
 
 
-    }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.profile_update, menu);
-        return true;
     }
 
     @Override
