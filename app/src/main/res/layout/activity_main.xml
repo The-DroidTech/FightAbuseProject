@@ -6,11 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.irinnovative.onepagesigninsignup.activity.MainActivity">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scaleType="centerCrop"
-        android:src="@drawable/support" />
+
 
     <android.support.percent.PercentRelativeLayout
         android:layout_width="match_parent"
@@ -23,7 +19,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentLeft="true"
-            android:background="@color/colorPrimaryTrans"
             android:orientation="horizontal"
             app:layout_widthPercent="85%">
 
@@ -35,7 +30,7 @@
                 android:paddingTop="15dp"
                 android:text="Signin"
                 android:textAllCaps="true"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text_color"
                 android:textSize="20sp"
                 android:visibility="gone" />
 
@@ -51,7 +46,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentRight="true"
-            android:background="#008975"
+            android:background="#20B2AA"
             android:gravity="center_horizontal"
             android:orientation="horizontal"
             app:layout_widthPercent="15%">
@@ -65,7 +60,7 @@
                 android:rotation="180"
                 android:text="Signup"
                 android:textAllCaps="true"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text_color"
                 android:textSize="20sp"
                 android:visibility="visible" />
 

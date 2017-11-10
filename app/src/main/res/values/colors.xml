@@ -6,11 +6,14 @@
 
 
     <color name="colorPrimaryTrans">#015e5d</color>
-    <color name="colorAccentTrans">#00afaf</color>
-    <color name="colorBlackTrans">#a0000000</color>
+    <color name="colorAccentTrans">#FFFFFF</color>
+    <color name="colorBlackTrans">#FFFFFF</color>
 
     <color name="colorTitle">#ffffff</color>
     <color name="colorBlack">#212121</color>
 
     <color name="black_overlay">#66000000</color>
+
+    <color name="text_color">#212121</color>
+    <color name="text_color_white">#FFFFFF</color>
 </resources>

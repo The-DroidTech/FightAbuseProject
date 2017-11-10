@@ -77,6 +77,7 @@ public class PlacesActivity extends AppCompatActivity {
         });
 
 
+
         btnAddress.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
