@@ -80,6 +80,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btnSignup= (Button) findViewById(R.id.btnSignup);
         btnSignin= (Button) findViewById(R.id.btnSignin);
+        btnSignin.setEnabled(false);
 
         llSignup = (LinearLayout) findViewById(R.id.llSignup);
         llSignin = (LinearLayout) findViewById(R.id.llSignin);
@@ -162,22 +163,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 String email = textEmail.getText().toString();
                 String password = textPassword.getText().toString();
 
-                if(validate(email))
+                if(!email.isEmpty())
                 {
-                    if(!password.isEmpty()){
-                        pd.show();
-                        signIn(email,password);
-                    }
-                    else
+                    if(validate(email))
                     {
-                        textPassword.setError("Enter Password");
-                    }
+                        if(!password.isEmpty()){
+                            pd.show();
+                            signIn(email,password);
+                        }
+                        else
+                        {
+                            textPassword.setError("Enter Password");
+                        }
 
+                    }
+                    else {
+                        textEmail.setError("Invalid email");
+                        textEmail.setText("");
+                    }
                 }
-                else {
-                    textEmail.setError("Invalid email");
-                    textEmail.setText("");
+                else
+                {
+                    textEmail.setError("Enter email");
                 }
+
 
 
             }
@@ -264,7 +273,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             textEmail.setText("");
         }
         else {
-            textEmail.setError("Invalid email");
+            textEmail.setError("Enter your email address");
             textEmail.setText("");
         }
 

@@ -39,5 +39,22 @@ SOS offers our clients access to appropriate emergency assistance when:
     <string name="error_weak_password">Should be 6 characters or more</string>
     <string name="error_invalid_email">Invalid Emaild or password</string>
     <string name="error_user_exists">User already exists</string>
+    <string name="disclaimer">VerbaLize disclaims responsibility for the actions of users on our app.
+        We do not claim ownership or endorse any of the content that is broadcast on our platform.
+        Fundamentally, human nature cannot be controlled and people you connect to may behave inappropriately.
+        \n\nThese people are solely responsible for their own behavior.
+        If a stranger on our app is breaking our chat rules, including our Terms and Conditions, or otherwise making you uncomfortable in any way,
+        please do not hesitate to disconnect from the chat.\n\n\t* Do not use VerbaLize if you are under 13 years old.
+        \n\t* If you\'re under 18 years old, then you must have a parent or guardian\'s permission to use our app.
+        \n\t* Please refrain from having conversations of sexual nature.\n\t* Do not transmit nudity, sexually harass anyone or behave in a way that is inappropriate or illegal in nature.
+        \n\t* Harassment, racism, sexism, bullying and excessive vulgarity will not be tolerated. If anyone is making you uncomfortable, please disconnect from the chat.
+        \n\t*Do not use VerbaLize if you are under 13 years old.
+        \n\t*Spamming our chat rooms is not allowed.\n\nThis includes excessively posting links/phrases, promoting or advertising products/services, or anything else that can be interpreted as spam.
+        For more information please visit Wikipedia\'s entry on \'Spamming\'.\n\t* Do not transmit any disgusting, shocking, violent situations or illegal content of any kind.
+        \n\* Do not share peoples\' private information. In addition, please be careful discussing any information about yourself.
+        This includes your name, age, location, social accounts or anything else that may contribute to identifying you or anyone else.
+        Parents looking to help their kids be safe online can learn more on Google\'s Be Internet Awesome.\n\t* Transmitting anything that may defame or damage someone\'s reputation is not allowed.
+        \n\t* Violating intellectual property rights on our platform will not be tolerated.</string>
+    <string name="heading_disclaimer">Disclaimer</string>
 
 </resources>
