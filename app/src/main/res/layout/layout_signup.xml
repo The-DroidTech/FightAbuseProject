@@ -44,6 +44,7 @@
         android:textColorHint="@color/text_color_white">
 
         <android.support.design.widget.TextInputEditText
+            android:id="@+id/text_input_signup_cell"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Mobile Number"
@@ -58,7 +59,7 @@
         android:textColor="@color/text_color_white"
         android:textSize="20sp"
         android:layout_marginTop="60dp"
-        android:layout_width="240dp"
+        android:layout_width="150dp"
         android:layout_height="45dp"
         android:background="@drawable/buttonshape1"
         android:fontFamily="sans-serif"

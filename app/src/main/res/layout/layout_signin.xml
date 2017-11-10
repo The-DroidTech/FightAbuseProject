@@ -48,10 +48,10 @@
     <Button
         android:id="@+id/btnSignin"
         android:text="Sign in"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="40dp"
         android:textColor="#000000"
         android:textSize="20sp"
-        android:layout_width="270dp"
+        android:layout_width="150dp"
         android:layout_height="45dp"
         android:background="@drawable/buttonshape"
         android:shadowColor="#A8A8A8"
@@ -61,11 +61,12 @@
         />
 
     <TextView
+        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Forgot Password"
         android:fontFamily="sans-serif"
-        android:textColor="#FFF"
+        android:textColor="@color/text_color"
         android:onClick="forgotPassword"/>
 
 
