@@ -47,6 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Mobile Number"
+            android:fontFamily="sans-serif"
             android:inputType="phone"
             android:textColor="@color/text_color_white" />
     </android.support.design.widget.TextInputLayout>
@@ -60,6 +61,7 @@
         android:layout_width="240dp"
         android:layout_height="45dp"
         android:background="@drawable/buttonshape1"
+        android:fontFamily="sans-serif"
         android:shadowColor="#FFFFFF"
         android:shadowDx="0"
         android:shadowDy="0"

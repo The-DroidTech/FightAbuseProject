@@ -64,7 +64,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Forgot Password"
-        android:layout_marginTop="20dp"
-        android:textColor="@color/text_color"
+        android:fontFamily="sans-serif"
+        android:textColor="#FFF"
         android:onClick="forgotPassword"/>
+
+
 </LinearLayout>
