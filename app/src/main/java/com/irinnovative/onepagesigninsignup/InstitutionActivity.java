@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -207,8 +206,8 @@ public class InstitutionActivity extends AppCompatActivity {
 
         listPlaces.add(new Place(" The South African Depression and Anxiety Group ",
                 "At Jelly Beanz, we believe children should be free. Free to live. To love. To learn. To play and to grow, knowing that they matter. We know that most children and families who’ve experienced trauma and abuse don’t have access to mental health services and the support they need. So we reach out to the most vulnerable and disadvantaged.\n" +
-                        "PROJECTS\n" +
-                        "AND PROGRAMMES\n" +
+                        "PROJECTS " +
+                        "AND PROGRAMMES " +
                         "We provide individual and group therapy to children who’ve suffered trauma and abuse\n" +
                         "We create therapeutic tools and treatment programmes\n" +
                         "We provide training to professionals who work with child protection and mental health.",
@@ -234,19 +233,6 @@ public class InstitutionActivity extends AppCompatActivity {
                 ,
                 "http://www.samsosa.org", " 071 280 9918"));
 
-        // Shukumisa
-
-        listPlaces.add(new Place("  Shukumisa",
-                "The Shukumisa Campaign was launched in 2008 by members of the National Working Group on Sexual Offences (NWGSO). The NWGSO was originally formed in 2004 to advocate around the proposed Sexual Offences Bill. When the Criminal Law [Sexual Offences and Related Matters] Amendment Act no. 32 of 2007 (Sexual Offences Act) was passed in late 2007, the NWGSO turned its focus to the implementation of the Sexual Offences Act and reformulated itself as the Shukumisa Campaign.\n" +
-                        "\n" +
-                        "The Shukumisa Campaign aims to stir and shake up public and political will to develop and implement policies and strengthen laws related to sexual offences in South Africa. It periodically carries out monitoring at police stations, health facilities and courts to determine the extent to which government departments and service providers are meeting their commitments to providing services to victims of sexual offences.\n" +
-                        "\n" +
-                        "The Shukumisa Campaign is made up of 47 organisations from all nine provinces and is governed by a steering committee comprising of 10 organisations. Its coordination is housed at the Rape Crisis Cape Town Trust (RCCTT) and is assisted administratively by RCCTT and the Tshwaranang Legal Advocacy Centre (TLAC) in Johannesburg.",
-                new int[]{R.drawable.shukumisa}, "\n   Oliver Tambo Community Centre" +
-                "  128 2nd St, Alexandra \n" +
-                "   Wynberg\n"
-                ,
-                "http://shukumisa.org.za", " 011 885 3305"));
 
 
     }
