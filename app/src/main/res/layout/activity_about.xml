@@ -56,12 +56,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:textSize="12sp"
+                android:textSize="14sp"
+
                 android:fontFamily="sans-serif"
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="15dp"
-                android:text="Information About VerbaLize Application\n---------------------------------------------------------------------\n
-VerbaLize is a mobile application that give abuse victims a platform, which offers them a wide variety of information, about different types of abuse and the effects they have on a victim. The application also has a reporting  abuse to the relevant institutions to handle and assist victims with their problems. In hopes of eradicating abuse in the community. The name was inspired and motivated to give individuals a voice to verbalize against abuse."
+                android:text="Information About VerbaLize Application\n---------------------------------------------------------------------\nVerbaLize is a mobile application that give abuse victims a platform, which offers them a wide variety of information, about different types of abuse and the effects they have on a victim. The application also has a reporting  abuse to the relevant institutions to handle and assist victims with their problems. In hopes of eradicating abuse in the community. The name was inspired and motivated to give individuals a voice to verbalize against abuse."
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
 
                 android:textColor="@color/black"
@@ -72,17 +72,16 @@ VerbaLize is a mobile application that give abuse victims a platform, which offe
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
+
                 android:fontFamily="sans-serif"
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="15dp"
-                android:text="The mission About VerbaLize Application\n----------------------------------------------------------------------\n
-
-The VerbaLize application is set on ensuring a safer community through mass communication, within the community using our interactive build in chat rooms, and verbalizing incidents of abuse, and in retrospect making the community a safer environment. In the end breaking the silence caused by the cancer we have come to know as abuse
+                android:text="The mission About VerbaLize Application\n----------------------------------------------------------------------\nThe VerbaLize app is set on ensuring a safer community through mass communication, within the community using our interactive build in chat rooms, and verbalizing incidents of abuse, and in retrospect making the community a safer environment. In the end breaking the silence caused by the cancer we have come to know as abuse
 .
 "
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
                 android:textColor="@color/black"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 android:textStyle="normal" />
             <TextView
                 android:layout_width="match_parent"
@@ -91,9 +90,9 @@ The VerbaLize application is set on ensuring a safer community through mass comm
                 android:fontFamily="sans-serif"
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="15dp"
-                android:text="The verbaLize App Developers\n-------------------------------------------------------"
+                android:text="The verbaLize App Developers\n-----------------------------------------------------"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 android:textColor="@color/black"
                 android:textStyle="normal" />
 
@@ -112,6 +111,7 @@ The VerbaLize application is set on ensuring a safer community through mass comm
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:gravity="center"
+                android:textSize="14sp"
                 android:fontFamily="sans-serif"
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="15dp"
@@ -133,6 +133,7 @@ The VerbaLize application is set on ensuring a safer community through mass comm
                 android:layout_margin="16dp"
                 android:gravity="center"
                 android:fontFamily="sans-serif"
+                android:textSize="14sp"
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="15dp"
                 android:text="Thabang Chabalala"/>
@@ -151,6 +152,7 @@ The VerbaLize application is set on ensuring a safer community through mass comm
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:gravity="center"
+                android:textSize="14sp"
                 android:fontFamily="sans-serif"
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="15dp"
