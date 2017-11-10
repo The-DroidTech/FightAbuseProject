@@ -1,4 +1,5 @@
-<android.support.design.widget.CoordinatorLayout android:id="@+id/coordinatorRootLayout"
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/coordinatorRootLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -29,9 +30,6 @@
                 app:layout_collapseParallaxMultiplier="0.7"
 
                 />
-
-
-
 
 
         </android.support.design.widget.CollapsingToolbarLayout>
