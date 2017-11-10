@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/coordinatorRootLayout1"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.irinnovative.onepagesigninsignup.activity.Disclaimer">
+
+
+
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:id="@+id/linear_layout_android1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="sans-serif"
+                android:text= "                                             Disclaimer\n                                           -----------------\nVerbaLize disclaims responsibility for the actions of users on our website or app. We do not claim ownership or endorse any of the content that is broadcast on our platform.
+
+Fundamentally, human nature cannot be controlled and people you connect to may behave inappropriately. These people are solely responsible for their own behavior. If a stranger on our website is breaking our chat rules, including our Terms and Conditions, or otherwise making you uncomfortable in any way, please do not hesitate to disconnect from the chat.
+
+ * Do not use VerbaLize if you are under 13 years old.
+ * If you're under 18 years old, then you must have a parent or
+    guardian's permission to use our app.
+ * Please refrain from having conversations of sexual nature.
+ * Do not transmit nudity, sexually harass anyone or behave in a
+    way that is inappropriate or illegal in nature.
+ * Harassment, racism, sexism, bullying and excessive vulgarity
+   will not be tolerated. If anyone is making you uncomfortable,
+   please disconnect from the chat.
+ * Do not use VerbaLize if you are under 13 years old.
+ * Spamming our chat rooms is not allowed. This includes
+   excessively posting links/phrases, promoting or advertising
+   products/services, or anything else that can be interpreted as
+   spam. For more information please visit Wikipedia's entry on
+   'Spamming'.
+ * Do not transmit any disgusting, shocking, violent situations or
+   illegal content of any kind..
+ * Do not share peoples' private information. In addition, please
+    be careful discussing any information about yourself. This
+    includes your name, age, location, social accounts or anything
+    else that may contribute to identifying you or anyone else.
+    Parents looking to help their kids be safe online can learn
+    more on Google's Be Internet Awesome.
+ * Transmitting anything that may defame or damage someone's
+    reputation is not allowed.
+ * Violating intellectual property rights on our platform will not
+    be tolerated.
+ * Do not use VerbaLize if you are under 13 years old.
+ * Do not use VerbaLize if you are under 13 years old.
+ * Do not use VerbaLize if you are under 13 years old.
+ * Do not use VerbaLize if you are under 13 years old."
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
+                android:textColor="@color/black"
+
+                android:textSize="12sp"
+                android:textStyle="normal"
+                tools:ignore="SmallSp" />
+
+
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+</android.support.design.widget.CoordinatorLayout >

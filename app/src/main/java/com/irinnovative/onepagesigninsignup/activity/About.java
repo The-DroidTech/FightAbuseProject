@@ -1,9 +1,9 @@
 package com.irinnovative.onepagesigninsignup.activity;
 
-import android.media.Image;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
@@ -18,6 +18,7 @@ public class About extends AppCompatActivity {
         setContentView(R.layout.activity_about);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("About");
 
         imHeader = (ImageView) findViewById(R.id.ImageView_about_header);
         imLesedi = (ImageView) findViewById(R.id.image_view_about1);
@@ -28,6 +29,18 @@ public class About extends AppCompatActivity {
         Glide.with(getApplicationContext()).load(R.drawable.tj).into(imThabang);
         Glide.with(getApplicationContext()).load(R.drawable.l).into(imLesedi);
         Glide.with(getApplicationContext()).load(R.drawable.tt).into(imTony);
+
+        imLesedi.setClickable(true);
+
+
+        //finish the activity (dismiss the image dialog) if the user clicks
+        //anywhere on the image
+        imLesedi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 
     @Override

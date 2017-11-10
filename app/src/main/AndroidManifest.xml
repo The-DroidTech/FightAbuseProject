@@ -25,7 +25,8 @@
         <activity
             android:name=".InstitutionActivity"
             android:label="Institution"
-            android:theme="@style/AppTheme" />/>
+            android:theme="@style/AppTheme" />
+        />
         <activity
             android:name=".activity.ContactsActivity"
             android:label="@string/title_activity_contacts"
@@ -44,8 +45,9 @@
         <activity android:name=".activity.SupportGroups" />
         <activity android:name=".MentorProfileActivity" />
         <activity android:name=".activity.ChatRoomActivity" />
-        <activity android:name=".activity.ChatActivity"
-            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".activity.ChatActivity"
+            android:theme="@style/AppTheme" />
         <activity android:name=".activity.SosDetailsActivity" />
         <activity
             android:name=".activity.TestomoniesActivity"
@@ -59,12 +61,14 @@
             android:name=".activity.NavigationActivity"
             android:label="@string/title_activity_navigation"
             android:theme="@style/AppTheme.NoActionBar.FullScreen" />
-        <activity android:name=".activity.About"
-            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".activity.About"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".activity.AbuseTypeActivity"
-            android:theme="@style/AppTheme" />/>
-
+            android:theme="@style/AppTheme" />
+        />
+        <activity android:name=".activity.Disclaimer"></activity>
     </application>
 
 </manifest>

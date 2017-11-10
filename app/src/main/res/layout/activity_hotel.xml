@@ -18,8 +18,7 @@
             android:layout_height="250dp"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:animationCache="true"
-           >
+            android:animationCache="true">
         </ImageSwitcher>
 
 
@@ -75,8 +74,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:fontFamily="sans-serif"
-                android:textColor="@color/colorPrimary"
-                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
                 tools:text="012 456 98775" />
 
         </LinearLayout>
@@ -96,16 +95,18 @@
                 android:layout_marginLeft="10dp"
                 android:fontFamily="sans-serif"
                 android:text="Description"
-                android:textSize="16dp"
+                android:textSize="14sp"
+                android:textColor="@color/black"
                 android:textStyle="bold" />
 
 
             <TextView
                 android:id="@+id/txt_hotel_desc"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="match_parent"
                 android:fontFamily="sans-serif"
-                android:textSize="16dp"
+                android:textSize="14sp"
+                android:textColor="@color/black"
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="10dp"
                 android:text="hy" />

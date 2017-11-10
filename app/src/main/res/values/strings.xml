@@ -2,7 +2,13 @@
     <string name="app_name">Verbalize
     </string>
     <string name="one" />
-    <string name="follow">FOLLOW US ON HERE !</string>
+
+
+    <string name="disclaimar"></string>
+
+
+
+
     <string name="facebook">FACEBOOK</string>
     <string name="twitter">Twitter</string>
     <string name="instagram">Instagram</string>
