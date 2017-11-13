@@ -19,7 +19,7 @@
 			android:id="@+id/list_image_row"
 	        android:layout_width="63dip"
 	        android:layout_height="63dip"
-	        android:src="@drawable/logo_app"/>
+	        android:src="@drawable/iconv"/>
 
 	</LinearLayout>
 
