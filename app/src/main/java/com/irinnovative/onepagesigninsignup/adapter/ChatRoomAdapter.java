@@ -1,12 +1,15 @@
 package com.irinnovative.onepagesigninsignup.adapter;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.irinnovative.onepagesigninsignup.R;
 import com.irinnovative.onepagesigninsignup.pojo.ChatRoom;
 
@@ -16,9 +19,11 @@ public class ChatRoomAdapter extends BaseAdapter {
 
     private ArrayList<ChatRoom> chatRooms;
     private static LayoutInflater inflater=null;
+    private Context context1;
     
     public ChatRoomAdapter(Context context, ArrayList<ChatRoom> rooms) {
         chatRooms = rooms;
+        context1 = context;
         inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
@@ -41,6 +46,7 @@ public class ChatRoomAdapter extends BaseAdapter {
 
         TextView roomName = (TextView)vi.findViewById(R.id.tvRoomName); // title
         TextView roomDesc = (TextView)vi.findViewById(R.id.tvDesc);
+
         // artist name
 
         ChatRoom chatRoom = chatRooms.get(position);

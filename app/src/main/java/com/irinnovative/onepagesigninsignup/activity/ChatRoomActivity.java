@@ -86,7 +86,7 @@ public class ChatRoomActivity extends AppCompatActivity {
 
 
         //create_room1 = (SubmitButton) findViewById(R.id.btnAddRoom1);
-        room_name = (EditText) findViewById(R.id.etRoomName);
+        //room_name = (EditText) findViewById(R.id.etRoomName);
         roomList = (ListView) findViewById(R.id.lvListRooms);
 
         list_of_rooms = new ArrayList<>();

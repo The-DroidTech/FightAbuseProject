@@ -14,6 +14,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -44,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnSignup;
     private Button btnSignin;
     private ImageView imSignInLogo;
+    private CheckBox checkBoxDisclaimer;
     LinearLayout llsignin,llsignup;
     ProgressDialog pd;
     private TextInputEditText textEmail,textSignUpEmail,textSignUpCell;
@@ -77,6 +80,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btnSignup= (Button) findViewById(R.id.btnSignup);
         btnSignin= (Button) findViewById(R.id.btnSignin);
+        btnSignin.setEnabled(false);
 
         llSignup = (LinearLayout) findViewById(R.id.llSignup);
         llSignin = (LinearLayout) findViewById(R.id.llSignin);
@@ -88,7 +92,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         textPassword = (TextInputEditText) findViewById(R.id.text_input_password);
         textSignUpEmail = (TextInputEditText) findViewById(R.id.text_input_signup_email);
         textSignUpPassword = (TextInputEditText) findViewById(R.id.text_input_signup_password);
-        textSignUpCell = (TextInputEditText) findViewById(R.id.text_input_signup_cell);
+        checkBoxDisclaimer = (CheckBox) findViewById(R.id.checkbox_disclaimer);
 
         mAuth = FirebaseAuth.getInstance();
         mAuthListener = new FirebaseAuth.AuthStateListener() {
@@ -137,6 +141,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
         showSigninForm();
+
+        checkBoxDisclaimer.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+               if(!isChecked)
+               {
+                   btnSignin.setEnabled(false);
+               }
+               else
+               {
+                   btnSignin.setEnabled(true);
+               }
+            }
+        });
         btnSignin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -144,24 +162,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 String email = textEmail.getText().toString();
                 String password = textPassword.getText().toString();
-                String cell = textSignUpCell.getText().toString();
 
-                if(validate(email))
+                if(!email.isEmpty())
                 {
-                    if(!password.isEmpty()){
-                        pd.show();
-                        signIn(email,password);
-                    }
-                    else
+                    if(validate(email))
                     {
-                        textPassword.setError("Enter Password");
-                    }
+                        if(!password.isEmpty()){
+                            pd.show();
+                            signIn(email,password);
+                        }
+                        else
+                        {
+                            textPassword.setError("Enter Password");
+                        }
 
+                    }
+                    else {
+                        textEmail.setError("Invalid email");
+                        textEmail.setText("");
+                    }
                 }
-                else {
-                    textEmail.setError("Invalid email");
-                    textEmail.setText("");
+                else
+                {
+                    textEmail.setError("Enter email");
                 }
+
 
 
             }
@@ -248,7 +273,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             textEmail.setText("");
         }
         else {
-            textEmail.setError("Invalid email");
+            textEmail.setError("Enter your email address");
             textEmail.setText("");
         }
 
@@ -266,6 +291,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (mAuthListener != null) {
             mAuth.removeAuthStateListener(mAuthListener);
         }
+    }
+
+    public void disclaimer(View view)
+    {
+        startActivity(new Intent(this,Disclaimer.class));
     }
 
     public static boolean validate(String emailStr) {
@@ -338,8 +368,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 textSignUpEmail.requestFocus();
                             } catch(Exception e) {
                                 Log.e("TAG", e.getMessage());
+                                Toast.makeText(getApplicationContext(), "Unsuccessful",Toast.LENGTH_SHORT).show();
                             }
-                            //Toast.makeText(getApplicationContext(), "Unsuccessful",Toast.LENGTH_SHORT).show();
+
                         }
 
                         // ...
@@ -368,6 +399,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 textPassword.requestFocus();
                             }  catch(Exception e) {
                                 Log.e("TAG", e.getMessage());
+                                Toast.makeText(getApplicationContext(), "Unsuccessful",Toast.LENGTH_SHORT).show();
                             }
                         }
 

@@ -68,7 +68,11 @@
             android:name=".activity.AbuseTypeActivity"
             android:theme="@style/AppTheme" />
         />
-        <activity android:name=".activity.Disclaimer"></activity>
+        <activity android:name=".activity.Disclaimer"
+            android:theme="@style/AppTheme"
+            android:label="@string/disclaimer_manifest">
+
+        </activity>
     </application>
 
 </manifest>
