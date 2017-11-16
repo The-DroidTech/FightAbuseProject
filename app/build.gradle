@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
 
 android {
     compileSdkVersion 25
@@ -22,27 +23,29 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
     //add lib
-    compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.android.support:percent:25.3.1'
-    compile 'com.android.support:design:25.3.1'
-    compile 'com.android.support:support-v4:25.3.1'
-    compile 'com.android.support:recyclerview-v7:25.3.1'
-    compile 'com.android.support:cardview-v7:25.3.1'
+    implementation 'com.android.support:appcompat-v7:25.3.1'
+    implementation 'com.android.support:percent:25.3.1'
+    implementation 'com.android.support:design:25.3.1'
+    implementation 'com.android.support:support-v4:25.3.1'
+    implementation 'com.android.support:recyclerview-v7:25.3.1'
+    implementation 'com.android.support:cardview-v7:25.3.1'
 
-    compile 'com.google.firebase:firebase-auth:11.6.0'
-    compile 'com.google.firebase:firebase-database:11.6.0'
-    compile 'com.google.firebase:firebase-storage:11.6.0'
-    compile 'com.google.firebase:firebase-messaging:11.6.0'
-    compile 'com.google.firebase:firebase-core:11.6.0'
-    compile 'com.google.firebase:firebase-crash:11.6.0'
+    implementation 'com.google.firebase:firebase-auth:11.6.0'
+    implementation 'com.google.firebase:firebase-database:11.6.0'
+    implementation 'com.google.firebase:firebase-storage:11.6.0'
+    implementation 'com.google.firebase:firebase-messaging:11.6.0'
+    implementation('com.crashlytics.sdk.android:crashlytics:2.7.1@aar') {
+        transitive = true
+    }
+    implementation 'com.google.firebase:firebase-core:11.6.0'
 
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
 
-    compile 'de.hdodenhof:circleimageview:2.1.0'
-    compile 'com.github.Hitomis:CircleMenu:v1.1.0'
-    compile 'com.github.ehehhh:Gooey-Loader:v1.1.1'
-    compile 'me.spark:submitbutton:1.0.1'
-    compile 'com.github.bumptech.glide:glide:3.8.0'
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+    implementation 'com.github.Hitomis:CircleMenu:v1.1.0'
+    implementation 'com.github.ehehhh:Gooey-Loader:v1.1.1'
+    implementation 'me.spark:submitbutton:1.0.1'
+    implementation 'com.github.bumptech.glide:glide:3.8.0'
 
     testCompile 'junit:junit:4.12'
 }
