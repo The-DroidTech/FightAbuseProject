@@ -14,11 +14,7 @@
         <activity
             android:name=".activity.MainActivity"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".SplashActivity" />
         <activity android:name=".activity.HomeActivity" />
@@ -36,8 +32,9 @@
         <activity
             android:name=".activity.ProfileActivity"
             android:theme="@style/AppTheme" />
-        <activity android:name=".activity.PlacesActivity"
-            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".activity.PlacesActivity"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".activity.AbuseActivity"
             android:theme="@style/AppTheme" />
@@ -68,10 +65,16 @@
             android:name=".activity.AbuseTypeActivity"
             android:theme="@style/AppTheme" />
         />
-        <activity android:name=".activity.Disclaimer"
-            android:theme="@style/AppTheme"
-            android:label="@string/disclaimer_manifest">
+        <activity
+            android:name=".activity.Disclaimer"
+            android:label="@string/disclaimer_manifest"
+            android:theme="@style/AppTheme"></activity>
+        <activity android:name=".PhoneSigninActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
