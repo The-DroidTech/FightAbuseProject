@@ -10,6 +10,10 @@ public class Person {
     public Person() {
     }
 
+    public Person(String cellphone) {
+        this.cellphone = cellphone;
+    }
+
     public Person(String id, String username, String bio, String cellphone, String imageUrl) {
         this.id = id;
         this.username = username;

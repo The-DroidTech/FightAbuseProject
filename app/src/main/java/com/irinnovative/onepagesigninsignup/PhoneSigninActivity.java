@@ -30,7 +30,13 @@ import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.irinnovative.onepagesigninsignup.activity.Disclaimer;
+import com.irinnovative.onepagesigninsignup.pojo.Person;
 
 import java.util.concurrent.TimeUnit;
 
@@ -60,6 +66,7 @@ public class PhoneSigninActivity extends AppCompatActivity {
 
     // [START declare_auth]
     private FirebaseAuth mAuth;
+    private DatabaseReference myRef;
     // [END declare_auth]
 
     private boolean mVerificationInProgress = false;
@@ -83,7 +90,6 @@ public class PhoneSigninActivity extends AppCompatActivity {
         //initialise views
         textInputNumbers = (TextInputEditText) findViewById(R.id.text_input_phone_signin);
         textInputVerification = (TextInputEditText) findViewById(R.id.text_input_verify_signin);
-        textInputLayoutHint = (TextInputLayout) findViewById(R.id.signin_hint);
         textViewDisclaimer = (TextView) findViewById(R.id.text_phone_signin_disclaimer);
         btnVerify = (Button) findViewById(R.id.btn_phone_signin);
         btnDone = (Button) findViewById(R.id.btn_done_signin);
@@ -97,6 +103,7 @@ public class PhoneSigninActivity extends AppCompatActivity {
 
         hideViews(btnDone,textInputVerification);
         disableViews(btnVerify);
+        btnVerify.setBackgroundResource(R.drawable.buttonshapegrey);
 
         //set listener for check box
         checkBoxDisclaimer.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -105,13 +112,13 @@ public class PhoneSigninActivity extends AppCompatActivity {
 
                 if (isChecked) {
                     enableViews(btnVerify);
-
+                    btnVerify.setBackgroundResource(R.drawable.buttonshape);
 
                 }
                 else
                 {
                     disableViews(btnVerify);
-
+                    btnVerify.setBackgroundResource(R.drawable.buttonshapegrey);
                 }
             }
         });
@@ -199,7 +206,7 @@ public class PhoneSigninActivity extends AppCompatActivity {
                 if (e instanceof FirebaseAuthInvalidCredentialsException) {
                     // Invalid request
                     // [START_EXCLUDE]
-                    //textInputNumbers.setError("Invalid phone number.");
+                    textInputNumbers.setError("Invalid phone number.");
                     // [END_EXCLUDE]
                 } else if (e instanceof FirebaseTooManyRequestsException) {
                     // The SMS quota for the project has been exceeded
@@ -223,8 +230,8 @@ public class PhoneSigninActivity extends AppCompatActivity {
                 // now need to ask the user to enter the code and then construct a credential
                 // by combining the code with a verification ID.
 
-                hideViews(btnVerify,textInputNumbers);
-                showViews(btnDone,textInputVerification,layout);
+                hideViews(btnVerify,textInputNumbers,layout);
+                showViews(btnDone,textInputVerification);
 
                 Log.d(TAG, "onCodeSent:" + verificationId);
 
@@ -314,10 +321,16 @@ public class PhoneSigninActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
+
                             Log.d(TAG, "signInWithCredential:success");
 
                             FirebaseUser user = task.getResult().getUser();
                             // [START_EXCLUDE]
+                            String uid = user.getUid();
+                            FirebaseDatabase database = FirebaseDatabase.getInstance();
+                            myRef = database.getReference().child("Profile").child(uid);
+
+
                             //updateUI(STATE_SIGNIN_SUCCESS, user);
                             // [END_EXCLUDE]
 
@@ -395,7 +408,7 @@ public class PhoneSigninActivity extends AppCompatActivity {
                 // Set the verification text based on the credential
                 if (cred != null) {
                     if (cred.getSmsCode() != null) {
-                        //mVerificationField.setText(cred.getSmsCode());
+                        textInputVerification.setText(cred.getSmsCode());
                     } else {
                         //mVerificationField.setText(R.string.instant_validation);
                     }
@@ -404,7 +417,7 @@ public class PhoneSigninActivity extends AppCompatActivity {
                 break;
             case STATE_SIGNIN_FAILED:
                 // No-op, handled by sign-in check
-                //mDetailText.setText(R.string.status_sign_in_failed);
+                // mDetailText.setText(R.string.status_sign_in_failed);
                 break;
             case STATE_SIGNIN_SUCCESS:
                 // Np-op, handled by sign-in check

@@ -168,9 +168,12 @@ public class ProfileActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                         Uri downloadUrl = taskSnapshot.getDownloadUrl();
+
+
                         sDownloadUri = downloadUrl.toString();
-                        value.setImageUrl(sDownloadUri);
-                        myRef.setValue(value);
+                        //value.setId(user.getUid());
+                        //value.setImageUrl(sDownloadUri);
+                        myRef.setValue( new Person(uid, username.getText().toString(), textViewBio.getText().toString(), textViewCellphone.getText().toString(), sDownloadUri));
                         pd.dismiss();
 
                         UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
