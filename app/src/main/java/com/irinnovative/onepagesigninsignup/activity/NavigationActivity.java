@@ -33,6 +33,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.irinnovative.onepagesigninsignup.InstitutionActivity;
+import com.irinnovative.onepagesigninsignup.PhoneSigninActivity;
 import com.irinnovative.onepagesigninsignup.R;
 import com.irinnovative.onepagesigninsignup.adapter.ChatRoomAdapter;
 import com.irinnovative.onepagesigninsignup.pojo.Chat;
@@ -357,7 +358,7 @@ public class NavigationActivity extends AppCompatActivity
 
         } else if (id == R.id.log_out) {
             FirebaseAuth.getInstance().signOut();
-            startActivity(new Intent(this, MainActivity.class));
+            startActivity(new Intent(this, PhoneSigninActivity.class));
         }
         else if (id == R.id.nav_about)
         {
