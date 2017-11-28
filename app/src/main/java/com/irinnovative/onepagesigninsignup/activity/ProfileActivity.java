@@ -71,7 +71,6 @@ public class ProfileActivity extends AppCompatActivity {
         username = (TextInputEditText) findViewById(R.id.user_Username);
         textViewBio = (TextInputEditText) findViewById(R.id.textView_profile_bio);
         textViewCellphone = (EditText) findViewById(R.id.textView_profile_cellphone);
-        textViewEmail = (TextView) findViewById(R.id.textView_profile_email);
 
         pd = new ProgressDialog(this);
         pd.setMessage("Uploading....");
@@ -87,13 +86,13 @@ public class ProfileActivity extends AppCompatActivity {
 
         imProfilePic = (ImageView) findViewById(R.id.ImageView_user_pic);
 
-
-        textViewEmail.setText(user.getEmail());
         try {
             Uri imageUri = user.getPhotoUrl();
             if (imageUri != null) {
                 InputStream imageStream = getContentResolver().openInputStream(imageUri);
+
                 Bitmap selectedImage = BitmapFactory.decodeStream(imageStream);
+                pd.show();
                 imProfilePic.setImageBitmap(selectedImage);
             } else {
                 imProfilePic.setImageResource(R.drawable.blank);
@@ -109,6 +108,7 @@ public class ProfileActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
                 photoPickerIntent.setType("image/*");
+
                 startActivityForResult(photoPickerIntent, RESULT_LOAD_IMG);
 
             }
@@ -173,7 +173,7 @@ public class ProfileActivity extends AppCompatActivity {
                         sDownloadUri = downloadUrl.toString();
                         //value.setId(user.getUid());
                         //value.setImageUrl(sDownloadUri);
-                        myRef.setValue( new Person(uid, username.getText().toString(), textViewBio.getText().toString(), textViewCellphone.getText().toString(), sDownloadUri));
+                        myRef.setValue(new Person(uid, username.getText().toString(), textViewBio.getText().toString(), textViewCellphone.getText().toString(), sDownloadUri));
                         pd.dismiss();
 
                         UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
@@ -204,7 +204,6 @@ public class ProfileActivity extends AppCompatActivity {
                         Toast.makeText(ProfileActivity.this, "Upload Failed -> " + e, Toast.LENGTH_SHORT).show();
                     }
                 });
-
 
 
             } catch (FileNotFoundException e) {

@@ -8,7 +8,6 @@ import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -17,7 +16,6 @@ import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -30,15 +28,14 @@ import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 import com.irinnovative.onepagesigninsignup.activity.Disclaimer;
-import com.irinnovative.onepagesigninsignup.pojo.Person;
+
 
 import java.util.concurrent.TimeUnit;
+
+import static android.telephony.PhoneNumberUtils.formatNumberToE164;
 
 public class PhoneSigninActivity extends AppCompatActivity {
     private TextInputEditText textInputNumbers, textInputVerification;
@@ -100,8 +97,8 @@ public class PhoneSigninActivity extends AppCompatActivity {
         Glide.with(getApplicationContext()).load(R.drawable.iconvebalize).into(imageView);
 
 
-
-        hideViews(btnDone,textInputVerification);
+        showViews(btnVerify, textInputNumbers, layout);
+        hideViews(btnDone, textInputVerification);
         disableViews(btnVerify);
         btnVerify.setBackgroundResource(R.drawable.buttonshapegrey);
 
@@ -114,9 +111,7 @@ public class PhoneSigninActivity extends AppCompatActivity {
                     enableViews(btnVerify);
                     btnVerify.setBackgroundResource(R.drawable.buttonshape);
 
-                }
-                else
-                {
+                } else {
                     disableViews(btnVerify);
                     btnVerify.setBackgroundResource(R.drawable.buttonshapegrey);
                 }
@@ -135,13 +130,11 @@ public class PhoneSigninActivity extends AppCompatActivity {
             public void onClick(View v) {
                 phoneNumber = textInputNumbers.getText().toString();
 
-                if(validatePhoneNumber())
-                {
+                if (validatePhoneNumber()) {
                     startPhoneNumberVerification(phoneNumber);
                     pd.show();
 
                 }
-
 
 
             }
@@ -151,12 +144,9 @@ public class PhoneSigninActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 String code = textInputVerification.getText().toString();
-                if(!code.isEmpty())
-                {
-                    verifyPhoneNumberWithCode(mVerificationId,code);
-                }
-                else
-                {
+                if (!code.isEmpty()) {
+                    verifyPhoneNumberWithCode(mVerificationId, code);
+                } else {
                     textInputVerification.setError("Enter verification code");
                 }
             }
@@ -174,10 +164,8 @@ public class PhoneSigninActivity extends AppCompatActivity {
                 // 2 - Auto-retrieval. On some devices Google Play services can automatically
                 //     detect the incoming verification SMS and perform verificaiton without
                 //     user action.
-                pd.dismiss();
 
-                hideViews(btnVerify,textInputNumbers,layout);
-                showViews(btnDone,textInputVerification,layout);
+                pd.dismiss();
 
                 Log.d(TAG, "onVerificationCompleted:" + credential);
                 // [START_EXCLUDE silent]
@@ -199,6 +187,8 @@ public class PhoneSigninActivity extends AppCompatActivity {
                 // for instance if the the phone number format is not valid.
                 pd.dismiss();
                 Log.w(TAG, "onVerificationFailed", e);
+                Snackbar.make(findViewById(android.R.id.content), "Failed",
+                        Snackbar.LENGTH_SHORT).show();
                 // [START_EXCLUDE silent]
                 mVerificationInProgress = false;
                 // [END_EXCLUDE]
@@ -206,7 +196,10 @@ public class PhoneSigninActivity extends AppCompatActivity {
                 if (e instanceof FirebaseAuthInvalidCredentialsException) {
                     // Invalid request
                     // [START_EXCLUDE]
-                    textInputNumbers.setError("Invalid phone number.");
+                    Snackbar.make(findViewById(android.R.id.content), e.getMessage(),
+                            Snackbar.LENGTH_LONG).show();
+                    Log.w(TAG, e.getMessage());
+                    // textInputNumbers.setError("Invalid phone number.");
                     // [END_EXCLUDE]
                 } else if (e instanceof FirebaseTooManyRequestsException) {
                     // The SMS quota for the project has been exceeded
@@ -218,7 +211,7 @@ public class PhoneSigninActivity extends AppCompatActivity {
 
                 // Show a message and update the UI
                 // [START_EXCLUDE]
-               // updateUI(STATE_VERIFY_FAILED);
+                // updateUI(STATE_VERIFY_FAILED);
                 // [END_EXCLUDE]
             }
 
@@ -230,8 +223,8 @@ public class PhoneSigninActivity extends AppCompatActivity {
                 // now need to ask the user to enter the code and then construct a credential
                 // by combining the code with a verification ID.
 
-                hideViews(btnVerify,textInputNumbers,layout);
-                showViews(btnDone,textInputVerification);
+                hideViews(btnVerify, textInputNumbers, layout);
+                showViews(btnDone, textInputVerification);
 
                 Log.d(TAG, "onCodeSent:" + verificationId);
 
@@ -241,7 +234,7 @@ public class PhoneSigninActivity extends AppCompatActivity {
 
                 // [START_EXCLUDE]
                 // Update UI
-               // updateUI(STATE_CODE_SENT);
+                // updateUI(STATE_CODE_SENT);
                 // [END_EXCLUDE]
             }
         };
@@ -249,8 +242,6 @@ public class PhoneSigninActivity extends AppCompatActivity {
 
 
     }
-
-
 
 
     @Override
@@ -262,7 +253,7 @@ public class PhoneSigninActivity extends AppCompatActivity {
 
         // [START_EXCLUDE]
         if (mVerificationInProgress && validatePhoneNumber()) {
-            startPhoneNumberVerification(textInputNumbers.getText().toString());
+            startPhoneNumberVerification(textInputNumbers.getText().toString().trim());
         }
         // [END_EXCLUDE]
     }
@@ -331,11 +322,10 @@ public class PhoneSigninActivity extends AppCompatActivity {
                             myRef = database.getReference().child("Profile").child(uid);
 
 
-                            //updateUI(STATE_SIGNIN_SUCCESS, user);
+                            updateUI(STATE_SIGNIN_SUCCESS, user);
                             // [END_EXCLUDE]
 
-                            Intent i =new  Intent(PhoneSigninActivity.this,SplashActivity.class);
-                            startActivity(i);
+
                         } else {
                             // Sign in failed, display a message and update the UI
                             Log.w(TAG, "signInWithCredential:failure", task.getException());
@@ -421,6 +411,9 @@ public class PhoneSigninActivity extends AppCompatActivity {
                 break;
             case STATE_SIGNIN_SUCCESS:
                 // Np-op, handled by sign-in check
+                Intent i = new Intent(PhoneSigninActivity.this, SplashActivity.class);
+                startActivity(i);
+                finish();
                 break;
         }
 
@@ -428,12 +421,14 @@ public class PhoneSigninActivity extends AppCompatActivity {
 
     private boolean validatePhoneNumber() {
         String regexStr = "^[0-9]{10}$";
-        String phoneNumber = textInputNumbers.getText().toString();
+        String temp = textInputNumbers.getText().toString().trim();
 
-        if(!phoneNumber.matches(regexStr))
-        {
+
+        if (!temp.matches(regexStr)) {
             textInputNumbers.setError("Invalid phone number.");
             return false;
+        } else {
+            phoneNumber = formatNumberToE164(temp, "ZA");
         }
 
         return true;

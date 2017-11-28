@@ -153,26 +153,7 @@
 
                     <TableRow>
 
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="10dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_weight="0.1"
-                            android:src="@drawable/ic_mail_black_24dp" />
 
-                        <TextView
-                            android:id="@+id/textView_profile_email"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="10dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_weight="1"
-                            android:fontFamily="sans-serif"
-                            android:textColor="@color/colorPrimaryDark"
-                            tools:text="edith@childtraumacentre.co.za">
-
-                        </TextView>
 
 
                     </TableRow>

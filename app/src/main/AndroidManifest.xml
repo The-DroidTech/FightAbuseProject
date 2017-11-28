@@ -70,7 +70,8 @@
             android:name=".activity.Disclaimer"
             android:label="@string/disclaimer_manifest"
             android:theme="@style/AppTheme"></activity>
-        <activity android:name=".PhoneSigninActivity">
+        <activity android:name=".PhoneSigninActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

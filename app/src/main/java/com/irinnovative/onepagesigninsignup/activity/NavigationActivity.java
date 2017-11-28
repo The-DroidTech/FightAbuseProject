@@ -98,7 +98,7 @@ public class NavigationActivity extends AppCompatActivity
 
         View hView = navigationView.getHeaderView(0);
         final TextView nav_userName = (TextView) hView.findViewById(R.id.drawerTextName);
-        final TextView nav_userEmail = (TextView) hView.findViewById(R.id.drawerTextEmail);
+        final TextView nav_userPhone = (TextView) hView.findViewById(R.id.drawerTextEmail);
         final ImageView nav_userImage = (ImageView) hView.findViewById(R.id.drawerImageView);
 
 
@@ -117,7 +117,7 @@ public class NavigationActivity extends AppCompatActivity
                 if (value != null) {
                     userName = value.getUsername();
                     nav_userName.setText(userName);
-                    nav_userEmail.setText(user.getEmail());
+                    nav_userPhone.setText(user.getPhoneNumber());
                     Glide.with(getApplicationContext()).load(value.getImageUrl()).into(nav_userImage);
                 }
 

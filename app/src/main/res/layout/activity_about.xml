@@ -62,7 +62,7 @@
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="10dp"
 
-                android:text="Information About VerbaLize Application\n---------------------------------------------------------------------\nVerbaLize is a mobile application that give abuse victims a platform, which offers them a wide variety of information, about different types of abuse and the effects they have on a victim. The application also has a reporting  abuse to the relevant institutions to handle and assist victims with their problems. In hopes of eradicating abuse in the community. The name was inspired and motivated to give individuals a voice to verbalize against abuse."
+                android:text="Information About VerbaLize Application\n---------------------------------------------------------------------\n"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
 
                 android:textColor="@color/black"
