@@ -62,7 +62,7 @@
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="10dp"
 
-                android:text="Information About VerbaLize Application\n---------------------------------------------------------------------\n"
+                android:text="Information About VerbaLize Application\n---------------------------------------------------------------------\nVerbaLize is a mobile application that give abuse victims a platform, which offers them a wide variety of information, about different types of abuse and the effects they have on a victim. The application also has a reporting  abuse to the relevant institutions to handle and assist victims with their problems. In hopes of eradicating abuse in the community. The name was inspired and motivated to give individuals a voice to verbalize against abuse."
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
 
                 android:textColor="@color/black"
@@ -98,28 +98,6 @@
                 android:textStyle="bold" />
 
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/image_view_about1"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/edith_kriel"
-                 />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:gravity="center"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:fontFamily="sans-serif"
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="10dp"
-                android:text="Lesedi Lebogo"/>
-
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/image_view_about2"
@@ -129,7 +107,7 @@
                 android:layout_marginTop="10dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/edith_kriel"
-               />
+                />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -142,6 +120,28 @@
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="10dp"
                 android:text="Thabang Chabalala"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image_view_about1"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/edith_kriel"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:text="Lesedi Lebogo"/>
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/image_view_about3"
@@ -175,5 +175,3 @@
 
 
 </android.support.design.widget.CoordinatorLayout>
-
-

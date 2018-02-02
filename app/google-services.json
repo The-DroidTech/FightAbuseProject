@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "151322820563-pt19qmsm0tvn32k9ih7c7ur8cfltgv7l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.irinnovative.onepagesigninsignup",
+            "certificate_hash": "65fb826ab0067fe347265647e6894d0e6bf7ca71"
+          }
+        },
+        {
           "client_id": "151322820563-7f0n0uki26nq2la2sn851133pnatl054.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

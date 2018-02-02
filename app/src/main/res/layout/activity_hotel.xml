@@ -75,8 +75,9 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:fontFamily="sans-serif"
-                android:textColor="@color/black"
-                android:textSize="14sp"
+
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="16sp"
                 tools:text="012 456 98775" />
 
         </LinearLayout>

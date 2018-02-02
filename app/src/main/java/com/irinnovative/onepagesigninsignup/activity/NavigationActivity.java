@@ -117,7 +117,7 @@ public class NavigationActivity extends AppCompatActivity
                 if (value != null) {
                     userName = value.getUsername();
                     nav_userName.setText(userName);
-                    nav_userPhone.setText(user.getPhoneNumber());
+                    nav_userPhone.setText(value.getCellphone());
                     Glide.with(getApplicationContext()).load(value.getImageUrl()).into(nav_userImage);
                 }
 
@@ -358,7 +358,7 @@ public class NavigationActivity extends AppCompatActivity
 
         } else if (id == R.id.log_out) {
             FirebaseAuth.getInstance().signOut();
-            startActivity(new Intent(this, PhoneSigninActivity.class));
+            startActivity(new Intent(this, MainActivity.class));
         }
         else if (id == R.id.nav_about)
         {
